@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../css/reset.css">
+        <title>Página 1</title>
+        <script>
+            function redirecionar() 
+            {
+                var texto = document.getElementById('meuInput').innerHTML;
+                sessionStorage.setItem('meuTexto', texto);
+                window.location.href = "teste2.html";
+            }
+        </script>
+    </head>
+    <body>
+        <div class="bread">
+            <strong>
+                <span class="page" id="meuInput">Procedimento de aumentar o tamanho do pinto</span>
+            </strong>
+        </div>
+        <!-- <input type="text" id="meuInput" placeholder="Digite um texto"> -->
+        <button onclick="redirecionar()">Ir para a Página 2</button>
+    </body>
+</html>

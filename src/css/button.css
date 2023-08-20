@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.agendamento-button {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.1);
+
+}
+
+.agendamento-button:hover {
+    cursor: pointer;
+    background-color: red;
+}
+
+.teste {
+    background-color: black;
+}

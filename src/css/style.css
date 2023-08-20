@@ -1,0 +1,63 @@
+body {
+    background-image: url("background.jpg");
+}
+
+.cabecalho {
+    display: flex;
+    padding: 40px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.cabecalho .logo {
+    width: 200px;
+    height: auto;
+    justify-content: space-between;
+}
+
+.cabecalho .menu{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+nav {
+    height: 12vh;
+    widows: 70vw;
+    min-width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+}
+
+
+.menu li a {
+    position: relative;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    padding: 0 10px;
+}
+
+.menu li a:after{
+    content: "";
+    position: absolute;
+    background-color: coral;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+
+.menu li a:hover:after{
+    width: 100%;
+}
+
+
+
+
+
+

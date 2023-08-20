@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="../css/reset.css">
+  <title>Página 2</title>
+  <script>
+    function exibirTexto() {
+      var texto = sessionStorage.getItem('meuTexto');
+      document.getElementById('textoArmazenado').textContent = texto;
+      sessionStorage.removeItem('meuTexto');
+    }
+  </script>
+</head>
+<body onload="exibirTexto()">
+  <h1>Texto Armazenado:</h1>
+  <p id="textoArmazenado"></p>
+</body>
+</html>
+
