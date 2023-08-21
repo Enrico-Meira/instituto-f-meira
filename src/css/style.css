@@ -1,17 +1,33 @@
-body {
-    background-image: url("background.jpg");
+.bg {
+    background: url('/src/imagens/background.jpg') no-repeat center fixed;
+    background-size: cover;
+}
+
+.bg-image {
+    
+}
+
+.main-container {
+    background-color: red;
 }
 
 .cabecalho {
+    /* background: url('/src/imagens/background.jpg') no-repeat center fixed; */
+    background-size: cover;
+    /* background-color: rgb(255, 255, 255) / 0%; */
+    background-color: aqua;
+    z-index: 99;
     display: flex;
-    padding: 40px;
-    max-width: 1440px;
+    padding: 30px 0px;
+    max-width: 100%;
     margin: 0 auto;
 }
 
 .cabecalho .logo {
-    width: 200px;
+    background-color: red;
+    width: 300px;
     height: auto;
+    margin: -30px 200px;
     justify-content: space-between;
 }
 
@@ -22,6 +38,7 @@ body {
 }
 
 nav {
+    background-color: aquamarine;
     height: 12vh;
     widows: 70vw;
     min-width: 600px;
@@ -33,12 +50,14 @@ nav {
 
 
 .menu li a {
+    background-color: azure;
     position: relative;
     text-decoration: none;
     color: black;
     font-size: 18px;
     letter-spacing: 0.5px;
     padding: 0 10px;
+    margin: auto 5px;
 }
 
 .menu li a:after{
