@@ -1,35 +1,6 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" href="src/css/style.css">
-        <link rel="stylesheet" href="src/css/reset.css">
-        <title>TCC</title>
-    </head>
-    <body>
-        <header class="cabecalho">
-            <a href="/index.html">
-                <img class="logo" src="./src/imagens/logo.png">
-            </a>
-            <nav>
-                <ul class="menu">
-                    <li>
-                        <a href="index.html">Início</a>
-                    </li>
-                    <li>
-                        <a href="./src/html/procedimentos.html">Procedimentos</a>
-                    </li>
-                    <li>
-                        <a href="./src/html/calendario.html">Agendamento</a>
-                    </li>
-                    <li>
-                        <a href="#">Fale conosco</a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
+<?php 
+    include_once("src/html/header.php");
+?>
         <!-- <img src="/src/imagens/background.jpg" alt="" class="bg-image"> -->
         <main class="main-container bg">
             <div class=introduction>
@@ -107,30 +78,8 @@
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.7135749635636!2d-47.462281188996116!3d-23.506824078749005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c58b11344dc07d%3A0x1750c849b8933f8e!2sInstituto%20F.%20Meira%20Est%C3%A9tica%20Avan%C3%A7ada!5e0!3m2!1spt-BR!2sbr!4v1683595038516!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </main>
-        <footer>
-            <h3>Fernanda Meira</h3>
-            <div class="links-sociais">
-                <a href="">
-                    <i>insta</i>
-                </a>
-                <br>
-                <a href="">
-                    <i>outra rede social que pega no meu pau</i>
-                </a>
-            </div>
-            <div class="creditos">
-                <div class="logo-footer">
-                        <img src="">
-                </div>
-                <div class="copyright">
-                    @ copytexto
-                </div>
-                <div class="credits">
-                    texto credito
-                </div>
-            </div>
-        </footer>
-    </body>
-</html>
 
+<?php 
+    include_once("src/html/footer.php");
+?>
 

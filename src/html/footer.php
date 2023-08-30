@@ -1,0 +1,26 @@
+        <footer>
+            <h3>Fernanda Meira</h3>
+            <div class="links-sociais">
+                <a href="">
+                    <i>insta</i>
+                </a>
+                <br>
+                <a href="">
+                    <i>outra rede social que pega no meu pau</i>
+                </a>
+            </div>
+            <div class="creditos">
+                <div class="logo-footer">
+                        <img src="">
+                </div>
+                <div class="copyright">
+                    @ copytexto
+                </div>
+                <div class="credits">
+                    texto credito
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
+
