@@ -1,12 +1,88 @@
-.bg {
-    background: url('/src/imagens/background.jpg') no-repeat center fixed;
-    background-size: cover;
-}
+@media screen and (min-width: 1024px) {
+    .bg {
+        /* background: url('/src/imagens/background.jpg') no-repeat center fixed; */
+        background-size: cover;
+    }
+    
+    .cabecalho {
+        /* background: url('/src/imagens/background.jpg') no-repeat center fixed; */
+        /* overflow: hidden; */
+        background-size: cover;
+        background-color: rgb(255, 255, 255) / 0%;
+        background-color: aqua;
+        z-index: 99;
+        display: flex;
+        padding: 30px 0px;
+        width: 100%;
+        margin: 0 auto;
+    }
 
-.bg-image {
+    .cabecalho .logo {
+        background-color: red;
+        width: 300px;
+        height: auto;
+        margin: -30px 0px;
+        justify-content: space-between;
+    }
+    
+    .cabecalho .menu{
+        display: flex;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+    
+    nav {
+        background-color: black;
+        height: 12vh;
+        widows: 70vw;
+        min-width: 600px;
+        width: 610px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: auto;
+    }
+    
+    
+    .menu li a {
+        background-color: azure;
+        position: relative;
+        text-decoration: none;
+        color: black;
+        width: 100%;
+        font-size: 18px;
+        letter-spacing: 0.5px;
+        padding: 0 10px;
+        margin: auto 5px;
+    }
+    
+    .menu li a:after{
+        content: "";
+        position: absolute;
+        background-color: coral;
+        height: 3px;
+        width: 0;
+        left: 0;
+        bottom: -10px;
+        transition: 0.3s;
+    }
+    
+    .menu li a:hover:after{
+        width: 100%;
+    }
+    
+
+    .main-container {
+        background-color: red;
+    }
+    
+    
+    
     
 }
 
+<<<<<<< HEAD
 .main-container {
     background-color: red;
 }
@@ -75,6 +151,8 @@ nav {
     width: 100%;
 }
 
+=======
+>>>>>>> 385145975b8962669e432aac742bc5cea5e1beba
 
 
 
