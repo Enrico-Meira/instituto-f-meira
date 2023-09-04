@@ -1,5 +1,8 @@
 <?php 
-    include_once("src/html/header.php");
+    require_once('config.php');
+    require_once(dbpath);
+    include(header_template);
+    $db = open_database();
 ?>
         <!-- <img src="/src/imagens/background.jpg" alt="" class="bg-image"> -->
         <main class="main-container bg">
@@ -80,6 +83,6 @@
         </main>
 
 <?php 
-    include_once("src/html/footer.php");
+    require_once(footer_template);
 ?>
 
