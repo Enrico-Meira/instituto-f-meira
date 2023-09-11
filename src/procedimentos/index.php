@@ -46,7 +46,7 @@
                             <div class="slick-slide">
                                 <div>
                                     <div><!-- estilo vai ser definido na hora de animar com css -->
-                                        <a href="./procedimentos/protocoll.html">
+                                        <a href="./protocoll.php">
                                             <img src="" alt="">
                                             <h2>Protocoll</h2>
                                             <p>Esse tratamento tem o objetivo de reestruturar a pele, através da aplicação de toxinas que estimulam a produção de colágeno.</p>

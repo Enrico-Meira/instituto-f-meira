@@ -4,6 +4,7 @@
     include(header_template);
     $db = open_database();
 ?>
+        <!-- <link rel="stylesheet" href="src/css/style.css">  -->
         <!-- <img src="/src/imagens/background.jpg" alt="" class="bg-image"> -->
         <main class="main-container bg">
             <div class=introduction>

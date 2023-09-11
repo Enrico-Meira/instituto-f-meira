@@ -1,47 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="/src/css/button.css">
-    <link rel="stylesheet" href="/src/css/reset.css">    
-    <title>Document</title>
-    <script>
-        function redirecionar() 
-        {
-            var texto = document.getElementById('meuInput').innerHTML;
-            sessionStorage.setItem('meuTexto', texto);
-
-            var form = document.getElementById('meuForm').innerHTML;
-            sessionStorage.setItem('meuTeste', teste);
-        }
-    </script>
-</head>
-<body>
-    <a href="../form.html">
-        <button onclick="redirecionar()" class="agendamento-button">Agendar</button>
-    </a>
-
-    <header class="cabecalho">
-        <a href="../index.html">
-            <img src="https://www.petz.com.br/blog/wp-content/uploads/2019/05/cachorro-independente-1.jpg">
-        </a>
-        <ul class="menu">
-            <li>
-                <a href="/index.html">Início</a>
-            </li>
-            <li>
-                <a href="../procedimentos.html">Procedimentos</a>
-            </li>
-            <li>
-                <a href="../calendario.html">Agendamento</a>
-            </li>
-            <li>
-                <a href="#">Fale conosco</a>
-            </li>   
-        </ul>
-    </header>
+<?php
+    require_once('functions.php');
+    include(header_template);   
+?>
     <main>
         <div class="faixa">
             <div class="faixa-container">
@@ -57,7 +17,7 @@
                             <i class="fas fa-angle-double-right"></i>
                             <div class="bread">
                                 <strong>
-                                    <span class="page" id="meuInput">agendamento com o nome da cabeça do meu pinto</span>
+                                    <span class="page" id="meuInput">agendamento com o nome</span>
                                 </strong>
                             </div>
                         </div>
@@ -88,5 +48,6 @@
             </div>
         </div>
     </main>
-</body>
-</html>
+<?php
+    require_once(footer_template);
+?>

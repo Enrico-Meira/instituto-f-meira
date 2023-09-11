@@ -22,7 +22,7 @@
         crossorigin="anonymous"
         referrerpolicy="no-referrer"
         />
-        <link rel="stylesheet" href="../css/CalendarStyle.css" />
+        
         <title>Calendar with Events</title>
         <script>
         function exibirTexto() {
@@ -38,27 +38,26 @@
         }
         </script>
         <!-- calendario -->
-
-        <link rel="stylesheet" href="<?php baseurl ?>src/css/reset.css">
-        <link rel="stylesheet" href="src/css/style.cssv=<?php echo time();?>">
+        <link rel="stylesheet" href="<?php echo baseurl; ?>/src/css/reset.css">
+        <link rel="stylesheet" href="<?php echo baseurl; ?>/src/css/style.css">
+        <!-- <link rel="stylesheet" href="/src/css/CalendarStyle.css" /> -->
         <title>TCC</title>
-        
     </head>
     <body>
         <header class="cabecalho">
-            <a href="/index.html">
-                <img class="logo" src="./src/imagens/logo.png">
+            <a href="<?php echo baseurl; ?>/index.php">
+                <img class="logo" src="<?php echo baseurl; ?>/src/imagens/logo.png">
             </a>
             <nav>
                 <ul class="menu">
                     <li>
-                        <a href="<?php echo baseurl; ?>index.php">Início</a>
+                        <a href="<?php echo baseurl; ?>/index.php">Início</a>
                     </li>
                     <li>
-                        <a href="<?php echo baseurl; ?>src/procedimentos/index.php">Procedimentos</a>
+                        <a href="<?php echo baseurl; ?>/src/procedimentos/index.php">Procedimentos</a>
                     </li>
                     <li>
-                        <a href="<?php echo baseurl; ?>src/agendamento/calendario.php">Agendamento</a>
+                        <a href="<?php echo baseurl; ?>/src/agendamento/calendario.php">Agendamento</a>
                     </li>
                     <li>
                         <a href="#">Fale conosco</a>

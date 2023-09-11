@@ -15,35 +15,10 @@
 
                 <textarea name="desc" id="desc" cols="30" rows="10" placeholder="Descrição"></textarea> <br> <br>
 
-                <label>Data de nascimento:</label><br>
-                <select name="dia">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
+                <label>Data de nascimento:</label> <br>
+                <input type="date" name="data" required> <br> <br>
 
-                <select name="mes">
-                    <option value="jan">Jan</option>
-                    <option value="fev">Fev</option>
-                    <option value="mar">Mar</option>
-                    <option value="abr">Abr</option>
-                    <option value="mai">Mai</option>
-                </select>
-
-                <select name="ano">
-                    <option value="1999">1999</option>
-                    <option value="2000">2000</option>
-                    <option value="2001">2001</option>
-                    <option value="2002">2002</option>
-                    <option value="2003">2003</option>
-                </select>
-
-                <br>
-                <br>
-
-                <label>Gênero:</label><br>
+                <label>Gênero:</label> <br>
 
                 <label for="feminino">Feminino</label>
                 <input type="radio" name="genero" id="feminino" value="feminino">
@@ -57,13 +32,9 @@
                 <br>
                 <br>
 
-                <!-- <input type="file" name="" id=""> -->
-
-                <!-- <br> -->
-                <!-- <br> -->
-
-                <input type="text" name="email" id="email" placeholder="Email" required> <br> <br>
-
+                <input type="email" name="email" id="email" placeholder="Email" required> <br> <br>
+                <input type="password" name="senha" id="senha" placeholder="senha" required> <br> <br>
+                <input type="password" name="senha_confirma" id="senha_confirma" placeholder="confirme a senha" required> <br> <br>
 
                 <input onclick="redirecionar()" id="meuForm" type="submit" value="Enviar">
 

@@ -6,7 +6,7 @@
                 </a>
                 <br>
                 <a href="">
-                    <i>outra rede social que pega no meu pau</i>
+                    <i>outra rede social</i>
                 </a>
             </div>
             <div class="creditos">
