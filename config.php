@@ -9,7 +9,7 @@
 		define('abspath', dirname(__FILE__) . '/');
 	
 	if (!defined("baseurl"))
-		define("baseurl", "/tcc_enrico");
+		define("baseurl", "/instituto-f-meira");
 
 	if (!defined('dbpath'))
 		define('dbpath', abspath . "src/inc/funcoes.php");
