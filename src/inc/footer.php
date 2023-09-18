@@ -2,7 +2,7 @@
             <h3>Fernanda Meira</h3>
             <div class="links-sociais">
                 <a href="">
-                    <i>insta</i>
+                    <i>instagram</i>
                 </a>
                 <br>
                 <a href="">

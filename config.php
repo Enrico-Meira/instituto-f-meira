@@ -12,7 +12,7 @@
 		define("baseurl", "/instituto-f-meira");
 
 	if (!defined('dbpath'))
-		define('dbpath', abspath . "src/inc/funcoes.php");
+		define('dbpath', abspath . "src/inc/database.php");
 	
 	define('header_template', abspath . "src/inc/header.php");
 	define('footer_template', abspath . "src/inc/footer.php");

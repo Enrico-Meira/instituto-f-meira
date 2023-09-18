@@ -11,8 +11,8 @@
     .cabecalho {
         background: url('../imagens/background.jpg') no-repeat center fixed;
         background-size: cover;
-        position: absolute;
-        z-index: 99;
+        position: sticky;
+        z-index: 0;     
         display: flex;
         padding: 30px 0px;
         width: 100%;

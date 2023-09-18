@@ -2,7 +2,12 @@
     require_once('functions.php');
     include(header_template);   
 ?>
+
+
     <main>
+    <a href="<?php echo baseurl; ?>/src/formulario/index.php">
+        <button class="agendamento-button">Agendar</button>
+    </a>
         <div class="faixa">
             <div class="faixa-container">
                 <div class="row">
