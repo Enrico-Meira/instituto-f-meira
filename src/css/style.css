@@ -12,7 +12,7 @@
         background: url('../imagens/background.jpg') no-repeat center fixed;
         background-size: cover;
         position: sticky;
-        z-index: 0;     
+        z-index: 999;     
         display: flex;
         padding: 30px 0px;
         width: 100%;
@@ -117,6 +117,21 @@
         font-weight: 300;
         color: #fff;
     }
+
+    .saber {
+        margin-top: 20px;
+    }
+
+    .saber a {
+        border: 0.5px solid red;
+        color: red;
+        padding: 10px 20px;
+        font-size: 15px;
+        margin: 0px 10px;
+        font-weight: 400;
+        text-shadow: 2px 2px 7px #000;
+    }
+
 
 
 

@@ -15,12 +15,8 @@
                         </h2>
                 </div>
                 <div class="saber">
-                    <a href="">
-
-                    </a>
-                    <a href="">
-                        
-                    </a>
+                    <a href="">Tratamentos</a>
+                    <a href="">Contato</a>
                 </div>
             </div>
 
