@@ -7,6 +7,10 @@
         padding: 0;
         line-height: 1.3;
     }
+
+    div {
+        display: block;
+    }
     
     .cabecalho {
         background: url('../imagens/background.jpg') no-repeat center fixed;
@@ -132,6 +136,28 @@
         text-shadow: 2px 2px 7px #000;
     }
 
+    .info {
+        padding: 60px 0;
+        background: #a25050;
+    }
+
+    .info-container {
+        max-width: 540px;
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+
+    .init-anim {
+        position: relative;
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
 
 
 
