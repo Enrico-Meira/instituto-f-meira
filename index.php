@@ -25,7 +25,7 @@
                     <div class="row">
                         <div class="init-anim">
                             <a href="">
-                                <img src="" alt="">
+                                <img src="<?php echo baseurl; ?>/src/imagens/infoIMG.jpg">
                             </a>
                         </div>
                         <div class="init-anim">
