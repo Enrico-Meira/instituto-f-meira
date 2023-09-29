@@ -1,5 +1,6 @@
 <?php
     require_once('functions.php');
+    variavel = "cabecalho2";
     include(header_template);   
 ?>
 
@@ -7,7 +8,7 @@
 
             <?php echo gerador();?>
             <h3>Formulário</h3>
-            <form method="get" action="calendario.html" enctype="multipart/form-data">     
+            <form class="formProced" method="get" action="calendario.html" enctype="multipart/form-data">     
                 <input type="text" name="clientes['name']" id="nome-completo" placeholder="Nome completo" required> <br> <br>
 
                 <input type="text" name="clientes['']" id="endereco" placeholder="Endereço" required> <br> <br>
@@ -16,7 +17,7 @@
 
                 <textarea name="clientes['']" id="desc" cols="30" rows="10" placeholder="Descrição"></textarea> <br> <br>
 
-                <label>Data de nascimento:</label> <br>
+                <label class="dateLabel">Data de nascimento:</label> <br>
                 <input type="date" name="clientes['']" required> <br> <br>
 
                 <label>Gênero:</label> <br>

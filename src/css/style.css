@@ -193,6 +193,50 @@
     }
 
 
+    .formProced input[type=text] {
+        background-color: lightgray;
+        padding: 10px;
+        border: 0;
+        box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+        border-radius: 8px;
+        width: 20%;
+    }
+
+    .formProced textarea {
+        width: 20%;
+        background-color: lightgray;
+        resize: vertical;
+        padding:15px;
+        border-radius:15px;
+        border:0;
+        box-shadow:4px 4px 10px rgba(0,0,0,0.06);
+        height:150px;
+    }
+
+    .formProced input[type=date] {
+        background-color: lightgray;
+        padding: 10px;
+        position: absolute;
+        /* transform: translate(-50%, -50%); */
+        top: 85%;
+        left: 0%;
+        font-size: 18px;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+    }
+
+    ::-webkit-calendar-picker-indicator{
+        background-color: lightgray;
+        padding: 5px;
+        cursor: pointer;
+        border-radius: 3px;
+    }
+
+    .dateLabel {
+        position: absolute;
+        top: 82%;
+    }   
 
 
 
