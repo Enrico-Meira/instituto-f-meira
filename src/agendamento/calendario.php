@@ -1,5 +1,6 @@
 <?php
     require_once('functions.php');
+    $head = "cabecalho2";
     include(header_template); 
 ?>
     <div class="container">

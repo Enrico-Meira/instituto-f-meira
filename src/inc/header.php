@@ -10,7 +10,7 @@
         <title>TCC</title>
     </head>
     <body>
-        <header class="<?php echo variavel; ?>">
+        <header class="<?php echo $head; ?>">
             <a href="<?php echo baseurl; ?>/index.php">
                 <img class="logo" src="<?php echo baseurl; ?>/src/imagens/logo.png">
             </a>

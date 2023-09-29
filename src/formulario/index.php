@@ -1,6 +1,6 @@
 <?php
     require_once('functions.php');
-    variavel = "cabecalho2";
+    $head = "cabecalho2";
     include(header_template);   
 ?>
 
