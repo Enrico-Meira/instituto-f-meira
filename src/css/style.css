@@ -66,8 +66,9 @@
         align-items: center;
         height: 100%;
         width: 100%;
+        margin: 0px 10px;
     }
-     
+
     nav {
         /* background-color: black; */
         height: 12vh;
@@ -80,19 +81,25 @@
         margin: auto;
     }
     
+    .menu li {
+        padding: 0px 15px;
+        display: inline-block;
+    }
     
     .menu li a {
         /* background-color: azure; */
         position: relative;
+        /* display: inline-block; */
         text-decoration: none;
         color: black;
         width: 100%;
         font-size: 18px;
         letter-spacing: 0.5px;
-        padding: 10 10px;
-        margin: auto 5px;
+        /* padding: 10px 10px; */
+        margin: auto;
     }
-    
+
+
     .menu li a:after{
         content: "";
         position: absolute;
@@ -100,7 +107,7 @@
         height: 3px;
         width: 0;
         left: 0;
-        bottom: -10px;
+        bottom: -5px;
         transition: 0.3s;
     }
     
@@ -111,11 +118,6 @@
 
     .main-container {
         background-color: red;
-    }
-    
-    .menu li {
-        padding: 0px 20px;
-        display: inline-block;
     }
     
     .name-container {
@@ -224,6 +226,24 @@
         width: 20%;
     }
 
+    .formProced input[type=email] {
+        background-color: lightgray;
+        padding: 10px;
+        border: 0;
+        box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+        border-radius: 8px;
+        width: 20%;
+    }
+
+    .formProced input[type=password] {
+        background-color: lightgray;
+        padding: 10px;
+        border: 0;
+        box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+        border-radius: 8px;
+        width: 20%;
+    }
+
     .formProced textarea {
         width: 20%;
         background-color: lightgray;
@@ -240,12 +260,36 @@
         padding: 10px;
         position: absolute;
         /* transform: translate(-50%, -50%); */
-        top: 85%;
+        top: 70%;
         left: 0%;
         font-size: 18px;
         border: none;
         outline: none;
         border-radius: 5px;
+    }
+
+/* CSS */
+    .button-2 {
+            background-color: lightgray;
+            border-radius: 8px;
+            border-width: 0;
+            color: black;
+            cursor: pointer;
+            display: inline-block;
+            font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 20px;
+            list-style: none;
+            margin: 0;
+            padding: 10px 12px;
+            text-align: center;
+            transition: all 200ms;
+            vertical-align: baseline;
+            white-space: nowrap;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
     }
 
     ::-webkit-calendar-picker-indicator{
@@ -257,7 +301,7 @@
 
     .dateLabel {
         position: absolute;
-        top: 82%;
+        top: 68%;
     }   
 
 

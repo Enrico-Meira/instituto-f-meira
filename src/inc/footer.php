@@ -21,6 +21,8 @@
                 </div>
             </div>
         </footer>
+
+        <script src="<?php echo baseurl; ?>/src/js/awesome/all.min.js"></script>
     </body>
 </html>
 
