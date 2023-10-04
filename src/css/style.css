@@ -208,6 +208,11 @@
         color: #fff;
     }
 
+    .infoIMG {
+        width: 418px;
+        height: 669px;
+    }
+
     .info p {
         font-weight: 300;
         text-align: justify;
