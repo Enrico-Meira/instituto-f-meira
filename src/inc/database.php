@@ -127,6 +127,8 @@
 		return find($table);
 	}
 
+	// gerar_id funcionando, falta conseguir usar o id gerado na inserção do banco!
+
 	function gerar_id( $table = null, $id_name = null , $id = null )
 	{
 		$database = open_database();
@@ -135,7 +137,7 @@
 		try 
 		{
 			$id_gerado = uniqid();
-			$sql = "SELECT $id FROM " . $table . "WHERE" . $id_name . "=" . $id_gerado;
+			$sql = "SELECT $id_name FROM " . $table . "WHERE" . $id_name . "=" . $id_gerado;
 			$result = $database->query($sql);
 
 			if($result == null)

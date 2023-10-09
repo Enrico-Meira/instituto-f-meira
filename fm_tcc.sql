@@ -29,8 +29,8 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `agendamentos` (
   `id_agendamentos` varchar(12) NOT NULL,
-  `id_clientes` varchar(12) DEFAULT NULL,
-  `id_funcionarios` varchar(12) DEFAULT NULL,
+  `id_clientes` varchar(13) DEFAULT NULL,
+  `id_funcionarios` varchar(13) DEFAULT NULL,
   `id_procedimentos` varchar(12) DEFAULT NULL,
   `data_agenda` varchar(100) DEFAULT NULL,
   `status_agenda` tinyint(1) DEFAULT NULL
@@ -43,7 +43,7 @@ CREATE TABLE `agendamentos` (
 --
 
 CREATE TABLE `clientes` (
-  `id_clientes` varchar(12) NOT NULL,
+  `id_clientes` varchar(13) NOT NULL,
   `nome` varchar(250) DEFAULT NULL,
   `data_nasc` datetime DEFAULT NULL,
   `cpf` varchar(11) DEFAULT NULL,
@@ -63,7 +63,7 @@ CREATE TABLE `clientes` (
 --
 
 CREATE TABLE `funcionarios` (
-  `id_funcionarios` varchar(100) NOT NULL,
+  `id_funcionarios` varchar(13) NOT NULL,
   `nome` varchar(100) DEFAULT NULL,
   `cpf` varchar(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -75,7 +75,7 @@ CREATE TABLE `funcionarios` (
 --
 
 CREATE TABLE `procedimentos` (
-  `id_procedimentos` varchar(11) NOT NULL,
+  `id_procedimentos` varchar(12) NOT NULL,
   `procedimento` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
