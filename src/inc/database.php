@@ -137,23 +137,15 @@
 		try 
 		{
 			$id_gerado = uniqid();
-			$sql = "SELECT $id_name FROM " . $table . "WHERE" . $id_name . "=" . $id_gerado;
-			$result = $database->query($sql);
-
-			if($result == null)
-			{
-				$id = $id_gerado;
-			}
-			else 
-			{
-				gerar_id($table, $id_name);
-			}
+			return $id_gerado;
 		} 
 		catch (Exception $e) 
 		{
 			$_SESSION['message'] = "Erro ao tentar gerar ID: " . $e->GetMessage();
 			$_SESSION['type'] = 'danger';
 		}
+		
+		close_database($database);
 	}
 
 	/**
@@ -176,10 +168,12 @@
 		// remove a ultima virgula
 		$columns = rtrim($columns, ',');
 		$values = rtrim($values, ',');
+
 		
 		$sql = "INSERT INTO " . $table . "($columns)" . " VALUES " . "($values);";
-	
+
 		try {
+
 		$database->query($sql);
 	
 		$_SESSION['message'] = 'Registro cadastrado com sucesso.';

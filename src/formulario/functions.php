@@ -13,17 +13,18 @@
 		global $clientes;
 		$clientes = find_all('clientes');
 	}
+
 	/**
  	 *  Cadastro de Clientes
 	 */
-	function add() {
-
-		if (!empty($_POST['cliente'])) {
-
-		$cliente = $_POST['cliente'];
-
-		save('clientes', $cliente);
-		header('location: index.php');
+	function add() 
+	{
+		if (!empty($_POST['clientes'])) 
+		{
+			$cliente = $_POST['clientes'];
+			$cliente['id_clientes'] = gerar_id();
+			save('clientes', $cliente);
+			header('location: index.php');
 		}
 	}
 	/**
@@ -35,9 +36,9 @@
 	
 			$id = $_GET['id'];
 	
-			if (isset($_POST['cliente'])) {
+			if (isset($_POST['clientes'])) {
 		
-				$cliente = $_POST['cliente'];
+				$cliente = $_POST['clientes'];
 		
 				update('clientes', $id, $cliente);
 				header('location: index.php');
@@ -69,11 +70,6 @@
 		header('location: index.php');
 	}
 
-	function gerador()
-	{	
-		global $gerar;
-		$gerar = gerar_id("clientes", "id_clientes");
-	}
 
 ?>
 
