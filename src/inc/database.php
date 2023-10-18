@@ -129,7 +129,7 @@
 
 	// gerar_id funcionando, falta conseguir usar o id gerado na inserção do banco!
 
-	function gerar_id( $table = null, $id_name = null , $id = null )
+	function gerar_id( $table = null, $id_name = null )
 	{
 		$database = open_database();
 		$id_gerado = null;
@@ -170,7 +170,8 @@
 		$values = rtrim($values, ',');
 
 		
-		$sql = "INSERT INTO " . $table . "($columns)" . " VALUES " . "($values);";
+		$sql = "INSERT INTO " . $table . " ($columns)" . " VALUES " . "($values);";
+
 
 		try {
 

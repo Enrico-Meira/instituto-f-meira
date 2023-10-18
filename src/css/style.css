@@ -1,4 +1,13 @@
-    body {
+   /* GERAL */
+   :root {
+       --primary-color: #FCD8D4;
+       --secondary-color: #FDF6F0;
+       --tertiary-color: #F8E2CF;
+       --quaternary-color: #F5C6AA;
+   }
+
+
+   body {
         color: #333;
         background: #fff;
         /* font-family: ; */
@@ -12,6 +21,8 @@
         display: block;
     }
     
+
+    /* HEADER */
     .cabecalho {
         background: url('../imagens/background.jpg') no-repeat center fixed;
         background-size: cover;
@@ -160,6 +171,8 @@
         text-shadow: 2px 2px 7px #000;
     }
 
+    /* INFO */
+
     .info {
         padding: 60px 0;
         background: #a25050;
@@ -182,7 +195,7 @@
 
     .init-anim {
         position: relative;
-        width: 100%;
+        max-width: 50%;
         padding-right: 15px;
         padding-left: 15px;
     }
@@ -204,11 +217,12 @@
 
     .info h3 {
         font-weight: 400;
-        font-size: 34px;
+        font-size: 28px;
         color: #fff;
     }
 
     .infoIMG {
+        float: left;
         width: 418px;
         height: 669px;
     }
@@ -221,7 +235,7 @@
         line-height: 32px; 
     }
 
-
+    /* FORM */
     .formProced input[type=text] {
         background-color: lightgray;
         padding: 10px;
@@ -273,7 +287,7 @@
         border-radius: 5px;
     }
 
-/* CSS */
+
     .button-2 {
             background-color: lightgray;
             border-radius: 8px;
@@ -308,6 +322,21 @@
         position: absolute;
         top: 68%;
     }   
+
+    /* PRINCIPAIS TRATAMENTOS */
+
+    /* IFRAME */
+
+    .iframe {
+        width: 100%;
+        height: 250px;
+    }
+
+    .iframe iframe {
+        width: 100%;
+        height: 100%;
+        border: 1px solid #000;
+    }
 
 
 

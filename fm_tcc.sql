@@ -50,6 +50,7 @@ CREATE TABLE `clientes` (
   `estado` varchar(2) DEFAULT NULL,
   `cidade` varchar(100) DEFAULT NULL,
   `bairro` varchar(100) DEFAULT NULL,
+  `rua` varchar(100) DEFAULT NULL,
   `numero` varchar(10) DEFAULT NULL,
   `descricao` varchar(100) DEFAULT NULL,
   `email` varchar(100) DEFAULT NULL,

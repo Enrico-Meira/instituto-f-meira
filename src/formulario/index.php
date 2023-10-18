@@ -20,7 +20,7 @@
 
                 <input type="text" name="clientes['numero']" id="numero" placeholder="Número"  > <br> <br>
 
-                <input type="text" name="clientes['celular']" id="celular" placeholder="Celular"  > <br> <br>
+                <!-- <input type="text" name="clientes['celular']" id="celular" placeholder="Celular"  > <br> <br> -->
 
                 <textarea name="clientes['descricao']" id="desc" cols="30" rows="10" placeholder="Descrição"></textarea> <br> <br>
 
