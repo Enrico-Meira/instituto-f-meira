@@ -3,73 +3,121 @@
     $head = "cabecalho2";
     include(header_template); 
 ?>
-    <div class="container">
-      <div class="left">
-        <div class="calendar">
-          <div class="month">
-            <i class="fas fa-angle-left prev"></i>
-            <div class="date">december 2015</div>
-            <i class="fas fa-angle-right next"></i>
-          </div>
-          <div class="weekdays">
-            <div>Sun</div>
-            <div>Mon</div>
-            <div>Tue</div>
-            <div>Wed</div>
-            <div>Thu</div>
-            <div>Fri</div>
-            <div>Sat</div>
-          </div>
-          <div class="days"></div>
-          <div class="goto-today">
-            <div class="goto">
-              <input type="text" placeholder="mm/yyyy" class="date-input" />
-              <button class="goto-btn">Go</button>
-            </div>
-            <button class="today-btn">Today</button>
-          </div>
-        </div>
-      </div>
-      <div class="right">
-        <div class="today-date">
-          <div class="event-day">wed</div>
-          <div class="event-date">12th december 2022</div>
-        </div>
-        <div class="events"></div>
-        <div class="add-event-wrapper">
-          <div class="add-event-header">
-            <div class="title">Add Event</div>
-            <i class="fas fa-times close"></i>
-          </div>
-          <div class="add-event-body">
-            <div class="add-event-input">
-              <input type="text" placeholder="Event Name" class="event-name" />
-            </div>
-            <div class="add-event-input">
-              <input
-                type="text"
-                placeholder="Event Time From"
-                class="event-time-from"
-              />
-            </div>
-            <div class="add-event-input">
-              <input
-                type="text"
-                placeholder="Event Time To"
-                class="event-time-to"
-              />
-            </div>
-          </div>
-          <div class="add-event-footer">
-            <button class="add-event-btn">Add Event</button>
-          </div>
-        </div>
-      </div>
-      <button class="add-event">
-        <i class="fas fa-plus"></i>
-      </button>
-    </div>
+    <script src="../js/index.global.js"></script>
+    <script>
 
-    <script src="../js/script.js"></script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var calendarEl = document.getElementById('calendar');
+
+      var calendar = new FullCalendar.Calendar(calendarEl, {
+        headerToolbar: {
+          left: 'prev,next today',
+          center: 'title',
+          right: 'dayGridMonth,timeGridWeek,timeGridDay'
+        },
+        initialDate: '2023-01-12',
+        navLinks: true, // can click day/week names to navigate views
+        selectable: true,
+        selectMirror: true,
+        select: function(arg) {
+          var title = prompt('Event Title:');
+          if (title) {
+            calendar.addEvent({
+              title: title,
+              start: arg.start,
+              end: arg.end,
+              allDay: arg.allDay
+            })
+          }
+          calendar.unselect()
+        },
+        eventClick: function(arg) {
+          if (confirm('Are you sure you want to delete this event?')) {
+            arg.event.remove()
+          }
+        },
+        editable: true,
+        dayMaxEvents: true, // allow "more" link when too many events
+        events: [
+          {
+            title: 'All Day Event',
+            start: '2023-01-01'
+          },
+          {
+            title: 'Long Event',
+            start: '2023-01-07',
+            end: '2023-01-10'
+          },
+          {
+            groupId: 999,
+            title: 'Repeating Event',
+            start: '2023-01-09T16:00:00'
+          },
+          {
+            groupId: 999,
+            title: 'Repeating Event',
+            start: '2023-01-16T16:00:00'
+          },
+          {
+            title: 'Conference',
+            start: '2023-01-11',
+            end: '2023-01-13'
+          },
+          {
+            title: 'Meeting',
+            start: '2023-01-12T10:30:00',
+            end: '2023-01-12T12:30:00'
+          },
+          {
+            title: 'Lunch',
+            start: '2023-01-12T12:00:00'
+          },
+          {
+            title: 'Meeting',
+            start: '2023-01-12T14:30:00'
+          },
+          {
+            title: 'Happy Hour',
+            start: '2023-01-12T17:30:00'
+          },
+          {
+            title: 'Dinner',
+            start: '2023-01-12T20:00:00'
+          },
+          {
+            title: 'Birthday Party',
+            start: '2023-01-13T07:00:00'
+          },
+          {
+            title: 'Click for Google',
+            url: 'http://google.com/',
+            start: '2023-01-28'
+          }
+        ]
+      });
+
+      calendar.render();
+    });
+
+  </script>
+  <style>
+
+    body {
+      padding: 0;
+      font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+      font-size: 14px;
+    }
+
+    #calendar {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+  </style>
+  </head>
+  <body>
+
+    <div id='calendar'></div>
+
   </body>
 </html>
