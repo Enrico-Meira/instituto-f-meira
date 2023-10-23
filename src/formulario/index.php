@@ -20,12 +20,12 @@
 
                 <input type="text" name="clientes['numero']" id="numero" placeholder="Número"  > <br> <br>
 
-                <!-- <input type="text" name="clientes['celular']" id="celular" placeholder="Celular"  > <br> <br> -->
+                <input type="text" name="clientes['telefone']" id="telefone" placeholder="Telefone"  > <br> <br>
 
                 <textarea name="clientes['descricao']" id="desc" cols="30" rows="10" placeholder="Descrição"></textarea> <br> <br>
 
-                <!-- <label class="dateLabel">Data de nascimento:</label> <br>
-                <input type="date" name="clientes['data_nasc']"  > <br> <br> -->
+                <label class="dateLabel">Data de nascimento:</label> <br>
+                <input type="date" name="clientes['data_nasc']"  > <br> <br>
 
                 <!-- <label>Gênero:</label> <br>
 

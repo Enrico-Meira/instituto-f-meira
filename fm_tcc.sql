@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `fm_tcc1`
+-- Banco de dados: `fm_tcc`
 --
 
 -- --------------------------------------------------------
@@ -45,14 +45,16 @@ CREATE TABLE `agendamentos` (
 CREATE TABLE `clientes` (
   `id_clientes` varchar(13) NOT NULL,
   `nome` varchar(250) DEFAULT NULL,
-  `data_nasc` datetime DEFAULT NULL,
   `cpf` varchar(11) DEFAULT NULL,
   `estado` varchar(2) DEFAULT NULL,
   `cidade` varchar(100) DEFAULT NULL,
   `bairro` varchar(100) DEFAULT NULL,
   `rua` varchar(100) DEFAULT NULL,
   `numero` varchar(10) DEFAULT NULL,
+  `telefone` varchar(11) DEFAULT NULL,
   `descricao` varchar(100) DEFAULT NULL,
+  `data_nasc` datetime DEFAULT NULL,
+  `genero` varchar(100) DEFAULT NULL,
   `email` varchar(100) DEFAULT NULL,
   `senha` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
