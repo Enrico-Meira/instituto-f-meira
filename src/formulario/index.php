@@ -10,6 +10,8 @@
             <form class="formProced" method="post" action="index.php" enctype="multipart/form-data">     
                 <input type="text" name="clientes['nome']" id="nome-completo" placeholder="Nome completo"  > <br> <br>
 
+                <input type="text" name="clientes['cpf']" id="cpf" placeholder="CPF"  > <br> <br>
+
                 <input type="text" name="clientes['estado']" id="estado" placeholder="Estado"  > <br> <br>
 
                 <input type="text" name="clientes['cidade']" id="cidade" placeholder="Cidade"  > <br> <br>
@@ -27,7 +29,7 @@
                 <label class="dateLabel">Data de nascimento:</label> <br>
                 <input type="date" name="clientes['data_nasc']"  > <br> <br>
 
-                <!-- <label>Gênero:</label> <br>
+                <label>Gênero:</label> <br>
 
                 <label class="form-control" for="feminino">Feminino</label>
                 <input type="radio" name="clientes['genero']" id="feminino" value="feminino">
@@ -39,7 +41,7 @@
                 <input type="radio" name="clientes['genero']" id="outros" value="outros">
 
                 <br>
-                <br> -->
+                <br>
 
                 <input type="email" name="clientes['email']" id="email" placeholder="Email"  > <br> <br>
                 <input type="password" name="senha" id="senha" placeholder="Senha"  > <br> <br>

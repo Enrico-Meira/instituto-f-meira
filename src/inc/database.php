@@ -172,7 +172,6 @@
 		
 		$sql = "INSERT INTO " . $table . " ($columns)" . " VALUES " . "($values);";
 
-
 		try {
 
 		$database->query($sql);
