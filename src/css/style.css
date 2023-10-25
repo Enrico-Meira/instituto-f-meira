@@ -35,7 +35,7 @@
     }
 
     .cabecalho2 {
-        background-color: aqua;
+        background-color: #BF3B7B;
         background-size: cover;
         position: sticky;
         z-index: 999;     
@@ -325,6 +325,58 @@
 
     /* PRINCIPAIS TRATAMENTOS */
 
+    .trat-title {
+        padding: 60px 0px 0px 0px;
+        /* text-align: center; */
+    }
+
+    .trat-container {
+        width: 100%;
+        padding: 0px 15px;
+        margin-right: auto;
+        margin-left: auto;    
+    }
+
+    .trat-title h2{
+        font-weight: 300;
+        color: saddlebrown;
+        font-size: 45px;
+    }
+
+    .linha-title {
+        margin-bottom: 30px;
+    }
+
+    .linha-title img {
+        border: none !important;
+        box-sizing: border-box;
+        max-width: 100%;
+        max-height: 100%;
+        height: auto;
+        vertical-align: middle;
+    }
+
+    .linha-title:before {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 10px;
+        width: 80px;
+        height: 0;
+        border: 0.5px solid #9a9a9a;
+    }
+
+    .linha-title:after {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 10px;
+        width: 80px;
+        height: 0;
+        border: 0.5px solid #9a9a9a;
+    }
+
+
     /* IFRAME */
 
     .iframe {
@@ -340,3 +392,7 @@
 
     /* FOOTER */
 
+    /* CALENDÁRIO */
+    .fc .fc-button {
+        margin: auto 2px;
+    }

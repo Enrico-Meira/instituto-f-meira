@@ -104,13 +104,14 @@
 
     body {
       padding: 0;
-      font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+      /* font-family: Arial, Helvetica Neue, Helvetica, sans-serif; */
       font-size: 14px;
     }
 
     #calendar {
       max-width: 1100px;
-      margin: 0 auto;
+      margin: 30px auto;
+      
     }
 
   </style>
