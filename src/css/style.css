@@ -327,14 +327,15 @@
 
     .trat-title {
         padding: 60px 0px 0px 0px;
-        /* text-align: center; */
+        text-align: center;
     }
 
     .trat-container {
         width: 100%;
         padding: 0px 15px;
-        margin-right: auto;
-        margin-left: auto;    
+        margin: 0px auto;
+        /* margin-right: auto;
+        margin-left: auto;     */
     }
 
     .trat-title h2{
@@ -352,7 +353,8 @@
         box-sizing: border-box;
         max-width: 100%;
         max-height: 100%;
-        height: auto;
+        width: 29px;
+        height: 32px;
         vertical-align: middle;
     }
 
@@ -376,6 +378,58 @@
         border: 0.5px solid #9a9a9a;
     }
 
+    .fotos {
+        padding: 30px 0px;
+        text-align: center;
+    }
+
+    .proced-container {
+        width: 100%;
+        padding: 0px 15px;
+        margin: 0px auto;
+    }
+
+    .autoplay {
+        margin-bottom: 30px;
+    }
+
+    .slick-list {
+        position: relative;
+        display: block;
+        overflow: hidden;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .slick-track {
+        position: relative;
+        top: 0px;
+        left: 0px;
+        display: block;
+    }
+
+    .div-st {
+        opacity: 1; 
+        width: 1110px; transform: translate3d(0px, 0px, 0px);
+    }
+
+    .slick-slide {
+        float: left;
+        height: 100%;
+        min-height: 1px;
+    }
+
+    .div-sl {
+        width: 100%;
+        display: inline-block;  
+    }
+
+   
+
+    .protocoll-img {
+        width: 200px;
+        height: 200px;
+    }
 
     /* IFRAME */
 
@@ -391,6 +445,11 @@
     }
 
     /* FOOTER */
+    footer {
+        background-color: var(--quaternary-color);
+        
+
+    }
 
     /* CALENDÁRIO */
     .fc .fc-button {
