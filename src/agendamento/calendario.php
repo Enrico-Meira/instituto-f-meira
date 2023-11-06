@@ -3,73 +3,31 @@
     $head = "cabecalho2";
     include(header_template); 
 ?>
-    <div class="container">
-      <div class="left">
-        <div class="calendar">
-          <div class="month">
-            <i class="fas fa-angle-left prev"></i>
-            <div class="date">december 2015</div>
-            <i class="fas fa-angle-right next"></i>
-          </div>
-          <div class="weekdays">
-            <div>Sun</div>
-            <div>Mon</div>
-            <div>Tue</div>
-            <div>Wed</div>
-            <div>Thu</div>
-            <div>Fri</div>
-            <div>Sat</div>
-          </div>
-          <div class="days"></div>
-          <div class="goto-today">
-            <div class="goto">
-              <input type="text" placeholder="mm/yyyy" class="date-input" />
-              <button class="goto-btn">Go</button>
-            </div>
-            <button class="today-btn">Today</button>
-          </div>
-        </div>
-      </div>
-      <div class="right">
-        <div class="today-date">
-          <div class="event-day">wed</div>
-          <div class="event-date">12th december 2022</div>
-        </div>
-        <div class="events"></div>
-        <div class="add-event-wrapper">
-          <div class="add-event-header">
-            <div class="title">Add Event</div>
-            <i class="fas fa-times close"></i>
-          </div>
-          <div class="add-event-body">
-            <div class="add-event-input">
-              <input type="text" placeholder="Event Name" class="event-name" />
-            </div>
-            <div class="add-event-input">
-              <input
-                type="text"
-                placeholder="Event Time From"
-                class="event-time-from"
-              />
-            </div>
-            <div class="add-event-input">
-              <input
-                type="text"
-                placeholder="Event Time To"
-                class="event-time-to"
-              />
-            </div>
-          </div>
-          <div class="add-event-footer">
-            <button class="add-event-btn">Add Event</button>
-          </div>
-        </div>
-      </div>
-      <button class="add-event">
-        <i class="fas fa-plus"></i>
-      </button>
-    </div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+    <script src="../js/evo-calendar.min.js"></script>
 
-    <script src="../js/script.js"></script>
-  </body>
+    <script>
+
+      $(document).ready(function() {
+        $('#calendar').evoCalendar({
+          //settingName: settingValue
+        })
+      })
+
+    </script>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <link rel="stylesheet" href="<?php echo baseurl; ?>/src/css/evo-calendar.min.css">
+  <link rel="stylesheet" href="<?php echo baseurl; ?>/src/css/evo-calendar.midnight-blue.min.css">
+</head>
+<body>
+  <div id='calendar'></div>
+</body>
 </html>
+

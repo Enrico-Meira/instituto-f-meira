@@ -1,4 +1,13 @@
-    body {
+   /* GERAL */
+   :root {
+       --primary-color: #FCD8D4;
+       --secondary-color: #FDF6F0;
+       --tertiary-color: #F8E2CF;
+       --quaternary-color: #F5C6AA;
+   }
+
+
+   body {
         color: #333;
         background: #fff;
         /* font-family: ; */
@@ -12,6 +21,8 @@
         display: block;
     }
     
+
+    /* HEADER */
     .cabecalho {
         background: url('../imagens/background.jpg') no-repeat center fixed;
         background-size: cover;
@@ -24,7 +35,7 @@
     }
 
     .cabecalho2 {
-        background-color: aqua;
+        background-color: #BF3B7B;
         background-size: cover;
         position: sticky;
         z-index: 999;     
@@ -160,6 +171,8 @@
         text-shadow: 2px 2px 7px #000;
     }
 
+    /* INFO */
+
     .info {
         padding: 60px 0;
         background: #a25050;
@@ -182,7 +195,7 @@
 
     .init-anim {
         position: relative;
-        width: 100%;
+        max-width: 50%;
         padding-right: 15px;
         padding-left: 15px;
     }
@@ -204,11 +217,12 @@
 
     .info h3 {
         font-weight: 400;
-        font-size: 34px;
+        font-size: 28px;
         color: #fff;
     }
 
     .infoIMG {
+        float: left;
         width: 418px;
         height: 669px;
     }
@@ -221,7 +235,7 @@
         line-height: 32px; 
     }
 
-
+    /* FORM */
     .formProced input[type=text] {
         background-color: lightgray;
         padding: 10px;
@@ -273,7 +287,7 @@
         border-radius: 5px;
     }
 
-/* CSS */
+
     .button-2 {
             background-color: lightgray;
             border-radius: 8px;
@@ -309,5 +323,135 @@
         top: 68%;
     }   
 
+    /* PRINCIPAIS TRATAMENTOS */
 
+    .trat-title {
+        padding: 60px 0px 0px 0px;
+        text-align: center;
+    }
 
+    .trat-container {
+        width: 100%;
+        padding: 0px 15px;
+        margin: 0px auto;
+        /* margin-right: auto;
+        margin-left: auto;     */
+    }
+
+    .trat-title h2{
+        font-weight: 300;
+        color: saddlebrown;
+        font-size: 45px;
+    }
+
+    .linha-title {
+        margin-bottom: 30px;
+    }
+
+    .linha-title img {
+        border: none !important;
+        box-sizing: border-box;
+        max-width: 100%;
+        max-height: 100%;
+        width: 29px;
+        height: 32px;
+        vertical-align: middle;
+    }
+
+    .linha-title:before {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 10px;
+        width: 80px;
+        height: 0;
+        border: 0.5px solid #9a9a9a;
+    }
+
+    .linha-title:after {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 10px;
+        width: 80px;
+        height: 0;
+        border: 0.5px solid #9a9a9a;
+    }
+
+    .fotos {
+        padding: 30px 0px;
+        text-align: center;
+    }
+
+    .proced-container {
+        width: 100%;
+        padding: 0px 15px;
+        margin: 0px auto;
+    }
+
+    .autoplay {
+        margin-bottom: 30px;
+    }
+
+    .slick-list {
+        position: relative;
+        display: block;
+        overflow: hidden;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .slick-track {
+        position: relative;
+        top: 0px;
+        left: 0px;
+        display: block;
+    }
+
+    .div-st {
+        opacity: 1; 
+        width: 1110px; transform: translate3d(0px, 0px, 0px);
+    }
+
+    .slick-slide {
+        float: left;
+        height: 100%;
+        min-height: 1px;
+    }
+
+    .div-sl {
+        width: 100%;
+        display: inline-block;  
+    }
+
+   
+
+    .protocoll-img {
+        width: 200px;
+        height: 200px;
+    }
+
+    /* IFRAME */
+
+    .iframe {
+        width: 100%;
+        height: 250px;
+    }
+
+    .iframe iframe {
+        width: 100%;
+        height: 100%;
+        border: 1px solid #000;
+    }
+
+    /* FOOTER */
+    footer {
+        background-color: var(--quaternary-color);
+        
+
+    }
+
+    /* CALENDÁRIO */
+    .fc .fc-button {
+        margin: auto 2px;
+    }

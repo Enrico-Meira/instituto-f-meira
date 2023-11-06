@@ -8,7 +8,6 @@
         <link rel="stylesheet" href="<?php echo baseurl; ?>/src/css/reset.css">
         <link rel="stylesheet" href="<?php echo baseurl; ?>/src/css/style.css">
         <link rel="stylesheet" href="<?php echo baseurl; ?>/src/css/button.css">
-        <link rel="stylesheet" href="<?php echo baseurl; ?>/src/css/awesome/all.min.css">
         <title>TCC</title>
     </head>
     <body>
@@ -28,7 +27,7 @@
                         <a href="<?php echo baseurl; ?>/src/agendamento/calendario.php">Agendamento</a>
                     </li>
                     <li>
-                        <a href="#">Fale conosco</a>
+                        <a href="<?php echo baseurl; ?>/src/pages/about.php">Sobre nós</a>
                     </li>
                     <li>
                         <a href="">

@@ -148,10 +148,8 @@
 		// remove a ultima virgula
 		$columns = rtrim($columns, ',');
 		$values = rtrim($values, ',');
-
-		$id = gerar_id();
 		
-		$sql = "INSERT INTO " . $table . "($id, $columns)" . " VALUES " . "($values);";
+		$sql = "INSERT INTO " . $table . "($columns)" . " VALUES " . "($values);";
 	
 		try {
 		$database->query($sql);
