@@ -129,7 +129,7 @@
 
 	// gerar_id funcionando, falta conseguir usar o id gerado na inserção do banco!
 
-	function gerar_id( $table = null, $id_name = null , $id = null )
+	function gerar_id( $table = null, $id_name = null )
 	{
 		$database = open_database();
 		$id_gerado = null;
@@ -137,12 +137,13 @@
 		try 
 		{
 			$id_gerado = uniqid();
-			$sql = "SELECT $id_name FROM " . $table . "WHERE" . $id_name . "=" . $id_gerado;
+			$sql = "SELECT " . $id_name . " FROM " . $table . " WHERE " . $id_name . " = " . $id_gerado;
 			$result = $database->query($sql);
 
 			if($result == null)
 			{
 				$id = $id_gerado;
+				return $id;
 			}
 			else 
 			{
@@ -154,12 +155,13 @@
 			$_SESSION['message'] = "Erro ao tentar gerar ID: " . $e->GetMessage();
 			$_SESSION['type'] = 'danger';
 		}
+		close_database ($database);
 	}
 
 	/**
 	*  Insere um registro no BD
 	*/
-	function save($table = null, $data = null) 
+	function save($table = null, $data = null, $id_clientes = null) 
     {
 		$database = open_database();
 	
@@ -177,7 +179,7 @@
 		$columns = rtrim($columns, ',');
 		$values = rtrim($values, ',');
 		
-		$sql = "INSERT INTO " . $table . "($columns)" . " VALUES " . "($values);";
+		$sql = "INSERT INTO " . $table . "($id_clientes, $columns)" . " VALUES " . "($values);";
 	
 		try {
 		$database->query($sql);

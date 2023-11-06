@@ -16,13 +16,13 @@
 	/**
  	 *  Cadastro de Clientes
 	 */
-	function add() {
+	function add($id_clientes) {
 
 		if (!empty($_POST['cliente'])) {
 
 		$cliente = $_POST['cliente'];
 
-		save('clientes', $cliente);
+		save('clientes', $cliente, $id_clientes);
 		header('location: index.php');
 		}
 	}
@@ -73,6 +73,7 @@
 	{	
 		global $gerar;
 		$gerar = gerar_id("clientes", "id_clientes");
+		return $gerar;
 	}
 
 ?>
