@@ -235,6 +235,46 @@
         line-height: 32px; 
     }
 
+    /* PRINCIPAIS TRATAMENTOS */
+
+    .slider {
+        width: 1300px;
+        max-width: 100vw;
+        height: 400px;
+        margin: auto;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .list {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        display: flex;
+        width: max-content;
+        transition: 1s;
+    }
+
+    .buttons {
+        position: absolute;
+        top: 120%;
+        left: 5%;
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .buttons button {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #fff5;
+        color: #fff;
+        border: none;
+        font-weight: bold;
+    }
+
     /* FORM */
     .formProced input[type=text] {
         background-color: lightgray;
@@ -323,9 +363,11 @@
         top: 68%;
     }   
 
+
+
     /* PRINCIPAIS TRATAMENTOS */
 
-    .trat-title {
+    .trat-title-container {
         padding: 60px 0px 0px 0px;
         text-align: center;
     }
@@ -338,7 +380,7 @@
         margin-left: auto;     */
     }
 
-    .trat-title h2{
+    .trat-title-container h2{
         font-weight: 300;
         color: saddlebrown;
         font-size: 45px;
@@ -378,58 +420,57 @@
         border: 0.5px solid #9a9a9a;
     }
 
-    .fotos {
-        padding: 30px 0px;
+    .general-container {
+        max-width: 1320px;
+        margin-left: 278px;
+    }
+
+    .trats-container {
+        position: relative;
+        display: block;
+        opacity: 1;
+        width: 1290px;
+        transform: translate3d(0px, 0px, 0px);
+        content: "";
+        display: table;
+        margin: 30px 0;
+    }
+    
+    .trat-container {
+        display: inline-block;
+        width: 100%;
+        text-align: center;        
+        width: 20.0%;
+        padding: 5px 0; 
+    }
+
+     .trat-container img{
+        border-radius: 50%;
+        margin-bottom: 15px;
+        max-width: 100%;
+        max-height: 100%;
+        height: auto;
+        vertical-align: middle;
+        border-style: none;
+        
+    }
+
+    .trat-container h2{
+        border-bottom: 0.5px solid #c9c9c9;
+        font-size: 18px;
+        font-weight: 600;
+        margin: 0 10px;
+        padding: 5px 0;
+    }
+
+    .trat-container p{
+        font-size: 13px;
         text-align: center;
+        margin: 0 10px;
+        font-weight: 400;
     }
 
-    .proced-container {
-        width: 100%;
-        padding: 0px 15px;
-        margin: 0px auto;
-    }
 
-    .autoplay {
-        margin-bottom: 30px;
-    }
-
-    .slick-list {
-        position: relative;
-        display: block;
-        overflow: hidden;
-        margin: 0px;
-        padding: 0px;
-    }
-
-    .slick-track {
-        position: relative;
-        top: 0px;
-        left: 0px;
-        display: block;
-    }
-
-    .div-st {
-        opacity: 1; 
-        width: 1110px; transform: translate3d(0px, 0px, 0px);
-    }
-
-    .slick-slide {
-        float: left;
-        height: 100%;
-        min-height: 1px;
-    }
-
-    .div-sl {
-        width: 100%;
-        display: inline-block;  
-    }
-
-   
-
-    .protocoll-img {
-        width: 200px;
-        height: 200px;
-    }
 
     /* IFRAME */
 
