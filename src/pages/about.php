@@ -56,3 +56,8 @@
                 </div>
             </div>
     </main>
+
+
+    <?php 
+        require_once(footer_template);
+    ?>

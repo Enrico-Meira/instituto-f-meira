@@ -29,12 +29,15 @@
   <link rel="stylesheet" href="<?php echo baseurl; ?>/src/css/calendar.css">
   <link rel="stylesheet" href="<?php echo baseurl; ?>/src/css/evo-calendar.min.css">
   <link rel="stylesheet" href="<?php echo baseurl; ?>/src/css/evo-calendar.midnight-blue.min.css">
+
 </head>
-<body>
+
   <div class="hero">
     <div id="calendar"></div>
   </div>
   
-</body>
-</html>
+
+  <?php 
+      require_once(footer_template);
+  ?>
 
