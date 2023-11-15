@@ -1,36 +1,43 @@
-﻿<?php
+<?php
 
 	mysqli_report(MYSQLI_REPORT_STRICT);
-	
+
 	date_default_timezone_set("America/Sao_Paulo");
 
-	function formataCPF($cpf)
-    {
-        return substr($cpf, 0, 3) . "." . substr($cpf, 2, 3) . "." . substr($cpf, 5, 3) . "-" . substr($cpf, 8, 2);
-    }
-
-	function formataData($data, $formato) {
-		$d = new Datetime($data);
+	function formataData($data, $formato)
+	{
+		$d = new DateTime ($data);
 		return $d->format($formato);
 	}
 
-	function formataTelefone($fone) {
-			return "(" . substr($fone, 0, 2) . ") " .
-			substr($fone, 2, 4) . "-" . substr($fone, 6, 4);
+	function formataTelefone($fone)
+	{
+		return "(" . substr($fone, 0, 2) . ")" . " ". substr($fone, 2, 4) . "-" . substr($fone, 6, 4);
 	}
 
-	function formataCelular($cell) {
+	function formataCelular($cell) 
+	{
 		return "(" . substr($cell, 0, 2) . ") " .
-		substr($cell, 2, 4) . "-" . substr($cell, 4, 8);
-}
+		substr($cell, 2, 5) . "-" . substr($cell, 7, 4);
+	}	
 
+	function formataCPF($cpf)
+	{
+		return substr($cpf, 0, 3) . "." . substr($cpf, 3, 3) . "." . substr($cpf, 6, 3) . "-" . substr($cpf, 9, 2);
+	}
+        
+        function formataCep($cep) 
+        {
+		return substr($cep, 0, 5) . "-" . substr($cep, 5, 3);
+	}
+	
 	function open_database() {
 		try {
 			$conn = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
-			$conn -> set_charset ("utf-8");
+			$conn -> set_charset ("utf8");	
 			return $conn;
 		} catch (Exception $e) {
-			echo "<h3>Ocorreu um erro:\n<br>" . $e->getMessage() . "</h3>";
+			echo "<h3> Ocorreu um erro: " . $e->getMessage() . "</h3>";
 			return null;
 		}
 	}
@@ -39,7 +46,7 @@
 		try {
 			mysqli_close($conn);
 		} catch (Exception $e) {
-			echo "<h3>Ocorreu um erro:\n<br>" . $e->getMessage() . "</h3>";
+			echo "<h3> Ocorreu um erro: " . $e->getMessage() . "</h3>";
 		}
 	}
 
@@ -55,8 +62,9 @@
 		if ($id) {
 			$sql = "SELECT * FROM " . $table . " WHERE id = " . $id;
 			$result = $database->query($sql);
+
 			
-			if ($result->num_rows > 0) {	
+			if ($result->num_rows > 0) {
 			$found = $result->fetch_assoc();
 			}
 			
@@ -66,13 +74,13 @@
 			$result = $database->query($sql);
 			
 			if ($result->num_rows > 0) {
-			$found = $result->fetch_all(MYSQLI_ASSOC);
+			//$found = $result->fetch_all(MYSQLI_ASSOC);
 			
-			/* Metodo alternativo
+			
 			$found = array();
 			while ($row = $result->fetch_assoc()) {
 			array_push($found, $row);
-			} */
+			}
 			}
 		}
 		} catch (Exception $e) {
@@ -84,91 +92,86 @@
 		return $found;
 	}
 
-	function filter( $table = null, $p = null ) 
-	{
-	
-		$database = open_database();
-		$found = null;
-
-		try 
+	function filter ($table = null, $p = null)
 		{
-			if ($p) 
-			{
-				$sql = "SELECT * FROM " . $table . " WHERE " . $p;
-				$result = $database->query($sql);
-				
-				if ($result->num_rows > 0) 
-				{	
-					$found = array();
-					while ($row = $result->fetch_assoc()) 
+			$database = open_database();
+			$found = null;
+			try {
+				if($p)
+				{
+					$sql = "SELECT * FROM " . $table .  " WHERE " . $p;
+	
+					$result = $database->query($sql);
+					
+					if ($result->num_rows > 0)
 					{
-						array_push($found, $row);
+						$found = array();
+						while($row = $result->fetch_assoc())
+						{
+							array_push($found, $row);
+						}
+					}
+					else 
+					{
+						throw new Exception ("Não foram encontrados registros de dados!");
 					}
 				}
 				
-			} 
-			else 
-			{
-				throw new Exception("Não foram encontrados registros de dados!");
+			} catch (Exception $e) {
+				$_SESSION['message'] = "Ocorreu um erro: " . $e->GetMessage();
+				$_SESSION['type'] = "danger";
 			}
-		}
-		catch (Exception $e) 
-		{
-		$_SESSION['message'] = "Ocorreu um erro: " . $e->GetMessage();
-		$_SESSION['type'] = 'danger';
-		}
 
-		close_database($database);
-		return $found;
-	}
-		
-	/**
-	 *  Pesquisa Todos os Registros de uma Tabela
-	 */
+			close_database($database);
+			return $found;
+		}
+	
 	function find_all( $table ) {
 		return find($table);
 	}
+
 	/**
 	*  Insere um registro no BD
 	*/
 	function save($table = null, $data = null) {
 
 		$database = open_database();
-	
+	  
 		$columns = null;
 		$values = null;
-	
+	  
 		//print_r($data);
-	
+	  
 		foreach ($data as $key => $value) {
-		$columns .= trim($key, "'") . ",";
-		$values .= "'$value',";
+		  $columns .= trim($key, "'") . ",";
+		  $values .= "'$value',";
 		}
-	
+	  
 		// remove a ultima virgula
 		$columns = rtrim($columns, ',');
 		$values = rtrim($values, ',');
 		
 		$sql = "INSERT INTO " . $table . "($columns)" . " VALUES " . "($values);";
-	
+	  
 		try {
-		$database->query($sql);
-	
-		$_SESSION['message'] = 'Registro cadastrado com sucesso.';
-		$_SESSION['type'] = 'success';
+		  $database->query($sql);
+	  
+		  $_SESSION['message'] = 'Registro cadastrado com sucesso.';
+		  $_SESSION['type'] = 'success';
 		
 		} catch (Exception $e) { 
 		
-		$_SESSION['message'] = 'Não foi possivel realizar a operação.';
-		$_SESSION['type'] = 'danger';
+		  $_SESSION['message'] = 'Nao foi possivel realizar a operacao.';
+		  $_SESSION['type'] = 'danger';
 		} 
-	
+	  
 		close_database($database);
-	}
+	  }
+
 	/**
 	 *  Atualiza um registro em uma tabela, por ID
 	 */
-	function update($table = null, $id = null, $data = null) {
+	function update($table = null, $id = 0, $data = null) {
 
 		$database = open_database();
 	
@@ -187,60 +190,60 @@
 	
 		try {
 		$database->query($sql);
-	
-		$_SESSION['message'] = '<h3> Registro atualizado com sucesso. </h3>';
+	 
+		$_SESSION['message'] = "<h3> Registro atualizado com sucesso. </h3>";
 		$_SESSION['type'] = 'success';
 	
 		} catch (Exception $e) { 
 	
-		$_SESSION['message'] = '<h3> Nao foi possivel realizar a operacao. </h3>';
+		$_SESSION['message'] = "<h3> Nao foi possivel realizar a operacao. </h3>";
 		$_SESSION['type'] = 'danger';
 		} 
 	
 		close_database($database);
 	}
-	/**
-	 *  Remove uma linha de uma tabela pelo ID do registro
-	 */
-	function remove( $table = null, $id = null ) {
 
-	$database = open_database();
-		
-		try {
+
+		/**
+		 *  Remove uma linha de uma tabela pelo ID do registro
+		 */
+		function remove( $table = null, $id = null ) 
+		{
+
+			$database = open_database();
+			
+			try {
 			if ($id) {
-
-			$sql = "DELETE FROM " . $table . " WHERE id = " . $id;
-			$result = $database->query($sql);
-
-			if ($result = $database->query($sql)) {   	
+		
+				$sql = "DELETE FROM " . $table . " WHERE id = " . $id;
+				$result = $database->query($sql);
+		
+				if ($result = $database->query($sql)) {   	
 				$_SESSION['message'] = "Registro Removido com Sucesso.";
 				$_SESSION['type'] = 'success';
+				}
 			}
-			}
-		} catch (Exception $e) { 
-
+			} catch (Exception $e) { 
+		
 			$_SESSION['message'] = $e->GetMessage();
 			$_SESSION['type'] = 'danger';
+			}
+		
+			close_database($database);
 		}
 
-		close_database($database);
+		function criptografia($senha)
+	{
+		$custo = "08";
+		$salt = "CflfilePArKlBJomM0F6aJ";
+		$hash = crypt($senha, "$2a$" . $custo . "$" . $salt	."$");
+
+		return $hash;
 	}
 
-	function criptografia($senha)
-    {
-        $custo = "08";
-        $salt = 'Cf1f11ePArKlBJomM0F6aJ';
-        
-        // Gera um hash baseado em bcrypt
-        $hash = crypt($senha, '$2a$' . $custo . '$' . $salt . '$');
+		function clear_messages() {
 
-        return $hash;
-    }
-
-	function clear_messages()
-    {
-        $_SESSION['message'] = null;
-        $_SESSION['type'] = null;
-    }
-	
-?>
+			$_SESSION['type'] = "";
+			$_SESSION['message'] = "";
+		}
+	?>

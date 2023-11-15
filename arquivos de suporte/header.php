@@ -1,5 +1,3 @@
-﻿<?php if (!isset($_SESSION)) session_start(); ?>
-
 <!DOCTYPE html>
 <html>
 	<head>
@@ -31,16 +29,20 @@
 				color: #FFFFFF;
 				background-color: #666666;
 			}
-			.header, #actions, .barra {
+			h2, .header, #actions, .barra {
 				margin-top: 10px;
 			}
 
 			.background{
-				background-image: url("../images/indexDark.jpg"); 
+				background-image: url("/../images/IndexDark.jpg"); 
 				background-color: whitesmoke;
 				height: 500px;
 				background-position: center; 
 				background-size: cover;
+			}
+			.right{
+				display: block;
+ 				margin-left: auto;
 			}
 			
 		</style>
@@ -84,24 +86,36 @@
 								<li class="nav-item dropdown">
 									<a class="nav-link dropdown-toggle" href="#"  role="button" data-bs-toggle="dropdown"><i class="fa-solid fa-user-group"></i> Usuarios</a>
 									<ul class="dropdown-menu">
-									<li><a class="dropdown-item" href="<?php echo BASEURL; ?>usuarios"><i class="fa-solid fa-user-group"></i></i> Gerenciar Usuarios</a></li>
-									<li><a class="dropdown-item" href="<?php echo BASEURL; ?>usuarios/add.php"><i class="fa-solid fa-user-plus"></i> Novo Usuario</a></li>
+                                        <li><a class="dropdown-item" href="<?php echo BASEURL; ?>usuarios"><i class="fa-solid fa-user-group"></i></i> Gerenciar Usuarios</a></li>
+                                       	<li><a class="dropdown-item" href="<?php echo BASEURL; ?>usuarios/add.php"><i class="fa-solid fa-user-plus"></i> Novo Usuario</a></li>
 									</ul> 
 								</li>
 							<?php endif; ?>
-
-							<li class="nav-item">
-								<a href="#" class="btn btn-sm btn-light" data-bs-toggle="modal" data-bs-target="#logoutmodal">
-								<i class="fa-solid fa-right-from-bracket"></i>Sair
-								</a>
-							</li>
+              
+                            <ul class="navbar-nav align-items-center">                       
+								<li class="nav-item">
+                                  <?php if(isset($_SESSION['id'])):?>
+                                    <h5 style="color: #d9d9d9; margin-left: 2rem; padding-right: 2rem;"> Bem vindo, <?php echo $_SESSION['user']; ?></h5>
+                                  <?php endif; ?>
+								</li>
+							</ul>
+              
+                            <ul class="navbar-nav align-items-center">                       
+								<li class="nav-item">
+									<a href="#" class="btn btn-sm btn-light" data-bs-toggle="modal" data-bs-target="#logoutmodal">
+									<i class="fa-solid fa-right-from-bracket"></i>Sair
+									</a>
+								</li>
+							</ul>
 
 						<?php else : ?>
-							<li class="nav-item">
-								<a class="btn btn-sm btn-light" href="<?php echo BASEURL; ?>inc/login.php">
-								<i class="fa-solid fa-right-to-bracket"></i> Login
-								</a>
-							</li>
+							<ul class="navbar-nav align-items-center mr-auto">
+								<li class="nav-item">
+								<a class="btn btn-sm btn-light" href="<?php echo BASEURL ?>inc/login.php">
+									<i class="fa-solid fa-right-to-bracket"></i> Login
+									</a>
+								</li>
+							</ul>
 						<?php endif; ?>
 					</ul>
 				</div>

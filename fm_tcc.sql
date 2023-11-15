@@ -44,7 +44,7 @@ CREATE TABLE `agendamentos` (
 
 CREATE TABLE `clientes` (
   `id_clientes` varchar(13) NOT NULL,
-  `nome` varchar(250) DEFAULT NULL,
+  `nome` varchar(100) DEFAULT NULL,
   `cpf` varchar(11) DEFAULT NULL,
   `estado` varchar(2) DEFAULT NULL,
   `cidade` varchar(100) DEFAULT NULL,
@@ -52,11 +52,11 @@ CREATE TABLE `clientes` (
   `rua` varchar(100) DEFAULT NULL,
   `numero` varchar(10) DEFAULT NULL,
   `telefone` varchar(11) DEFAULT NULL,
-  `descricao` varchar(100) DEFAULT NULL,
+  `descricao` varchar(250) DEFAULT NULL,
   `data_nasc` datetime DEFAULT NULL,
   `genero` varchar(100) DEFAULT NULL,
   `email` varchar(100) DEFAULT NULL,
-  `senha` varchar(100) DEFAULT NULL
+  `senha` varchar(30) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------

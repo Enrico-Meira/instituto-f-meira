@@ -1,6 +1,6 @@
 <?php
 
-	define ('db_nome', 'fm_tcc');
+	define ('db_name', 'fm_tcc');
 	define ('db_user', 'root');
 	define ('db_pass', '');
 	define ('db_host', 'localhost');

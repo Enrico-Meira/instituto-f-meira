@@ -1,6 +1,10 @@
 <?php 
     ob_start();
     include("../config.php");
+    if(!isset($_SESSION))
+        {
+          session_start();
+        }
     include(HEADER_TEMPLATE);
 ?>
 
@@ -11,11 +15,11 @@
         <div class="row">
             <h3> Faça login</h3>
             <div class="form-floating col-12 mb-2">
-                <input type="text" class="form-control" id="log" placeholder="Usuário" name="login">
+                <input type="text" class="form-control" id="log" placeholder="Usuário" name="login" required oninvalid="this.setCustomValidity('Preencha o Usuário!')" onchange="try{setCustomValidity('')}catch(e){}">
                 <label for="log">Usuário</label>
             </div>
             <div class="form-floating col-12 mb-2">
-                <input type="password" class="form-control" id="pass" placeholder="Senha" name="senha">
+                <input type="password" class="form-control" id="pass" placeholder="Senha" name="senha" maxlength="30" required oninvalid="this.setCustomValidity('Preencha a Senha!')" onchange="try{setCustomValidity('')}catch(e){}">
                 <label for="log">Senha</label>
             </div>
             <div class="form-floating col-12 mb-2">

@@ -29,7 +29,7 @@
     function open_database() 
     {
         try {
-            $conn = new mysqli( db_host, db_user, db_pass, db_nome);
+            $conn = new mysqli( db_host, db_user, db_pass, db_name);
             $conn -> set_charset ("utf-8");
             return $conn;
         } catch (Exception $e) {
