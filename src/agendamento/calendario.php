@@ -10,7 +10,10 @@
 
       $(document).ready(function() {
         $('#calendar').evoCalendar({
-          //settingName: settingValue
+          language: 'pt',
+          sidebarToggler: false,
+          eventDisplayDefault: false,
+          eventListToggler: false
         })
       })
 
@@ -23,11 +26,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title></title>
+  <link rel="stylesheet" href="<?php echo baseurl; ?>/src/css/calendar.css">
   <link rel="stylesheet" href="<?php echo baseurl; ?>/src/css/evo-calendar.min.css">
   <link rel="stylesheet" href="<?php echo baseurl; ?>/src/css/evo-calendar.midnight-blue.min.css">
+
 </head>
-<body>
-  <div id='calendar'></div>
-</body>
-</html>
+
+  <div class="hero">
+    <div id="calendar"></div>
+  </div>
+  
+
+  <?php 
+      require_once(footer_template);
+  ?>
 
