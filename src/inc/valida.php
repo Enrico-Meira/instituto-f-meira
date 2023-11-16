@@ -1,6 +1,6 @@
 <?php 
     ob_start();
-    include("../config.php");
+    include("../../config.php");
     require_once(dbpath);
     include(header_template);
 
@@ -13,14 +13,14 @@
     $bd = open_database();
     try {
         $bd -> select_db(db_name);
-        $usuario = $_POST['login'];
+        $cliente = $_POST['login'];
         $senha = $_POST['senha'];
 
-        if(!empty($usuario) && !empty($senha))
+        if(!empty($cliente) && !empty($senha))
         {
             //$senha = criptografia($_POST['senha']);
             
-            $sql = "SELECT id, nome, user, password FROM usuarios WHERE (user = '" . $usuario . "') AND (password = '" . $senha . "') LIMIT 1";
+            $sql = "SELECT id, nome, email, cpf password FROM clientes WHERE (email = '" . $cliente . "') AND (password = '" . $senha . "') LIMIT 1";
             $query = $bd->query($sql);
 
             if ($query->num_rows > 0)
@@ -32,20 +32,20 @@
 
                 $id = $dados['id'];
                 $nome = $dados['nome'];
-                $user = $dados['user'];
+                $email = $dados['email'];
                 $password = $dados['password'];
-                var_dump($user);
+                var_dump($email);
 
-                if(!empty($user))
+                if(!empty($email))
                 {
                     if (!isset($_SESSION)) session_start();
                     $_SESSION['message'] = "Bem vindo" . $nome . "!";
                     $_SESSION['type'] = "info";
                     $_SESSION['id'] = $id;
                     $_SESSION['nome'] = $nome;
-                    $_SESSION['user'] = $user;
+                    $_SESSION['email'] = $email;
                     echo "<b>";
-                    var_dump($user);
+                    var_dump($email);
                     echo "</b>";
                 }
 
@@ -54,7 +54,7 @@
                     throw new Exception ("Não foi possível se conectar! <br> Verifique seu usuário e senha.");
                 }
 
-                header("Location: " . BASEURL . "index.php");
+                header("Location: " . baseurl . "index.php");
             }
 
             else
@@ -82,7 +82,7 @@
 <?php endif; ?>
 
     <header>
-        <a href="<?php echo BASEURL ?>index.php" class="btn btn-light"><i class="fa-solid fa-rotate-left"></i></a>
+        <a href="<?php echo baseurl ?>index.php" class="btn btn-light"><i class="fa-solid fa-rotate-left"></i></a>
     </header>
     
 <?php 

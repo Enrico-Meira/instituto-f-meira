@@ -22,7 +22,7 @@
 
                 <input type="text" name="clientes['numero']" id="numero" placeholder="Número" maxlength="10" required> <br> <br>
 
-                <input type="text" name="clientes['telefone']" id="telefone" placeholder="Telefone" maxlength="11" required> <br> <br>
+                <input type="text" name="clientes['telefone']" id="telefone" placeholder="Telefone" maxlength="11" > <br> <br>
 
                 <textarea name="clientes['descricao']" id="desc" cols="30" rows="10" placeholder="Descrição" maxlength="250"></textarea> <br> <br>
 
@@ -45,10 +45,10 @@
                 <br>
 
                 <input type="email" name="clientes['email']" id="email" placeholder="Email" maxlength="100" required> <br> <br>
-                <input type="password" name="senha" id="senha" placeholder="Senha" maxlength="30" required onchange="senhaConfere();"> <br> <br>
-                <input type="password" name="clientes['senha']" id="confirma" placeholder="Confirme a senha" maxlength="30" required onchange="senhaConfere();"> <br> <br>
+                <input type="password" name="senha" id="senha" placeholder="Senha" maxlength="30" required onchange="confereSenha();"> <br> <br>
+                <input type="password" name="clientes['senha']" id="confirma" placeholder="Confirme a senha" maxlength="30" required onchange="confereSenha();"> <br> <br>
 
-                <input class="button-2" id="meuForm" type="submit" value="Enviar">
+                <input class="button-2" id="meuForm" type="submit" value="Enviar" onsubmit="">
                 
             </form>
         </main>

@@ -23,6 +23,8 @@
         </footer>
 
         <script src="<?php echo baseurl; ?>/src/js/awesome/all.min.js"></script>
+        <script src="<?php echo baseurl; ?>/src/js/main.js"></script>
+
     </body>
 </html>
 

@@ -15,8 +15,10 @@
 
 function confereSenha () 
 {
-    const senha = document.querySelector("input[id=senha]");
-    const confirma = document.querySelector("input[id=senha]");
+    // const senha = document.querySelector("input[name=senha]");
+    // const confirma = document.querySelector("input[name=confirma]");
+    const senha = document.querySelector("#senha");
+    const confirma = document.querySelector("#confirma");
 
     
     if (senha.matches(/[\"'/;<>[()~=]/))

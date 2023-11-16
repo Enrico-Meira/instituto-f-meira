@@ -127,11 +127,10 @@
 		return find($table);
 	}
 
-	// gerar_id funcionando, falta conseguir usar o id gerado na inserção do banco!
+	// gera um id único
 
-	function gerar_id( $table = null, $id_name = null )
+	function gerar_id()
 	{
-		$database = open_database();
 		$id_gerado = null;
 
 		try 
@@ -144,7 +143,35 @@
 			$_SESSION['message'] = "Erro ao tentar gerar ID: " . $e->GetMessage();
 			$_SESSION['type'] = 'danger';
 		}
-		
+	}
+
+	function email_query ($email)
+	{
+		$database = open_database();
+
+		$sql = "SELECT email FROM clientes WHERE " . $email . " = email";
+		$result = $database->query($sql);
+
+		if ($result -> num_rows > 0) {
+
+			die;
+			echo $result;
+
+			?>
+				<script>
+					document.setCustomValidity('');
+			<?php
+		}
+		else
+		{
+			?>
+					document.getElementById('email').focus;
+					document.setCustomValidity('Email já Cadastrado');
+				<script/>
+			<?php
+		}
+
+
 		close_database($database);
 	}
 
@@ -234,7 +261,7 @@
 			$sql = "DELETE FROM " . $table . " WHERE id = " . $id;
 			$result = $database->query($sql);
 
-			if ($result = $database->query($sql)) {   	
+			if ($result == $database->query($sql)) {   	
 				$_SESSION['message'] = "Registro Removido com Sucesso.";
 				$_SESSION['type'] = 'success';
 			}

@@ -29,11 +29,11 @@
                     <li>
                         <a href="<?php echo baseurl; ?>/src/pages/about.php">Sobre nós</a>
                     </li>
-                    <li>
-                        <a href="">
+                     <li>
+                         <a href="<?php echo baseurl; ?>/src/inc/login.php">
                             <i class="fa-solid fa-user icon"></i> Login
                         </a>
-                    </li>
+                    </li> 
                 </ul>
             </nav>
         </header>

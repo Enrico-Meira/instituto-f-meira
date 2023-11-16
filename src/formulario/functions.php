@@ -14,6 +14,13 @@
 		$clientes = find_all('clientes');
 	}
 
+	function testa_email() 
+	{
+		email_query(['email']);
+		die;
+		echo ['email'];
+	}
+
 	/**
  	 *  Cadastro de Clientes
 	 */
