@@ -47,7 +47,7 @@
                     <a href="">
                         <img class="linha-img" src="<?php echo baseurl; ?>/src/imagens/200.png">
                         <h2>Bioestimuladores de colágeno</h2>
-                        <p>São substâncias injetáveis que estimulam a produção de colágeno na pele. São utilizados para tratar rugas, flacidez e melhorar a textura da pele</p>
+                        <p>São substâncias injetáveis que estimulam a produção de colágeno na pele. São utilizados para tratar rugas, flacidez e melhorar a textura da pele.</p>
                     </a>
                 </div>
 
@@ -55,7 +55,7 @@
                     <a href="">
                         <img class="linha-img" src="<?php echo baseurl; ?>/src/imagens/200.png">
                         <h2>Fios de PDO</h2>
-                        <p> São fios absorvíveis que são inseridos na pele para promover um efeito de lifting facial, melhorando a firmeza e a sustentação da pele.</p>
+                        <p>São fios absorvíveis que são inseridos na pele para promover um efeito de lifting facial, melhorando a firmeza e a sustentação da pele.</p>
                     </a>
                 </div>
             </div>
