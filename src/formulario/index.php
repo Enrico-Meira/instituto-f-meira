@@ -12,7 +12,7 @@
 
                 <input type="text" name="clientes['cpf']" id="cpf" placeholder="CPF"  maxlength="11" required> <br> <br>
 
-                <input type="text" name="clientes['estado']" id="estado" placeholder="Estado" maxlength="2" required> <br> <br>
+                <!-- <input type="text" name="clientes['estado']" id="estado" placeholder="Estado" maxlength="2" required> <br> <br>
 
                 <input type="text" name="clientes['cidade']" id="cidade" placeholder="Cidade" maxlength="100" required> <br> <br>
 
@@ -42,13 +42,13 @@
                 <input type="radio" name="clientes['genero']" id="outros" value="outros">
 
                 <br>
-                <br>
+                <br> -->
 
                 <input type="email" name="clientes['email']" id="email" placeholder="Email" maxlength="100" required> <br> <br>
                 <input type="password" name="senha" id="senha" placeholder="Senha" maxlength="30" required onchange="confereSenha();"> <br> <br>
                 <input type="password" name="clientes['senha']" id="confirma" placeholder="Confirme a senha" maxlength="30" required onchange="confereSenha();"> <br> <br>
 
-                <input class="button-2" id="meuForm" type="submit" value="Enviar" onsubmit="">
+                <input class="button-2" id="meuForm" type="submit" value="Enviar">
                 
             </form>
         </main>
