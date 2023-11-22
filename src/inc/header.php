@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="<?php echo baseurl; ?>/src/css/style.css">
         <link rel="stylesheet" href="<?php echo baseurl; ?>/src/css/responsiveStyle.css">
         <link rel="stylesheet" href="<?php echo baseurl; ?>/src/css/button.css">
+        <link rel="stylesheet" href="<?php echo baseurl; ?>/src/css/proc.css">
         <title>TCC</title>
     </head>
     <body>
@@ -31,8 +32,8 @@
                     <li>
                         <a href="<?php echo baseurl; ?>/src/pages/about.php">Sobre nós</a>
                     </li>
-                     <li>
-                         <a href="<?php echo baseurl; ?>/src/inc/login.php">
+                    <li>
+                        <a href="<?php echo baseurl; ?>/src/inc/login.php">
                             <i class="fa-solid fa-user icon"></i> Login
                         </a>
                     </li> 

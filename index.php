@@ -17,7 +17,7 @@
                 </div>
                 <div class="saber">
                     <a href="">Tratamentos</a>
-                    <a href="">Contato</a>
+                    <a href="">Agendamentos</a>
                 </div>
             </div>
 

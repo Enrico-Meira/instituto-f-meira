@@ -20,7 +20,7 @@
         <div class="general-container">
             <div class="trats-container">
                 <div class="trat-container">
-                    <a href="">
+                    <a href="<?php echo baseurl; ?>/src/procedimentos/botox.php">
                         <img class="linha-img" src="<?php echo baseurl; ?>/src/imagens/200.png">
                         <h2>Toxina botulínica - botox</h2>
                         <p> O Botox é uma técnica que utiliza a toxina botulínica para suavizar rugas e linhas de expressão, proporcionando uma aparência mais jovem e relaxada.</p>

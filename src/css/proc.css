@@ -1,0 +1,148 @@
+/* BOTOX */
+
+.btx-container1 {
+    /* background-color: red; */
+    height: 800px;
+}
+
+.btx-container2 {
+    height: 500px;
+    background-color: var(--accent-color);
+}
+
+.btx-container2 h2 {
+    padding: 50px;
+    text-align: center;
+    font-size: 45px;
+}
+
+.logo-container {
+    position: relative;
+    top: 30px;
+}
+
+.btx-container2 p {
+    text-align: center;
+    font-size: 20px;
+    position: relative;
+    bottom: 55px;
+}
+
+.btx-container2 .linha-title {
+    width: 300px;
+    position: relative;
+    left: 770px;
+    bottom: 40px;
+}
+
+.botox-title {
+    width: 500px;
+    position: relative;
+    left: 300px;
+    top: 250px;
+}
+
+.botox-title h2 {
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: xx-large;
+    color: var(--dominant-color);
+}
+
+.botox-title p {
+    padding: 10px; 
+    border-radius: 10px; 
+    font-size: 18px; 
+    font-family: Arial; 
+    line-height: 1.4; 
+    margin: 10px 0; 
+    text-align: center;
+}
+
+.botox-img {
+    width: 10px;
+    height: 10px;
+}
+
+.botox-btn {
+    font-size: large;
+    border-color: #424242;
+    cursor: pointer;
+    background-color: white;
+    text-align: center;
+    border-radius: 16px;
+    position: relative;
+    top: 280px;
+    left: 460px;
+    width: 170px;
+    height: 40px;
+    border-width: 5px;
+}
+
+.hex-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.hex {
+    display: flex;
+    position: relative;
+    bottom: 300px;
+    left: 1051px;
+    width: 800px;
+    height: 800px;
+    background-color: #424242;
+    -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    clip-path: polygon(26% 0, 75% 0%, 100% 0, 100% 62%, 57% 95%, 8% 59%);
+}
+
+.logo-container {
+    position: relative;
+    display: inline-block;
+}
+
+.line {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-8%);
+    width: 200px;
+    height: 25px;
+    border-radius: 10px;
+    background-color: pink;
+}
+
+.line:nth-child(1) {
+    top: 10px;
+}
+
+.line:nth-child(2) {
+    top: 50px;
+}
+
+.line:nth-child(3) {
+    top: 90px;
+}
+
+.resultados {
+    display: flex;
+    flex-wrap: wrap;
+    /* margin: 0 -15px; */
+}
+
+.resultados img {
+    width: 255px;
+    height: 255px;
+    border-radius: 12px;
+    max-width: 100%;
+    transition: all 0.3s;
+    vertical-align: middle;
+    padding: 0 10px;
+    position: relative;
+    left: 410px;
+    bottom: 60px;
+    margin: 10px 0;
+}
+

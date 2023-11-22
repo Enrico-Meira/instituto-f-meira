@@ -1,15 +1,14 @@
    /* GERAL */
    :root {
-       --primary-color: #FCD8D4;
-       --secondary-color: #FDF6F0;
-       --tertiary-color: #F8E2CF;
-       --quaternary-color: #F5C6AA;
+       --dominant-color: #B1556D;
+       --complementary-color: #F5C8C7;
+       --accent-color: #FFAFC5; 
    }
 
 
    body {
         color: #333;
-        background: #fff;
+        background: white;
         /* font-family: ; */
         font-size: 13px;
         margin: 0;
@@ -128,7 +127,7 @@
     
 
     .main-container {
-        background-color: red;
+        background-color: var(--primary-color);
     }
     
     .name-container {
@@ -162,13 +161,13 @@
     }
 
     .saber a {
-        border: 0.5px solid red;
-        color: red;
+        border: 0.5px solid #8B9B9C;
+        color: var(--primary-color);
         padding: 10px 20px;
         font-size: 15px;
         margin: 0px 10px;
         font-weight: 400;
-        text-shadow: 2px 2px 7px #000;
+        text-shadow: 2px 2px 7px #8D8D8D;
     }
 
     /* INFO */
@@ -258,7 +257,7 @@
 
     .buttons {
         position: absolute;
-        top: 165%;
+        top: 180%;
         left: 5%;
         width: 90%;
         display: flex;
@@ -269,8 +268,8 @@
         width: 50px;
         height: 50px;
         border-radius: 50%;
-        background-color: #fff5;
-        color: #fff;
+        background-color: var(--accent-color);
+        color: rgb(255, 255, 255);
         border: none;
         font-weight: bold;
     }
@@ -382,7 +381,7 @@
 
     .trat-title-container h2{
         font-weight: 300;
-        color: saddlebrown;
+        color: var(--accent-color);
         font-size: 45px;
     }
 
@@ -457,6 +456,7 @@
     }
 
     .trat-container h2{
+        color: var(--accent-color);
         border-bottom: 0.5px solid #c9c9c9;
         font-size: 18px;
         font-weight: 600;
@@ -465,6 +465,7 @@
     }
 
     .trat-container p{
+        color: var(--complementary-color);
         font-size: 13px;
         text-align: center;
         margin: 0 10px;
@@ -488,10 +489,9 @@
 
     /* FOOTER */
     .footer {
-        background-color: var(--quaternary-color);
-        position: absolute;
-        /* left: 0; */
-        /* bottom: 0; */
+        background-color: var(--complementary-color);
+        position: fixed;
+        bottom: 300;
         width: 100%;
         height: 22.8%;
     }
