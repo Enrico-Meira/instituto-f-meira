@@ -6,7 +6,7 @@
         session_start();
         session_destroy();
 
-        header("Location: " . baseurl . "index.php");
+        header("Location: " . baseurl . "/index.php");
     } 
     catch (Exception $e) 
     {

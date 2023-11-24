@@ -21,34 +21,33 @@
             
             $sql = "SELECT nome, email, cpf, senha FROM clientes WHERE (email = '" . $cliente . "') AND (senha = '" . $senha . "') LIMIT 1";
             $query = $bd->query($sql);
-            var_dump($sql);
             if ($query->num_rows > 0)
             {
                 $dados = $query->fetch_assoc();
                 $nome = $dados['nome'];
                 $email = $dados['email'];
                 $cpf = $dados['cpf'];
-                $password = $dados['password'];
+                $senha = $dados['senha'];
 
 
                 if(!empty($email))
                 {
-                    if (!isset($_SESSION)) 
-                    {
-                        session_start();
+                    if (!isset($_SESSION)) session_start();
                         $_SESSION['message'] = "Bem vindo" . $nome . "!";
                         $_SESSION['type'] = "info";
                         $_SESSION['nome'] = $nome;
                         $_SESSION['email'] = $email;
-                    }
+                        $_SESSION['cpf'] = $cpf;
+                        $_SESSION['senha'] = $senha;
+                        
+                        echo $senha;
                 }
 
                 else
                 {
                     throw new Exception ("Não foi possível se conectar! <br> Verifique seu usuário e senha.");
                 }
-
-                header("Location: " . baseurl . "index.php");
+                header("Location: " . baseurl . "/index.php");
             }
 
             else
@@ -67,18 +66,16 @@
     }
 ?>
 
-<!-- <?php if(!empty($_SESSION['message'])) : ?>
+
+<?php if(!empty($_SESSION['message'])) : ?>
+
     <div class="alert alert-<?php echo $_SESSION['type']; ?> alert-dismissible" role="alert" id="actions">
-        <?php echo $_SESSION['message']; ?>
+        <?php echo $_SESSION['message'];?>
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
     <?php clear_messages(); ?>
 <?php endif; ?>
 
-    <header>
-        <a href="<?php echo baseurl ?>index.php" class="btn btn-light"><i class="fa-solid fa-rotate-left"></i></a>
-    </header> -->
-    
 <?php 
 	include(footer_template); 
 	ob_end_flush();
