@@ -5,29 +5,39 @@
         {
             session_start();
         }
+    $head = "cabecalho2";
     include(header_template);
 ?>
 
 
-
-<div id="actions" class="mt-5 mb-5">
-    <form action="valida.php" method="post">
-        <div class="row">
-            <h3> Faça login</h3>
-            <div class="form-floating col-12 mb-2">
+<div class="sim-body">
+    <div class="wrapper2">
+        <form action="valida.php" method="post">
+            <h1>Login</h1>
+            <div class="input-box">
                 <input type="text" class="form-control" id="log" placeholder="Usuário" name="login" required oninvalid="this.setCustomValidity('Preencha o Usuário!')" onchange="try{setCustomValidity('')}catch(e){}">
-                <label for="log">Usuário</label>
+                <i class="bx bxs-user"></i>
+                <!-- <label for="log">Usuário</label> -->
             </div>
-            <div class="form-floating col-12 mb-2">
+
+            <div class="input-box">
                 <input type="password" class="form-control" id="pass" placeholder="Senha" name="senha" maxlength="30" required oninvalid="this.setCustomValidity('Preencha a Senha!')" onchange="try{setCustomValidity('')}catch(e){}">
-                <label for="log">Senha</label>
+                <i class="bx bxs-lock-alt"></i>
+                <!-- <label for="log">Senha</label> -->
             </div>
-            <div class="form-floating col-12 mb-2">
-                <button type="submit" class="btn btn-secondary btn-block mb-4"><i class="fa-solid fa-user-check"></i> Conectar</button>
-                <a href = "<?php echo baseurl; ?>" class="btn bnt-light btn-block mb-4"><i class="fa-solid fa-rotate-left"></i> Cancelar</a>
+
+            <div class="remember-forgot">
+                <label><input type="checkbox">Manter login</label>
+                <a href="#">Esqueceu a senha?</a>
             </div>
-        </div>
-    </form>
+
+            <button type="submit" class="btn">Login</button>
+
+            <div class="register-link">
+                <p>Não possui uma conta? <a href="<?php echo baseurl; ?>/src/formulario/index.php">Registrar</a></p>
+            </div>
+        </form>
+    </div>
 </div>
 
 <?php 

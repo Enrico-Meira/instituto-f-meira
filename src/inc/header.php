@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+        <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
         <link rel="stylesheet" href="<?php echo baseurl; ?>/src/css/reset.css">
         <link rel="stylesheet" href="<?php echo baseurl; ?>/src/css/style.css">
         <link rel="stylesheet" href="<?php echo baseurl; ?>/src/css/responsiveStyle.css">
