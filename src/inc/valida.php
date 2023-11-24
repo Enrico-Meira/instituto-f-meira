@@ -18,35 +18,29 @@
 
         if(!empty($cliente) && !empty($senha))
         {
-            //$senha = criptografia($_POST['senha']);
             
-            $sql = "SELECT id, nome, email, cpf password FROM clientes WHERE (email = '" . $cliente . "') AND (password = '" . $senha . "') LIMIT 1";
+            $sql = "SELECT nome, email, cpf, senha FROM clientes WHERE (email = '" . $cliente . "') AND (senha = '" . $senha . "') LIMIT 1";
             $query = $bd->query($sql);
-
+            var_dump($sql);
             if ($query->num_rows > 0)
             {
                 $dados = $query->fetch_assoc();
-                echo "<b>";
-                var_dump($dados);
-                echo "</b>";
-
-                $id = $dados['id'];
                 $nome = $dados['nome'];
                 $email = $dados['email'];
+                $cpf = $dados['cpf'];
                 $password = $dados['password'];
-                var_dump($email);
+
 
                 if(!empty($email))
                 {
-                    if (!isset($_SESSION)) session_start();
-                    $_SESSION['message'] = "Bem vindo" . $nome . "!";
-                    $_SESSION['type'] = "info";
-                    $_SESSION['id'] = $id;
-                    $_SESSION['nome'] = $nome;
-                    $_SESSION['email'] = $email;
-                    echo "<b>";
-                    var_dump($email);
-                    echo "</b>";
+                    if (!isset($_SESSION)) 
+                    {
+                        session_start();
+                        $_SESSION['message'] = "Bem vindo" . $nome . "!";
+                        $_SESSION['type'] = "info";
+                        $_SESSION['nome'] = $nome;
+                        $_SESSION['email'] = $email;
+                    }
                 }
 
                 else
@@ -73,7 +67,7 @@
     }
 ?>
 
-<?php if(!empty($_SESSION['message'])) : ?>
+<!-- <?php if(!empty($_SESSION['message'])) : ?>
     <div class="alert alert-<?php echo $_SESSION['type']; ?> alert-dismissible" role="alert" id="actions">
         <?php echo $_SESSION['message']; ?>
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
@@ -83,7 +77,7 @@
 
     <header>
         <a href="<?php echo baseurl ?>index.php" class="btn btn-light"><i class="fa-solid fa-rotate-left"></i></a>
-    </header>
+    </header> -->
     
 <?php 
 	include(footer_template); 
