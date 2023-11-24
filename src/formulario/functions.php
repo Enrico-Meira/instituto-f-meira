@@ -16,9 +16,11 @@
 
 	function testa_email() 
 	{
-		email_query(['email']);
-		die;
-		echo ['email'];
+		if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['action']) && $_POST['action'] == 'verifica_email') 
+		{
+			$email = $_POST['email'];
+			echo email_query($email);
+		}
 	}
 
 	/**

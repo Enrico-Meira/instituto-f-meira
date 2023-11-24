@@ -152,23 +152,13 @@
 		$sql = "SELECT email FROM clientes WHERE " . $email . " = email";
 		$result = $database->query($sql);
 
-		if ($result -> num_rows > 0) {
-
-			die;
-			echo $result;
-
-			?>
-				<script>
-					document.setCustomValidity('');
-			<?php
-		}
-		else
+		if ($result -> num_rows > 0) 
 		{
-			?>
-					document.getElementById('email').focus;
-					document.setCustomValidity('Email já Cadastrado');
-				<script/>
-			<?php
+			return "E-mail já existe no banco de dados!";
+		} 
+		else 
+		{
+			return "";
 		}
 
 

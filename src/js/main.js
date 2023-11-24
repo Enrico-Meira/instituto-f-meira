@@ -11,20 +11,29 @@
 // })
 //   
 //      NÃO APAGAR ATÉ TER CERTEZA QUE NÃO SERÁ USADO NO PROJETO!
+function verificaEmail() {
+    var email = document.getElementById('email').value;
+
+    $.ajax({
+        type: 'POST',
+        url: 'functions.php',
+        data: { action: 'verifica_email', email: email },
+        success: function(response) {
+            document.getElementById('emailMessage').innerHTML = response;
+        }
+    });
+}
 
 
 function confereSenha () 
 {
-    // const senha = document.querySelector("input[name=senha]");
-    // const confirma = document.querySelector("input[name=confirma]");
     const senha = document.querySelector("#senha");
     const confirma = document.querySelector("#confirma");
 
-    
-    if (senha.matches(/[\"'/;<>[()~=]/))
-    {
-        senha.setCustomValidity("Os seguites caracteres especiais não são permitidos! \"'/;<>[()~= ");
-    }
+    // if (senha.matches(/[\"'/;<>[()~=]/))
+    // {
+    //     senha.setCustomValidity("Os seguites caracteres especiais não são permitidos! \"'/;<>[()~= ");
+    // }
 
     if (senha.value === confirma.value) 
     {
@@ -36,4 +45,18 @@ function confereSenha ()
         document.getElementById("confirma").value = '';
         confirma.setCustomValidity('Senhas não conferem!');
     }
+}
+
+function addJS() 
+{
+    var email = document.getElementById('email').value;
+
+    $.ajax({
+        type: 'POST',
+        url: 'functions.php',
+        data: { action: 'add', email: email },
+        success: function(response) {
+            alert(response);
+        }
+    });
 }

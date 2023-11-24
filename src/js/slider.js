@@ -16,10 +16,10 @@ next.onclick = function(){
 }
 
 prev.onclick = function(){
-    if(active - 1 < lengthItems){
-        active = lengthItems;
-    }else{
+    if(active >= 1 && active < lengthItems){
         active = active - 1;
+    }else{
+        active = lengthItems;
     }
     reloadSlider();
 }
