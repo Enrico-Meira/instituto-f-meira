@@ -3,16 +3,7 @@
     include("../../config.php");
     if(!isset($_SESSION))
         {
-            // session_start();
-            echo "eu sou uma cadela";
-            $session_ativa = session_status() == PHP_SESSION_ACTIVE;
-            echo $session_ativa;
             session_start();
-            print_r(scandir(session_save_path()));
-            $SESSION_ID = 'fnqmodku6m393po0l8f8lcsnjt';
-            echo (file_exists(session_save_path().'/sess_'.$SESSION_ID) ? "Existe!" : "Não existe!");
-            session_destroy();
-            die();
         }
     include(header_template);
 ?>
