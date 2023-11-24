@@ -3,41 +3,40 @@
     $head = "cabecalho2";
     include(header_template); 
 ?>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
-    <script src="../js/evo-calendar.min.js"></script>
-
-    <script>
-
-      $(document).ready(function() {
-        $('#calendar').evoCalendar({
-          language: 'pt',
-          sidebarToggler: false,
-          eventDisplayDefault: false,
-          eventListToggler: false
-        })
-      })
-
-    </script>
-
 
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title></title>
-  <link rel="stylesheet" href="<?php echo baseurl; ?>/src/css/calendar.css">
-  <link rel="stylesheet" href="<?php echo baseurl; ?>/src/css/evo-calendar.min.css">
-  <link rel="stylesheet" href="<?php echo baseurl; ?>/src/css/evo-calendar.midnight-blue.min.css">
+<!-- Coding By CodingNepal - youtube.com/codingnepal -->
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="<?php echo baseurl; ?>/src/css/tst.css">
+    <title>Dynamic Calendar JavaScript | CodingNepal</title> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Font Link for Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+  </head>
+    <div class="wrapper">
+        <p class="current-date"></p>
+        <div class="icons">
+          <span id="prev" class="material-symbols-rounded">chevron_left</span>
+          <span id="next" class="material-symbols-rounded">chevron_right</span>
+        </div>
+      <div class="calendar">
+        <ul class="weeks">
+          <li>Dom</li>
+          <li>Seg</li>
+          <li>Ter</li>
+          <li>Qua</li>
+          <li>Qui</li>
+          <li>Sex</li>
+          <li>Sab</li>
+        </ul>
+        <ul class="days"></ul>
+      </div>
+    </div>
+    <div class="fundo">
+      <div class="botoes-container"></div>
+    </div>
 
-</head>
-
-  <div class="hero">
-    <div id="calendar"></div>
-  </div>
-  
-
-  <?php 
+<?php 
       require_once(footer_template);
-  ?>
-
+?>
