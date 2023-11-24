@@ -283,6 +283,10 @@
     }
 
     /* FORM */
+    .formProced {
+        margin-bottom: 250px;
+    }
+
     .formProced input[type=text] {
         background-color: lightgray;
         padding: 10px;
