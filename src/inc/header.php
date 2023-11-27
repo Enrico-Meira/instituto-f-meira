@@ -38,26 +38,7 @@
                     <li class="menu-li">
                         <a href="<?php echo baseurl; ?>/src/pages/about.php">Sobre nós</a>
                     </li>
-
-                    <?php if (isset($_SESSION['email'])) : ?>
-                        <?php echo $email; ?>
-                        <ul class="navbar-nav align-items-center">                       
-                            <li class="nav-item">
-                            <?php if(isset($_SESSION['nome'])):?>
-                                <h5 style="color: #d9d9d9; margin-left: 2rem; padding-right: 2rem;"> Bem vindo, <?php echo $_SESSION['nome']; ?></h5>
-                            <?php endif; ?>
-                            </li>
-                        </ul>
-
-                        <ul class="navbar-nav align-items-center">                       
-                            <li class="nav-item">
-                                <a href="#" class="btn btn-sm btn-light" data-bs-toggle="modal" data-bs-target="#logoutmodal">
-                                <i class="fa-solid fa-right-from-bracket"></i>Sair
-                                </a>
-                            </li>
-                        </ul>
-                    <?php else : ?>
-                        
+                </ul>
                             <div class="navigation">
                                 <div class="menuToggle"></div>
                                 <ul>
@@ -95,18 +76,24 @@
                                             <span class="title">Password</span>
                                         </a>
                                     </li>
-
-                                    <li>
-                                        <a href="<?php echo baseurl; ?>/src/inc/login.php">
-                                            <span class="icon"><i class="fa-solid fa-right-from-bracket"></i></span>
-                                            <span class="title">Login</span>
-                                        </a>
-                                    </li>
+                                    
+                                    <?php if (!isset($_SESSION['email'])) : ?>
+                                        <li>
+                                            <a href="<?php echo baseurl; ?>/src/inc/login.php">
+                                                <span class="icon"><i class="fa-solid fa-right-from-bracket"></i></span>
+                                                <span class="title">Login</span>
+                                            </a>
+                                        </li>
+                                    <?php else : ?>
+                                        <li>
+                                            <a href="<?php echo baseurl; ?>/src/inc/logout.php">
+                                                <span class="icon"><i class="fa-solid fa-right-from-bracket"></i></span>
+                                                <span class="title">Logout</span>
+                                            </a>
+                                        </li>
+                                    <?php endif; ?>
                                 </ul>
                             </div>
-
-                    <?php endif; ?>
-                </ul>
             </nav>
         </header>
 

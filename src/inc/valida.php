@@ -30,6 +30,7 @@
                 $senha = $dados['senha'];
 
 
+
                 if(!empty($email))
                 {
                     if (!isset($_SESSION)) session_start();
@@ -39,8 +40,6 @@
                         $_SESSION['email'] = $email;
                         $_SESSION['cpf'] = $cpf;
                         $_SESSION['senha'] = $senha;
-                        
-                        echo $senha;
                 }
 
                 else
