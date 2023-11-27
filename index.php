@@ -6,13 +6,15 @@
     $db = open_database();
 ?>
         <!-- <link rel="stylesheet" href="src/css/style.css">  -->
-        <!-- <img src="/src/imagens/background.jpg" alt="" class="bg-image"> -->
+        
         <main class="main-container">
             <div class="introduction bg">
                 <div class="name-container">
+                        <img src="/src/imagens/background.jpg" alt="" class="bg-image">
                         <h2>
                             Fernanda 
                             <span>Meira</span>
+                            <p>BIOMÉDICA ESTETA</p>
                         </h2>
                 </div>
                 <div class="saber">

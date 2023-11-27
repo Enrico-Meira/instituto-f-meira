@@ -25,7 +25,8 @@
 
     /* HEADER */
     .cabecalho {
-        background: url('../imagens/background.jpg') no-repeat center fixed;
+        /* background: url('../imagens/newI-removebg.png') no-repeat center fixed rgb(246,190,237) ; */
+        background: linear-gradient(90deg, rgba(238,206,221,1) 33%, rgba(241,210,226,1) 41%, rgba(245,228,236,1) 52%, rgba(241,210,226,1) 63%, rgba(238,206,221,1) 72%); 
         background-size: cover;
         position: sticky;
         z-index: 999;     
@@ -167,7 +168,9 @@
     /* ꓥ ꓥ ꓥ            essa aqui memo           ꓥ ꓥ ꓥ */
 
     .bg {
-        background: url('../imagens/background.jpg') no-repeat center fixed;
+        background: url('../imagens/newI-removebg.png'); 
+        position: relative;
+        /* background-color: rgb(246,190,237); */
         background-size: cover;
     }
     
@@ -238,7 +241,8 @@
     
 
     .main-container {
-        background-color: var(--primary-color);
+        background: rgb(238,206,221);
+        background: linear-gradient(90deg, rgba(238,206,221,1) 33%, rgba(241,210,226,1) 41%, rgba(245,228,236,1) 52%, rgba(241,210,226,1) 63%, rgba(238,206,221,1) 72%); 
     }
     
     .name-container {
@@ -272,8 +276,10 @@
     }
 
     .saber a {
-        border: 0.5px solid #8B9B9C;
-        color: var(--primary-color);
+        /* border: 0.5px solid #8B9B9C; */
+        background-color: rgb(117, 38, 38);
+        color: #fff;
+        border-radius: 5px;
         padding: 10px 20px;
         font-size: 15px;
         margin: 0px 10px;
@@ -348,9 +354,8 @@
     /* PRINCIPAIS TRATAMENTOS */
 
     .slider-container {
-        background: #fff;
-        background: radial-gradient(circle, var(--dominant-color) 0%, var(--accent-color) 100%);
         background-size: cover;
+        background-color: #fff;
         background-position: center;
     }
 

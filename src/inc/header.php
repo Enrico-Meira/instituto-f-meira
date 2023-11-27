@@ -49,7 +49,6 @@
                             </li>
                         </ul>
 
-
                         <ul class="navbar-nav align-items-center">                       
                             <li class="nav-item">
                                 <a href="#" class="btn btn-sm btn-light" data-bs-toggle="modal" data-bs-target="#logoutmodal">
@@ -105,10 +104,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <!-- <a href="<?php echo baseurl; ?>/src/inc/login.php">
-                                <i class="fa-solid fa-user icon"></i> Login
-                            </a> -->
-                        
+
                     <?php endif; ?>
                 </ul>
             </nav>
