@@ -26,16 +26,16 @@
             </a>
             <nav>
                 <ul class="menu">
-                    <li>
+                    <li class="menu-li">
                         <a href="<?php echo baseurl; ?>/index.php">Início</a>
                     </li>
-                    <li>
+                    <li class="menu-li">
                         <a href="<?php echo baseurl; ?>/src/procedimentos/index.php">Procedimentos</a>
                     </li>
-                    <li>
+                    <li class="menu-li">
                         <a href="<?php echo baseurl; ?>/src/agendamento/calendario.php">Agendamento</a>
                     </li>
-                    <li>
+                    <li class="menu-li">
                         <a href="<?php echo baseurl; ?>/src/pages/about.php">Sobre nós</a>
                     </li>
 
@@ -58,12 +58,60 @@
                             </li>
                         </ul>
                     <?php else : ?>
-                        <li>
-                            <a href="<?php echo baseurl; ?>/src/inc/login.php">
+                        
+                            <div class="navigation">
+                                <div class="menuToggle"></div>
+                                <ul>
+                                    <li>
+                                        <a href="<?php echo baseurl; ?>/index.php">
+                                            <span class="icon"><i class="fa-solid fa-house"></i></span>
+                                            <span class="title">Home</span>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            <span class="icon"><i class="fa-solid fa-user"></i></span>
+                                            <span class="title">Profile</span>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            <span class="icon"><i class="fa-solid fa-message"></i></span>
+                                            <span class="title">Messages</span>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            <span class="icon"><i class="fa-solid fa-gear"></i></span>
+                                            <span class="title">Settings</span>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            <span class="icon"><i class="fa-solid fa-lock"></i></span>
+                                            <span class="title">Password</span>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="<?php echo baseurl; ?>/src/inc/login.php">
+                                            <span class="icon"><i class="fa-solid fa-right-from-bracket"></i></span>
+                                            <span class="title">Login</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- <a href="<?php echo baseurl; ?>/src/inc/login.php">
                                 <i class="fa-solid fa-user icon"></i> Login
-                            </a>
-                        </li>
+                            </a> -->
+                        
                     <?php endif; ?>
                 </ul>
             </nav>
         </header>
+
+        

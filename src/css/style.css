@@ -1,3 +1,5 @@
+   @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+   
    /* GERAL */
    :root {
        --dominant-color: #B1556D;
@@ -31,6 +33,115 @@
         padding: 30px 0px;
         width: 100%;
         /* margin: 0 auto; */
+    }
+
+    .navigation {
+        font-family: 'Poppins', sans-serif;
+        position: absolute;
+        top: 65px;
+        right: 65px;
+        width: 50px;
+        height: 50px;
+        background: #fff;
+        z-index: 10000;
+        border-radius: 4px;
+        overflow: hidden;
+        transition: width 0.5s, height 0.5s;
+        transition-delay: 0s, 0.25s;
+    }
+
+    .navigation ul{
+        position: absolute;
+        left: 0;
+        width: 100%;
+    }
+
+    .navigation ul li {
+        display: block;
+        position: relative;
+        list-style: none;
+        width: 100%;
+    }
+
+    .navigation ul li:hover {
+        background-color: #03A9F4;
+    }
+
+    .navigation ul li a{
+        position: relative;
+        display: flex;
+        width: 100%;
+        text-decoration: none;
+        color: #154367;
+    }
+
+    .navigation ul li a .icon{
+        position: relative;
+        display: block;
+        min-width: 50px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+    }
+
+    .navigation ul li a .icon i {
+        font-size: 1.15em;
+        color: #154367;
+    }
+
+    .navigation ul li a .title {
+        position: relative;
+        display: block;
+        line-height: 50px;
+        white-space: nowrap;
+    }
+
+    .navigation ul li:hover a .title,
+    .navigation ul li:hover a .icon i {
+        color: #fff;
+    }
+
+    .navigation.active {
+        width: 250px;
+        height: 350px;
+        transition: width 0.5s, height 0.5s;
+        transition-delay: 0s, 0.25s;
+    }
+
+    .navigation .menuToggle {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        background-color: #ff4081;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+
+    .navigation .menuToggle.active {
+        background-color: #2196f3;
+    }
+
+    .navigation .menuToggle::before {
+        content: '+';
+        position: absolute;
+        font-size: 2em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        width: 50px;
+        height: 50px;
+        font-weight: 400;
+        transition: 0.5s;
+    }
+
+    .navigation .menuToggle.active::before {
+        transform: rotate(315deg);
     }
 
     .cabecalho2 {
@@ -91,12 +202,12 @@
         margin: auto;
     }
     
-    .menu li {
+    .menu .menu-li {
         padding: 0px 15px;
         display: inline-block;
     }
     
-    .menu li a {
+    .menu .menu-li a {
         /* background-color: azure; */
         position: relative;
         /* display: inline-block; */
@@ -110,7 +221,7 @@
     }
 
 
-    .menu li a:after{
+    .menu .menu-li a:after{
         content: "";
         position: absolute;
         background-color: coral;
@@ -121,7 +232,7 @@
         transition: 0.3s;
     }
     
-    .menu li a:hover:after{
+    .menu .menu-li a:hover:after{
         width: 100%;
     }
     
@@ -237,8 +348,8 @@
     /* PRINCIPAIS TRATAMENTOS */
 
     .slider-container {
-        background: rgb(212,165,178);
-        background: radial-gradient(circle, rgba(212,165,178,1) 0%, rgba(161,149,154,1) 100%);
+        background: #fff;
+        background: radial-gradient(circle, var(--dominant-color) 0%, var(--accent-color) 100%);
         background-size: cover;
         background-position: center;
     }
@@ -276,7 +387,7 @@
         width: 50px;
         height: 50px;
         border-radius: 50%;
-        background-color: var(--accent-color);
+        background-color: var(--complementary-color);
         color: rgb(255, 255, 255);
         border: none;
         font-weight: bold;
@@ -286,6 +397,16 @@
     .formProced {
         margin-bottom: 250px;
     }
+
+
+    input[type="date"]::-webkit-calendar-picker-indicator {
+        opacity: 1;
+        background: url('../imagens/bx-calendar-alt.svg') no-repeat;
+        position: absolute;
+        right: 17px;
+    }
+
+    input[type="radio"]
 
     .formProced input[type=text] {
         background-color: lightgray;
@@ -338,6 +459,46 @@
         border-radius: 5px;
     }
 
+    .gender-box{
+        position: relative;
+        bottom: 20px;
+    }
+
+    .gnr-title {
+        position: absolute;
+        left: 5px;
+    }
+
+    .gnr-label{
+        background-color: transparent;
+        border: 1px solid #ccd0d5;
+        border-radius: 4px;
+        display: inline-block;
+        flex: 1 0 auto;
+        font-weight: normal;
+        height: 36px;
+        margin: 8px 6px 6px;
+        position: relative;
+        width: auto;
+    }
+
+    .form-control {
+        box-sizing: border-box;
+        color: #fff;
+        display: inline-block;
+        font-size: 15px;
+        line-height: 36px;
+        padding: 0 35px 0 10px;
+        width: 100%;
+    }
+
+    .gnr-input {
+        height: 36px;
+        margin: 0;
+        position: absolute;
+        right: 10px;
+        top: 0;
+    }
 
     .button-2 {
             background-color: lightgray;
