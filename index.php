@@ -1,7 +1,12 @@
 <?php 
+
     require_once('config.php');
     require_once(dbpath);
     $head = "cabecalho";
+    if(!isset($_SESSION))
+    {
+      session_start();
+    }
     include(header_template);
     $db = open_database();
 ?>

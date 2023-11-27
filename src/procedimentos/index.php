@@ -1,6 +1,10 @@
 <?php
     require_once('functions.php');
     $head = "cabecalho2";
+    if(!isset($_SESSION))
+    {
+      session_start();
+    }
     include(header_template);   
 ?>
     <main>

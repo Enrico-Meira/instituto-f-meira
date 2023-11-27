@@ -2,6 +2,10 @@
     require_once('../../config.php');
 	require_once(dbpath);
     $head = "cabecalho2";
+    if(!isset($_SESSION))
+    {
+      session_start();
+    }
     include(header_template);
 ?>
 
