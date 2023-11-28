@@ -5,7 +5,7 @@
     $head = "cabecalho";
     if(!isset($_SESSION))
     {
-      session_start();
+        session_start();
     }
     include(header_template);
     $db = open_database();
@@ -15,12 +15,11 @@
         <main class="main-container">
             <div class="introduction bg">
                 <div class="name-container">
-                        <img src="/src/imagens/background.jpg" alt="" class="bg-image">
                         <h2>
                             Fernanda 
-                            <span>Meira</span>
-                            <p>BIOMÉDICA ESTETA</p>
+                            Meira
                         </h2>
+                        <p>BIOMÉDICA ESTETA</p>
                 </div>
                 <div class="saber">
                     <a href="">Tratamentos</a>

@@ -246,6 +246,8 @@
     }
     
     .name-container {
+        position: relative;
+        right: 100px;
         width: 100%;
         padding-right: 15px;
         padding-left: 15px;
@@ -260,7 +262,7 @@
 
     .name-container h2 {
         font-weight: 100;
-        color: #fff;
+        color: #58434A;
         font-size: 70px;
         margin: 0;
         text-shadow: 2px 2px 7px #999;
@@ -271,8 +273,17 @@
         color: #fff;
     }
 
+    .name-container p {
+        color: #AF96A1;
+        position: absolute;
+        left: 705px;
+        top: 80px;
+    }
+
     .saber {
-        margin-top: 20px;
+        position: absolute;
+        right: 870px;
+        top: 470px;
     }
 
     .saber a {
