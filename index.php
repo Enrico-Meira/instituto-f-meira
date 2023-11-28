@@ -12,7 +12,10 @@
 ?>
         <!-- <link rel="stylesheet" href="src/css/style.css">  -->
         
+
         <main class="main-container">
+
+
             <div class="introduction bg">
                 <div class="name-container">
                         <h2>
@@ -27,58 +30,55 @@
                 </div>
             </div>
 
+            <div class="slider-container">
+                <div class="pt"> 
+                    <div class="trat-title-container">
+                            <h2>
+                                Principais procedimentos
+                            </h2>
+                            <div class="linha-title">
+                                <img src="<?php echo baseurl; ?>/src/imagens/textless-logo.png">
+                            </div>
+                    </div>
+                </div>
 
-
-
-        <div class="slider-container">
-            <div class="pt"> 
-                <div class="trat-title-container">
-                        <h2>
-                            Principais procedimentos
-                        </h2>
-                        <div class="linha-title">
-                            <img src="<?php echo baseurl; ?>/src/imagens/textless-logo.png">
+                <div class="slider">
+                    <div class="list">
+                        <div class="item item-container trat-container" style="width: 430px;">
+                            <img src="<?php echo baseurl; ?>/src/imagens/download.png" alt="">
+                            <h2>Toxina botulínica - botox</h2>
+                            <p>O Botox é uma técnica que utiliza a toxina botulínica para suavizar rugas e linhas de expressão, proporcionando uma aparência mais jovem e relaxada.</p>
                         </div>
-                </div>
-            </div>
-
-            <div class="slider">
-                <div class="list">
-                    <div class="item item-container trat-container" style="width: 430px;">
-                        <img src="<?php echo baseurl; ?>/src/imagens/download.png" alt="">
-                        <h2>Toxina botulínica - botox</h2>
-                        <p>O Botox é uma técnica que utiliza a toxina botulínica para suavizar rugas e linhas de expressão, proporcionando uma aparência mais jovem e relaxada.</p>
-                    </div>
-                    <div class="item item-container trat-container" style="width: 430px;">
-                        <img src="<?php echo baseurl; ?>/src/imagens/download.png" alt="">
-                        <h2>Rinomodelação</h2>
-                        <p>É um procedimento não cirúrgico que utiliza preenchimentos dérmicos para melhorar a aparência do nariz, corrigindo irregularidades no formato ou tamanho.</p>
-                    </div>
-                    <div class="item item-container trat-container" style="width: 430px;">
-                        <img src="<?php echo baseurl; ?>/src/imagens/download.png" alt="">
-                        <h2>Bioestimuladores de colágeno</h2>
-                        <p>São substâncias injetáveis que estimulam a produção de colágeno na pele. São utilizados para tratar rugas, flacidez e melhorar a textura da pele.</p>
-                    </div>
-                    <div class="item item-container trat-container" style="width: 430px;">
-                        <img src="<?php echo baseurl; ?>/src/imagens/download.png" alt="">
-                        <h2>Fios de PDO</h2>
-                        <p>São fios absorvíveis que são inseridos na pele para promover um efeito de lifting facial, melhorando a firmeza e a sustentação da pele.</p>
-                    </div>
-                    <div class="item item-container trat-container" style="width: 430px;">
-                        <img src="<?php echo baseurl; ?>/src/imagens/download.png" alt="">
-                        <h2>Outros</h2>
-                        <p></p>
+                        <div class="item item-container trat-container" style="width: 430px;">
+                            <img src="<?php echo baseurl; ?>/src/imagens/download.png" alt="">
+                            <h2>Rinomodelação</h2>
+                            <p>É um procedimento não cirúrgico que utiliza preenchimentos dérmicos para melhorar a aparência do nariz, corrigindo irregularidades no formato ou tamanho.</p>
+                        </div>
+                        <div class="item item-container trat-container" style="width: 430px;">
+                            <img src="<?php echo baseurl; ?>/src/imagens/download.png" alt="">
+                            <h2>Bioestimuladores de colágeno</h2>
+                            <p>São substâncias injetáveis que estimulam a produção de colágeno na pele. São utilizados para tratar rugas, flacidez e melhorar a textura da pele.</p>
+                        </div>
+                        <div class="item item-container trat-container" style="width: 430px;">
+                            <img src="<?php echo baseurl; ?>/src/imagens/download.png" alt="">
+                            <h2>Fios de PDO</h2>
+                            <p>São fios absorvíveis que são inseridos na pele para promover um efeito de lifting facial, melhorando a firmeza e a sustentação da pele.</p>
+                        </div>
+                        <div class="item item-container trat-container" style="width: 430px;">
+                            <img src="<?php echo baseurl; ?>/src/imagens/download.png" alt="">
+                            <h2>Outros</h2>
+                            <p></p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="buttons">
-                <button id="prev"><</button>
-                <button id="next">></button>
-            </div>
+                <div class="buttons">
+                    <button id="prev"><</button>
+                    <button id="next">></button>
+                </div>
 
-            <br>
-        </div>
+                <br>
+            </div>
             
 
 

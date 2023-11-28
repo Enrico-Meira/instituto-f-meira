@@ -8,7 +8,7 @@
    }
 
 
-   body {
+    body {
         color: #333;
         background: white;
         /* font-family: ; */
@@ -25,9 +25,8 @@
 
     /* HEADER */
     .cabecalho {
-        /* background: url('../imagens/newI-removebg.png') no-repeat center fixed rgb(246,190,237) ; */
-        background: linear-gradient(90deg, rgba(238,206,221,1) 33%, rgba(241,210,226,1) 41%, rgba(245,228,236,1) 52%, rgba(241,210,226,1) 63%, rgba(238,206,221,1) 72%); 
-        background-size: cover;
+        /* background: url('../imagens/nbg.png') no-repeat center fixed; */
+        background-color: transparent;
         position: sticky;
         z-index: 999;     
         display: flex;
@@ -118,13 +117,13 @@
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        background-color: #ff4081;
+        background-color: #806161;
         transition: 0.5s;
         cursor: pointer;
     }
 
     .navigation .menuToggle.active {
-        background-color: #2196f3;
+        background-color: #9B7D86;
     }
 
     .navigation .menuToggle::before {
@@ -161,6 +160,7 @@
     .cabecalho2 .logo {
         width: 300px;
         height: auto;
+
         margin: -34px 130px;
         display: inline-block;
         justify-content: space-between;
@@ -168,10 +168,14 @@
     /* ꓥ ꓥ ꓥ            essa aqui memo           ꓥ ꓥ ꓥ */
 
     .bg {
-        background: url('../imagens/newI-removebg.png'); 
-        position: relative;
-        /* background-color: rgb(246,190,237); */
+        background: url('../imagens/nbg.png'); 
+        background-size: 100%;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
         background-size: cover;
+        position: relative;
+        bottom: 170px;
     }
     
     
@@ -188,6 +192,7 @@
     .cabecalho .menu{
         display: flex;
         align-items: center;
+        background-color: transparent;
         height: 100%;
         width: 100%;
         margin: 0px 10px;
@@ -241,8 +246,8 @@
     
 
     .main-container {
-        background: rgb(238,206,221);
-        background: linear-gradient(90deg, rgba(238,206,221,1) 33%, rgba(241,210,226,1) 41%, rgba(245,228,236,1) 52%, rgba(241,210,226,1) 63%, rgba(238,206,221,1) 72%); 
+        background-color: blue;
+        /* height: 1000px; */
     }
     
     .name-container {
@@ -255,9 +260,14 @@
         margin-left: auto;
     }
 
-    .introduction {
-        padding: 322px 0px;
-        text-align: center;
+    .introduction {    
+        /* background: url('../imagens/nbg.png');  */
+        padding: 330px 0px;
+        text-align: center; 
+    }
+
+    .introduction-container {
+        height: 800px;
     }
 
     .name-container h2 {
@@ -365,6 +375,7 @@
     /* PRINCIPAIS TRATAMENTOS */
 
     .slider-container {
+
         background-size: cover;
         background-color: #fff;
         background-position: center;
