@@ -1,5 +1,7 @@
    @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
    @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+   @import url('https://fonts.googleapis.com/css2?family=Lato&family=Playfair+Display:wght@500&display=swap');
+
 
    
    /* GERAL */
@@ -41,7 +43,7 @@
         font-family: 'Poppins', sans-serif;
         position: absolute;
         top: 65px;
-        right: 65px;
+        right: 250px;
         width: 50px;
         height: 50px;
         background: #fff;
@@ -66,7 +68,7 @@
     }
 
     .navigation ul li:hover {
-        background-color: #03A9F4;
+        background-color: #dfd9d9;
     }
 
     .navigation ul li a{
@@ -119,9 +121,10 @@
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        background-color: #806161;
+        background-color: #594047;
         transition: 0.5s;
         cursor: pointer;
+        right: 1000px;
     }
 
     .navigation .menuToggle.active {
@@ -203,7 +206,6 @@
     nav {
         /* background-color: black; */
         height: 12vh;
-        widows: 70vw;
         min-width: 600px;
         width: 610px;
         display: flex;
@@ -217,7 +219,7 @@
         padding-right: 28px;
         display: inline-block;
         position: relative;
-        right: 100px;
+        right: 300px;
     }
 
     
@@ -268,7 +270,7 @@
         position: relative;
         right: 100px;
         width: 100%;
-        right: 400px;
+        right: 360px;
         bottom: 70px;
         padding-right: 15px;
         padding-left: 15px;
@@ -287,9 +289,14 @@
     }
 
     .name-container h2 {
-        font-weight: 100;
+        font-family: Playfair Display;
+        font-weight: 500;
         color: #58434A;
         font-size: 70px;
+        font-style: italic;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: 2.1px;
         margin: 0;
         text-shadow: 2px 2px 7px #999;
     }
@@ -302,23 +309,33 @@
     .name-container p {
         color: #AF96A1;
         position: absolute;
-        left: 705px;
-        top: 80px;
+        font-family: Lato;
+        left: 665px;
+        top: 90px;
     }
 
     .saber {
         position: absolute;
+        font-family: Lato;
+        color: #EDEDED;
+        text-align: center;
+        font-family: Lato;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 1.96px;
+        text-transform: uppercase;
         left: 290px;
         top: 580px;
     }
 
     .saber a {
-        /* border: 0.5px solid #8B9B9C; */
         background-color: #594047;
         color: #fff;
-        border-radius: 5px;
+        border-radius: 12px;
         padding: 10px 20px;
-        font-size: 15px;
+        font-size: 12px;
         margin: 0px 10px;
         font-weight: 400;
         text-shadow: 2px 2px 7px #8D8D8D;
@@ -472,11 +489,16 @@
     .buttons button {
         position: relative;
         bottom: 210px;
+        color: #594047;
+        font-family: Lato;
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 70%; 
         width: 50px;
         height: 50px;
         border-radius: 50%;
-        background-color: var(--complementary-color);
-        color: rgb(255, 255, 255);
+        background-color: #D9D7D7;
         border: none;
         font-weight: bold;
     }
@@ -641,9 +663,12 @@
     }
 
     .trat-title-container h2{
-        font-weight: 300;
-        color: var(--accent-color);
-        font-size: 45px;
+        color: #594047;
+        font-family: Playfair Display;
+        font-size: 40px;
+        font-style: italic;
+        font-weight: 400;
+        line-height: normal;
     }
 
     .linha-title {
@@ -668,7 +693,7 @@
         margin-right: 10px;
         width: 80px;
         height: 0;
-        border: 0.5px solid #9a9a9a;
+        border: 0.5px solid #594047;;
     }
 
     .linha-title:after {
@@ -678,7 +703,7 @@
         margin-left: 10px;
         width: 80px;
         height: 0;
-        border: 0.5px solid #9a9a9a;
+        border: 0.5px solid #594047;
     }
 
     .general-container {
@@ -719,20 +744,24 @@
     }
 
     .trat-container h2{
-        color: var(--accent-color);
+        color: #594047;
         border-bottom: 0.5px solid #c9c9c9;
         font-size: 18px;
         font-weight: 600;
-        margin: 0 10px;
+        margin: 3px 10px;
         padding: 5px 0;
     }
 
     .trat-container p{
-        color: var(--complementary-color);
+        color: #000;
+        text-align: center;
+        font-family: Lato;
         font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
         text-align: center;
         margin: 0 10px;
-        font-weight: 400;
+        line-height: 100%; /* 24.3px */
     }
 
 

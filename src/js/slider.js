@@ -4,7 +4,7 @@ let prev = document.getElementById('prev');
 let next = document.getElementById('next');
 
 let active = 0;
-let lengthItems = items.length - 1;
+let lengthItems = items.length - 3;
 
 next.onclick = function(){
     if(active + 1 > lengthItems){
