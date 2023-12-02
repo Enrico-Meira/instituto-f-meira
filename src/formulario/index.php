@@ -12,62 +12,21 @@
         <main>
         <div class="sim-body">
             <div class="wrapper2">
-                <form action="valida.php" method="post">
+                <form id="cadForm" method="post" enctype="multipart/form-data">
                     <h1>Cadastro</h1>
                     <div class="input-box">
-                        <input type="text" class="form-control" id="log" placeholder="Nome completo" name="login" required oninvalid="this.setCustomValidity('Preencha o Usuário!')" onchange="try{setCustomValidity('')}catch(e){}">
-                        <i class="bx bxs-user"></i>
+                        <input type="text" name="clientes['nome']" id="nome-completo" placeholder="Nome completo" maxlength="100" required>
                     </div>
 
                     <div class="input-box">
-                        <input type="password" class="form-control" id="pass" placeholder="CPF" name="senha" maxlength="30" required oninvalid="this.setCustomValidity('Preencha a Senha!')" onchange="try{setCustomValidity('')}catch(e){}">
-                        <i class="bx bxs-lock-alt"></i>
+                        <input type="text" name="clientes['cpf']" id="cpf" placeholder="CPF"  maxlength="11" required>                       
                     </div>
 
                     <div class="input-box">
-                        <input type="password" class="form-control" id="pass" placeholder="Estado" name="senha" maxlength="30" required oninvalid="this.setCustomValidity('Preencha a Senha!')" onchange="try{setCustomValidity('')}catch(e){}">
-                        <i class="bx bxs-lock-alt"></i>
-                    </div>
-
-                    <div class="input-box">
-                        <input type="password" class="form-control" id="pass" placeholder="Cidade" name="senha" maxlength="30" required oninvalid="this.setCustomValidity('Preencha a Senha!')" onchange="try{setCustomValidity('')}catch(e){}">
-                        <i class="bx bxs-lock-alt"></i>
-                    </div>
-
-                    <div class="input-box">
-                        <input type="password" class="form-control" id="pass" placeholder="Bairro" name="senha" maxlength="30" required oninvalid="this.setCustomValidity('Preencha a Senha!')" onchange="try{setCustomValidity('')}catch(e){}">
-                        <i class="bx bxs-lock-alt"></i>
-                    </div>
-
-                    <div class="input-box">
-                        <input type="password" class="form-control" id="pass" placeholder="Rua" name="senha" maxlength="30" required oninvalid="this.setCustomValidity('Preencha a Senha!')" onchange="try{setCustomValidity('')}catch(e){}">
-                        <i class="bx bxs-lock-alt"></i>
-                    </div>
-
-                    <div class="input-box">
-                        <input type="password" class="form-control" id="pass" placeholder="Número" name="senha" maxlength="30" required oninvalid="this.setCustomValidity('Preencha a Senha!')" onchange="try{setCustomValidity('')}catch(e){}">
-                        <i class="bx bxs-lock-alt"></i>
-                    </div>
-
-                    <div class="input-box">
-                        <input type="password" class="form-control" id="pass" placeholder="Telefone" name="senha" maxlength="30" required oninvalid="this.setCustomValidity('Preencha a Senha!')" onchange="try{setCustomValidity('')}catch(e){}">
-                        <i class="bx bxs-lock-alt"></i>
-                    </div>
-
-                    <div class="input-box">
-                        <input type="date" class="form-control" id="pass" placeholder="Senha" name="senha" maxlength="30" required oninvalid="this.setCustomValidity('Preencha a Senha!')" onchange="try{setCustomValidity('')}catch(e){}">
-                    </div>
-
-                    <div class="input-box">
-                        <input type="email" class="form-control" id="pass" placeholder="Email" name="senha" maxlength="30" required oninvalid="this.setCustomValidity('Preencha a Senha!')" onchange="try{setCustomValidity('')}catch(e){}">
-                    </div>
-
-                    <div class="input-box">
-                        <input type="password" class="form-control" id="pass" placeholder="Senha" name="senha" maxlength="30" required oninvalid="this.setCustomValidity('Preencha a Senha!')" onchange="try{setCustomValidity('')}catch(e){}">
-                    </div>
-
-                    <div class="input-box">
-                        <input type="password" class="form-control" id="pass" placeholder="Confirme a senha" name="senha" maxlength="30" required oninvalid="this.setCustomValidity('Preencha a Senha!')" onchange="try{setCustomValidity('')}catch(e){}">
+                        <span class="data-label">
+                            <label class="dateLabel">Data de nascimento:</label>
+                            <input type="date" name="clientes['data_nasc']" required>
+                        </span>
                     </div>
 
                     <div class="gender-box">
@@ -89,16 +48,19 @@
                         </span>
                     </div>
 
-                    <div class="remember-forgot">
-                        <label><input type="checkbox">Manter login</label>
-                        <a href="#">Esqueceu a senha?</a>
+                    <div class="input-box">
+                        <input type="email" name="clientes['email']" id="email" placeholder="Email" maxlength="100" required>
                     </div>
 
-                    <button type="submit" class="btn">Login</button>
-
-                    <div class="register-link">
-                        <p>Não possui uma conta? <a href="<?php echo baseurl; ?>/src/formulario/index.php">Registrar</a></p>
+                    <div class="input-box">
+                        <input type="password" name="senha" id="senha" placeholder="Senha" maxlength="30" required onchange="confereSenha();">
                     </div>
+
+                    <div class="input-box">
+                        <input type="password" name="clientes['senha']" id="confirma" placeholder="Confirme a senha" maxlength="30" required onchange="confereSenha();">
+                    </div>
+
+                    <button class="btn" id="btnCad" type="submit" value="Enviar">Cadastrar</button>
                 </form>
             </div>
         </div>

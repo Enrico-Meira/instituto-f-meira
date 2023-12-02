@@ -127,6 +127,18 @@
 		return find($table);
 	}
 
+	function teste ($data)
+	{
+		$database = open_database();
+		
+
+		$sql = "SELECT * FROM agendamento WHERE data = " . $data;
+		$result = $database->query($sql);
+		//10:00
+
+
+		close_database($database);
+	}
 	// gera um id único
 
 	function gerar_id()

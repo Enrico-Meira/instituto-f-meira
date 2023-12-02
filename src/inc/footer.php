@@ -40,7 +40,7 @@
                 </div>
             </div>
         </footer>
-
+        <script src="<?php echo baseurl; ?>/src/js/bootstrap/bootstrap.min.js" defer></script>
         <script src="<?php echo baseurl; ?>/src/js/awesome/all.min.js"></script>
         <script src="<?php echo baseurl; ?>/src/js/main.js"></script>
         <script src="<?php echo baseurl; ?>/src/js/script.js" defer></script>
