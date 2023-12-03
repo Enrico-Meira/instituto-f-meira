@@ -89,12 +89,6 @@ ALTER TABLE `clientes`
   ADD PRIMARY KEY (`id_clientes`);
 
 --
--- Índices para tabela `funcionarios`
---
-ALTER TABLE `funcionarios`
-  ADD PRIMARY KEY (`id_funcionarios`);
-
---
 -- Índices para tabela `procedimentos`
 --
 ALTER TABLE `procedimentos`
