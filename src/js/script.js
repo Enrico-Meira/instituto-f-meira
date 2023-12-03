@@ -98,7 +98,7 @@ const renderCalendar = () => {
     function enviarParaPHP(data_agendada) 
     {
         const xhr = new XMLHttpRequest();
-        const url = "teste.php";
+        const url = "functions.php";
 
         alert(data_agendada);
 

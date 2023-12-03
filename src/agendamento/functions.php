@@ -3,76 +3,28 @@
 	require_once('../../config.php');
 	require_once(dbpath);
 
-	$clientes = null;
-	$cliente = null;
-
-	/**
-	 *  Listagem de Clientes
-	 */
-	function index() {
-		global $clientes;
-		$clientes = find_all('clientes');
-	}
 	/**
  	 *  Cadastro de Clientes
 	 */
 	function add() {
 
-		if (!empty($_POST['cliente'])) {
+		if ($_SERVER["REQUEST_METHOD"] === "POST") {
+			// Verifica se o parâmetro "data_agendada" foi enviado
+			if (isset($_POST['data_agendada'])) {
+				$dataRecebida = $_POST['data_agendada'];
 		
-		$today = new DateTime("now");
-
-		$cliente = $_POST['cliente'];
-		$cliente['modified'] = $cliente['created'] = $today->format("Y-m-d H:i:s");
-
-		save('clientes', $cliente);
-		header('location: index.php');
-		}
-	}
-	/**
-	 *	Atualizacao/Edicao de Cliente
-	*/
-	function edit() {
-
-		$now = new DateTime("now");
-			//date_create('now', new DateTimeZone('America/Sao_Paulo'));
-	
-		if (isset($_GET['id'])) {
-	
-			$id = $_GET['id'];
-	
-			if (isset($_POST['cliente'])) {
-		
-				$cliente = $_POST['cliente'];
-				$cliente['modified'] = $now->format("Y-m-d H:i:s");
-		
-				update('clientes', $id, $cliente);
-				header('location: index.php');
+				// Aqui você pode realizar operações com o dado recebido
+				// Neste exemplo, apenas um echo para demonstração
+				echo "Dado recebido no PHP: " . $dataRecebida;
 			} else {
-		
-				global $cliente;
-				$cliente = find('clientes', $id);
-			} 
-		
+				echo "Erro: Parâmetro 'data_agendada' não foi enviado.";
+			}
 		} else {
-		header('location: index.php');
+			echo "Erro: Método de requisição inválido.";
 		}
-	}
-	/**
-	 *  Visualização de um Cliente
-	 */
-	function view($id = null) {
-		global $cliente;
-		$cliente = find('clientes', $id);
-	}
-	/**
-	 *  Exclusão de um Cliente
-	 */
-	function delete($id = null) {
 
-		global $cliente;
-		$cliente = remove('clientes', $id);
-		
+		save('agendamentos', $dataRecebida);
 		header('location: index.php');
 	}
+	
 ?>

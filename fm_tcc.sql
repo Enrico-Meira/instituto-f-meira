@@ -28,11 +28,10 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `agendamentos` (
-  `id_agendamentos` varchar(12) NOT NULL,
+  `id_agendamentos` int(11) NOT NULL AUTO_INCREMENT,
   `id_clientes` varchar(13) DEFAULT NULL,
-  `id_funcionarios` varchar(13) DEFAULT NULL,
-  `id_procedimentos` varchar(12) DEFAULT NULL,
-  `data_agenda` varchar(100) DEFAULT NULL,
+  `id_procedimentos` int(11) DEFAULT NULL,
+  `data_agenda` datetime DEFAULT NULL,
   `status_agenda` tinyint(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -62,23 +61,11 @@ CREATE TABLE `clientes` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `funcionarios`
---
-
-CREATE TABLE `funcionarios` (
-  `id_funcionarios` varchar(13) NOT NULL,
-  `nome` varchar(100) DEFAULT NULL,
-  `cpf` varchar(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
 -- Estrutura da tabela `procedimentos`
 --
 
 CREATE TABLE `procedimentos` (
-  `id_procedimentos` varchar(12) NOT NULL,
+  `id_procedimentos` int(11) NOT NULL AUTO_INCREMENT,
   `procedimento` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
