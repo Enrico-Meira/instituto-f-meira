@@ -168,7 +168,7 @@
 
 @media only screen and (min-width: 1400px) {
     .footer {
-        background-color: var(--complementary-color);
+        background-color: #EBC2D4;
     }
 
     .buttons {
@@ -180,3 +180,4 @@
         justify-content: space-between;
     }
 }
+

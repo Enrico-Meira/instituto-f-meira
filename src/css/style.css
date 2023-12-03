@@ -43,7 +43,7 @@
         font-family: 'Poppins', sans-serif;
         position: absolute;
         top: 65px;
-        right: 250px;
+        right: 90px;
         width: 50px;
         height: 50px;
         background: #fff;
@@ -150,7 +150,7 @@
     }
 
     .cabecalho2 {
-        background-color: #BF3B7B;
+        background-color: #EBC2D3;
         background-size: cover;
         position: sticky;
         z-index: 999;     
@@ -345,7 +345,7 @@
 
     .info {
         padding: 60px 0;
-        background: #a25050;
+        background: #fff;
     }
 
     .info-container {
@@ -395,11 +395,15 @@
     }
 
     .init-anim {
+        font-family: Lato;
         position: relative;
         max-width: 50%;
+        left: 135px;
+        margin: 50px 0;
         padding-right: 15px;
         padding-left: 15px;
     }
+
 
     .init-anim a {
         color: inherit;
@@ -407,7 +411,23 @@
         background-color: transparent;
     }
 
+    .init-anim h3 {
+        position: relative;
+        bottom: 67px;
+        right: 540px;
+        color: #9B7D86;
+        text-align: center;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 7.5px;
+        text-transform: uppercase;
+    }
+
     .init-anim img {
+        box-shadow: rgba(89, 64, 71, 1) 15px 15px; 
+        margin: 0 0 17px 10px;
         max-width: 100%;
         max-height: 100%;
         height: auto;
@@ -416,10 +436,19 @@
         overflow: clip;
     }
 
+    .init-anim p {
+        position: relative;
+        width: 1100px;
+        left: 53px;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+    }
+
     .info h3 {
         font-weight: 400;
         font-size: 28px;
-        color: #fff;
+        color: #9B7D86;
     }
 
     .infoIMG {
@@ -432,8 +461,180 @@
         font-weight: 300;
         text-align: justify;
         font-size: 15px;
-        color: #fff;
-        line-height: 32px; 
+        color: #000;
+        line-height: 32.4px; 
+    }
+
+    .whitec {
+        background: #fff;
+    }
+
+
+    .evidence h3 {
+        position: relative;
+        top: 99px;
+        left: 825px;
+        width: 150px;
+        color: #9B7D86;
+        text-align: center;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 8px;
+        text-transform: uppercase;
+    }
+
+    .evidence {
+        background: #EBC2D4;
+        font-family: Lato;
+    }
+    .evd-card {
+        position: relative;
+        left: 250px;
+        margin: 220px 80px;
+        height: 412px;
+        display: inline-block;
+        width: 326px;
+        background: #594047;
+        box-shadow: 2px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    .evd-card p{
+        /* word-wrap: break-word; */
+        position: absolute;
+        top: 63%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 200px;
+        height: 200px;
+        flex-shrink: 0;
+        color: #FFF;
+        text-align: center;
+        /* font-family: Lato; */
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 162%; /* 29.16px */
+    }
+
+    .evd-linha {
+        position: relative;
+        top: 54px;
+        left: 125px;
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 10px;
+        width: 80px;
+        height: 1px;
+        border: 0.2px solid #9B7D86;
+    }
+
+    .evd-img {
+        position: relative;
+        right: 25px;
+        top: 39px;
+        width: 100px;
+        height: 100px;
+        flex-shrink: 0;
+        border-radius: 100px;
+        background: lightgray 50% / cover no-repeat;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    .virgula {
+        position: relative;
+        width: 45px;
+        height: 45px;
+        flex-shrink: 0;
+        right: 75px;
+        bottom: 30px;
+    }
+
+    .location {
+        font-family: Lato;
+        position: relative;
+        max-width: 50%;
+        left: 135px;
+        margin-top: 196px;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .location h3 {        
+        position: relative;
+        bottom: 61px;
+        right: 205px;
+        color: #9B7D86;
+        text-align: center;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 8px;
+        text-transform: uppercase;
+    }
+
+    .location img {
+        box-shadow: rgba(89, 64, 71, 1) 15px 15px; 
+        margin: 0 0 17px 10px;
+        width: 369px;
+        height: 470px;
+        height: auto;
+        border-style: none;
+        vertical-align: middle;
+        overflow: clip;
+    }
+
+    .location p {
+        position: relative;
+    }
+
+    .lct-main-p {
+        color: #000;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 162%; /* 32.4px */
+        left: 430px;
+        bottom: 550px;
+    }
+
+    .lct-div {
+        position: relative;
+        left: 580px;
+        bottom: 550px;
+    }
+
+    .lct-div p{
+        right: 100px;
+        color: #000;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 162%; /* 32.4px */
+    }
+
+    .lct-div svg{
+        width: 52px;
+        height: 52px;
+        position: relative;
+        top: 60px;
+        right: 155px;
+    }
+
+    .lct-iframe {
+        position: relative;
+        bottom: 120px;
+        width: 1500px;
+        height: 250px;
+    }
+
+    .lct-iframe iframe {
+        width: 100%;
+        height: 100%;
+        border: 1px solid #000;
     }
 
     /* PRINCIPAIS TRATAMENTOS */
@@ -693,7 +894,7 @@
         margin-right: 10px;
         width: 80px;
         height: 0;
-        border: 0.5px solid #594047;;
+        border: 0.5px solid #594047;
     }
 
     .linha-title:after {
@@ -781,7 +982,7 @@
 
     /* FOOTER */
     .footer {
-        background-color: var(--complementary-color);
+        background-color: #EBC2D4;
         position: fixed;
         bottom: 600;
         width: 100%;
