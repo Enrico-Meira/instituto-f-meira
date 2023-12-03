@@ -14,6 +14,10 @@ currMonth = date.getMonth();
 const months = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho",
 "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
 
+criarBotoes();
+
+let data;
+
 const renderCalendar = () => {
     let firstDayofMonth = new Date(currYear, currMonth, 1).getDay(), // getting first day of month
     lastDateofMonth = new Date(currYear, currMonth + 1, 0).getDate(), // getting last date of month
@@ -39,16 +43,16 @@ const renderCalendar = () => {
     currentDate.innerText = `${months[currMonth]} ${currYear}`; // passing current mon and yr as currentDate text
     daysTag.innerHTML = liTag;
 
-    criarBotoes();
 
-    let data;
+
+
 
     days = document.querySelectorAll(".days li:not(.inactive)");
 
     days.forEach(dia => {
         dia.addEventListener("click", () => {
             let valor = dia.innerText;
-            data = currYear + "-" +  currMonth + "-" + valor;
+            data = currYear + "-" +  (currMonth + 1) + "-" + valor;
             if (fundoExibido) {
                 fundo.style.transform = 'translateX(0)'; // Retrai o fundo movendo-o para a posição original
                 fundoExibido = false;
@@ -59,75 +63,73 @@ const renderCalendar = () => {
         });
     });
 
-    function criarBotoes() 
-    {
-        const horasInicio = 8;
-        const horasFim = 19;
-        const minutosIntervalo = 30;
-
-        const container = document.querySelector(".botoes-container"); // Substitua pelo ID real do seu contêiner
-
-        for (let hora = horasInicio; hora < horasFim; hora++) 
-        {
-            for (let minuto = 0; minuto < 60; minuto += minutosIntervalo) 
-            {
-                const button = document.createElement("button");
-                button.className = "button-hour";
-
-                const horaFormatada = hora < 10 ? "0" + hora : hora;
-                const minutoFormatado = minuto === 0 ? "00" : minuto;
-
-                const textoBotao = horaFormatada + ":" + minutoFormatado;
-                button.textContent = textoBotao;
-
-                // Adicione o botão ao contêiner
-                container.appendChild(button);
-            }
-        }
-    }
-
-    button = document.querySelectorAll(".botoes-container .button-hour");
-
-    button.forEach(btn => {
-        btn.addEventListener("click", () => {
-            const horarioClicado = data + " " + btn.innerHTML + ":00";
-            enviarParaPHP(horarioClicado);
-        });
-    });
-
-    function enviarParaPHP(data_agendada) 
-    {
-        const xhr = new XMLHttpRequest();
-        const url = "functions.php";
-
-        alert(data_agendada);
-
-        xhr.open("POST", url, true);
-        xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-
-        xhr.onreadystatechange = function() 
-        {
-            if (xhr.readyState == 4) 
-            {
-                if (xhr.status == 200) 
-                {
-                    console.log("Resposta da página PHP:", xhr.responseText);
-                    // window.location.href = 'teste.php';  // Remova ou mova para dentro do bloco if, se necessário
-                } 
-                else 
-                {
-                    console.error("Erro na requisição AJAX:", xhr.status, xhr.statusText);
-                }
-            }
-        };
-
-        xhr.send("data_agendada=" + encodeURIComponent(data_agendada));
-    }
 }
 
 
+function criarBotoes() 
+{
+    const horasInicio = 8;
+    const horasFim = 19;
+    const minutosIntervalo = 30;
 
+    const container = document.querySelector(".botoes-container"); // Substitua pelo ID real do seu contêiner
 
+    for (let hora = horasInicio; hora < horasFim; hora++) 
+    {
+        for (let minuto = 0; minuto < 60; minuto += minutosIntervalo) 
+        {
+            const button = document.createElement("button");
+            button.className = "button-hour";
+
+            const horaFormatada = hora < 10 ? "0" + hora : hora;
+            const minutoFormatado = minuto === 0 ? "00" : minuto;
+
+            const textoBotao = horaFormatada + ":" + minutoFormatado;
+            button.textContent = textoBotao;
+
+            // Adicione o botão ao contêiner
+            container.appendChild(button);
+        }
+    }
+}
+
+button = document.querySelectorAll(".botoes-container .button-hour");
+
+button.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const horarioClicado = data + " " + btn.innerHTML + ":00";
+        enviarParaPHP(horarioClicado);
+    });
+});
+
+function enviarParaPHP(data_agendada) 
+{
+    const xhr = new XMLHttpRequest();
+    const url = "functions.php";
+
+    alert(data_agendada);
+
+    xhr.open("POST", url, true);
+    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+    xhr.onreadystatechange = function() 
+    {
+        if (xhr.readyState == 4) 
+        {
+            if (xhr.status == 200) 
+            {
+                console.log("Resposta da página PHP:", xhr.responseText);
+                // window.location.href = 'teste.php';  // Remova ou mova para dentro do bloco if, se necessário
+            } 
+            else 
+            {
+                console.error("Erro na requisição AJAX:", xhr.status, xhr.statusText);
+            }
+        }
+    };
+
+    xhr.send("data_agendada=" + encodeURIComponent(data_agendada));
+}
 
 renderCalendar();
 
