@@ -63,6 +63,19 @@ const renderCalendar = () => {
         });
     });
 
+    
+    function sincronizarAltura() {
+        var btnContainer = document.querySelector('.botoes-container');
+        var divFrente = document.querySelector('.wrapper');
+        var divTras = document.querySelector('.fundo');
+
+        var alturaFrente = divFrente.getBoundingClientRect().height + 'px'; // Get the computed height of the .wrapper div
+        var alturaTras = divTras.getBoundingClientRect().height + 'px';
+        divTras.style.height = alturaFrente; // Set the height of the .fundo div equal to the .wrapper div
+        btnContainer.style.height = alturaTras;
+    }
+
+    sincronizarAltura(); // Call the function to synchronize heights
 }
 
 
@@ -138,29 +151,3 @@ prevNextIcon.forEach(icon => {
         renderCalendar();
     });
 });
-
-        //     function criarBotoes(data) {
-        //         const botoesContainer = document.querySelector('.botoes-container');
-        //         botoesContainer.innerHTML = ''; // Limpa qualquer conteúdo anterior
-                
-        //         const botao1 = document.createElement('button');
-        //         botao1.textContent = '15:00';
-        //         botao1.addEventListener('click', () => {
-        //             alert(data + "-" + botao1.textContent);
-        //         });
-        //         botoesContainer.appendChild(botao1);
-                
-        //         const botao2 = document.createElement('button');
-        //         botao2.textContent = '15:30';
-        //         botao2.addEventListener('click', () => {
-        //             alert(data + "-" + botao2.textContent);
-        //         });
-        //         botoesContainer.appendChild(botao2);
-                
-        //         const botao3 = document.createElement('button');
-        //         botao3.textContent = '16:00';
-        //         botao3.addEventListener('click', () => {
-        //             alert(data + " " + botao3.textContent);
-        //         });
-        //         botoesContainer.appendChild(botao3);
-        //     }

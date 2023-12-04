@@ -150,14 +150,35 @@
     }
 
     .cabecalho2 {
-        background-color: #EBC2D3;
-        background-size: cover;
+        background: rgb(233,190,208);
+        background: linear-gradient(90deg, rgba(233,190,208,1) 0%, rgba(244,224,231,1) 50%, rgba(236,205,218,1) 100%); 
+        /* background-size: cover; */
         position: sticky;
         z-index: 999;     
         display: flex;
         padding: 30px 0px;
         width: 100%;
         /* margin: 0 auto; */
+    }
+
+    .cabecalho2 .menu {
+        padding-left: 0;
+        display: flex;
+        align-items: center;
+        background-color: transparent;
+        height: 100%;
+        width: 100%;
+        margin: 0px 10px;
+    }
+
+    .cabecalho2 .menu .menu-li {
+        flex-shrink: 0;
+        padding: 0px 15px;
+        padding-right: 15px;
+        padding-right: 28px;
+        display: inline-block;
+        position: relative;
+        right: 266px;
     }
 
     /* 𝗩 𝗩 𝗩 arruma essa merda dps pq eu fiz esse 𝗩 𝗩 𝗩
@@ -215,6 +236,7 @@
     }
     
     .menu .menu-li {
+        flex-shrink: 0;
         padding: 0px 15px;
         padding-right: 28px;
         display: inline-block;
@@ -222,6 +244,9 @@
         right: 300px;
     }
 
+    .boxMenu-ul {
+        padding-left: 0;
+    }
     
     .menu .menu-li a {
         /* background-color: azure; */
@@ -310,7 +335,7 @@
         color: #AF96A1;
         position: absolute;
         font-family: Lato;
-        left: 665px;
+        left: 505px;
         top: 90px;
     }
 
@@ -326,11 +351,13 @@
         line-height: normal;
         letter-spacing: 1.96px;
         text-transform: uppercase;
-        left: 290px;
+        left: 130px;
         top: 580px;
     }
 
     .saber a {
+        display: inline-block;
+        height: 37px;
         background-color: #594047;
         color: #fff;
         border-radius: 12px;
@@ -414,7 +441,7 @@
     .init-anim h3 {
         position: relative;
         bottom: 67px;
-        right: 540px;
+        right: 465px;
         color: #9B7D86;
         text-align: center;
         font-size: 30px;
@@ -439,6 +466,7 @@
     .init-anim p {
         position: relative;
         width: 1100px;
+        bottom: 35px;
         left: 53px;
         font-size: 20px;
         font-style: normal;
@@ -473,7 +501,7 @@
     .evidence h3 {
         position: relative;
         top: 99px;
-        left: 825px;
+        left: 630px;
         width: 150px;
         color: #9B7D86;
         text-align: center;
@@ -491,7 +519,7 @@
     }
     .evd-card {
         position: relative;
-        left: 250px;
+        left: 50px;
         margin: 220px 80px;
         height: 412px;
         display: inline-block;
@@ -564,8 +592,8 @@
 
     .location h3 {        
         position: relative;
-        bottom: 61px;
-        right: 205px;
+        bottom: 81px;
+        right: 125px;
         color: #9B7D86;
         text-align: center;
         font-size: 32px;
@@ -598,13 +626,13 @@
         font-weight: 500;
         line-height: 162%; /* 32.4px */
         left: 430px;
-        bottom: 550px;
+        bottom: 517px;
     }
 
     .lct-div {
         position: relative;
         left: 580px;
-        bottom: 550px;
+        bottom: 450px;
     }
 
     .lct-div p{
@@ -627,7 +655,7 @@
     .lct-iframe {
         position: relative;
         bottom: 120px;
-        width: 1500px;
+        width: 1210px;
         height: 250px;
     }
 
@@ -909,29 +937,60 @@
 
     .general-container {
         max-width: 1320px;
-        margin-left: 278px;
+        margin-left: 50px;
     }
 
-    .trats-container {
+    .trats-proced-container {
         position: relative;
         display: block;
         opacity: 1;
-        width: 1290px;
+        width: 1450px;
         transform: translate3d(0px, 0px, 0px);
         content: "";
         display: table;
         margin: 30px 0;
     }
     
-    .trat-container {
+    .trats-container {
+        position: relative;
+        display: block;
+        opacity: 1;
+        width: 1450px;
+        transform: translate3d(0px, 0px, 0px);
+        content: "";
+        display: table;
+        margin: 30px 0;
+    }
+
+    .trat-proced-container {
+        margin: 0 5px;
+        border-radius: 5px;
+        background-color: #594047;
         display: inline-block;
         width: 100%;
         text-align: center;        
-        width: 20.0%;
+        width: 19.0%;
         padding: 5px 0; 
     }
 
-     .trat-container img{
+    .trat-container {
+        margin: 0 5px;
+        border-radius: 5px;
+        display: inline-block;
+        width: 100%;
+        text-align: center;        
+        width: 19.0%;
+        padding: 5px 0; 
+    }
+
+
+    .trat-gen {
+        position: relative;
+        bottom: 50px;
+    }
+    
+
+    .trat-proced-container img{
         width: 200px;
         height: 200px;
         border-radius: 50%;
@@ -944,8 +1003,22 @@
         
     }
 
-    .trat-container h2{
-        color: #594047;
+    .trat-container img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        margin-bottom: 15px;
+        max-width: 100%;
+        max-height: 100%;
+        height: auto;
+        vertical-align: middle;
+        border-style: none;
+    }
+
+    .trat-container h2 {
+        position: relative;
+        bottom: 18px;
+        color: #000;
         border-bottom: 0.5px solid #c9c9c9;
         font-size: 18px;
         font-weight: 600;
@@ -953,8 +1026,35 @@
         padding: 5px 0;
     }
 
-    .trat-container p{
+    .trat-container p {
+        position: relative;
+        bottom: 18px;
         color: #000;
+        text-align: center;
+        font-family: Lato;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        text-align: center;
+        margin: 0 10px;
+        line-height: 100%; /* 24.3px */
+    }
+
+    .trat-proced-container h2{
+        position: relative;
+        bottom: 18px;
+        color: #fff;
+        border-bottom: 0.5px solid #c9c9c9;
+        font-size: 18px;
+        font-weight: 600;
+        margin: 3px 10px;
+        padding: 5px 0;
+    }
+
+    .trat-proced-container p{
+        position: relative;
+        bottom: 18px;
+        color: #FFF;
         text-align: center;
         font-family: Lato;
         font-size: 13px;

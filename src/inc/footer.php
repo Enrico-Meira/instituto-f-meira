@@ -2,12 +2,12 @@
             <div class="footer-container">
                 <div class="footer-row">
                     <div class="footer-col">
-                        <h4>company</h4>
+                        <h4>Empresa</h4>
                         <ul>
-                            <li><a href="">about us</a></li>
-                            <li><a href="">our services</a></li>
-                            <li><a href="">privacy policy</a></li>
-                            <li><a href="">affiliate program</a></li>
+                            <li><a href="">Sobre nós</a></li>
+                            <li><a href="">Nossos serviços</a></li>
+                            <li><a href="">Política de privacidade</a></li>
+                            <!-- <li><a href="">affiliate program</a></li> -->
                         </ul>
                     </div>
                     <div class="footer-col">
@@ -16,7 +16,7 @@
                             <li><a href="">FAQ</a></li>
                             <li><a href="">shipping</a></li>
                             <li><a href="">returns</a></li>
-                            <li><a href="">payment options</a></li>
+                            <!-- <li><a href="">payment options</a></li> -->
                         </ul>
                     </div>
                     <div class="footer-col">
@@ -25,7 +25,7 @@
                             <li><a href="">watch</a></li>
                             <li><a href="">bag</a></li>
                             <li><a href="">shoes</a></li>
-                            <li><a href="">dress</a></li>
+                            <!-- <li><a href="">dress</a></li> -->
                         </ul>
                     </div>
                     <div class="footer-col">
@@ -40,12 +40,13 @@
                 </div>
             </div>
         </footer>
-        <script src="<?php echo baseurl; ?>/src/js/bootstrap/bootstrap.min.js" defer></script>
+
         <script src="<?php echo baseurl; ?>/src/js/awesome/all.min.js"></script>
         <script src="<?php echo baseurl; ?>/src/js/main.js"></script>
+        <script src="<?php echo baseurl; ?>/src/js/bootstrap/bootstrap.min.js" defer></script>
         <script src="<?php echo baseurl; ?>/src/js/script.js" defer></script>
         <script src="<?php echo baseurl; ?>/src/js/jquery-3.6.0.min.js"></script>
-
+        <!-- <script src="<?php echo baseurl; ?>/src/js/slider.js"></script> -->
     </body>
 </html>
 
