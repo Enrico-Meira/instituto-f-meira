@@ -18,10 +18,12 @@
     <!-- Google Font Link for Icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
   </head>
+
+  <div class="cld-container">
     <div class="wrapper">
-        <p class="current-date"></p>
         <div class="icons">
           <span id="prev" class="material-symbols-rounded">chevron_left</span>
+          <p class="current-date"></p>
           <span id="next" class="material-symbols-rounded">chevron_right</span>
         </div>
       <div class="calendar">
@@ -37,9 +39,12 @@
         <ul class="days"></ul>
       </div>
     </div>
+
     <div class="fundo">
-      <div class="botoes-container"></div>
+          <div class="botoes-container"></div>
     </div>
+  </div>
+    
 
 <?php 
       require_once(footer_template);

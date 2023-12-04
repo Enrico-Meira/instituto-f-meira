@@ -90,8 +90,6 @@
 
 
             <script src="<?php echo baseurl; ?>/src/js/slider.js"></script>
-       
-
 <?php 
     require_once(footer_template);
 ?>

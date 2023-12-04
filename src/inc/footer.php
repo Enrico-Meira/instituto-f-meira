@@ -46,7 +46,7 @@
         <script src="<?php echo baseurl; ?>/src/js/bootstrap/bootstrap.min.js" defer></script>
         <script src="<?php echo baseurl; ?>/src/js/script.js" defer></script>
         <script src="<?php echo baseurl; ?>/src/js/jquery-3.6.0.min.js"></script>
-        <script src="<?php echo baseurl; ?>/src/js/slider.js"></script>
+        <!-- <script src="<?php echo baseurl; ?>/src/js/slider.js"></script> -->
     </body>
 </html>
 
