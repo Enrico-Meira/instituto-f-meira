@@ -30,21 +30,21 @@
             <nav>
                 <ul class="menu">
                     <li class="menu-li">
-                        <a href="<?php echo baseurl; ?>/index.php">Início</a>
+                        <a href="<?php echo baseurl; ?>/index.php">INÍCIO</a>
                     </li>
                     <li class="menu-li">
-                        <a href="<?php echo baseurl; ?>/src/procedimentos/index.php">Procedimentos</a>
+                        <a href="<?php echo baseurl; ?>/src/procedimentos/index.php">PROCEDIMENTOS</a>
                     </li>
                     <li class="menu-li">
-                        <a href="<?php echo baseurl; ?>/src/agendamento/calendario.php">Agendamento</a>
+                        <a href="<?php echo baseurl; ?>/src/agendamento/calendario.php">AGENDAMENTO</a>
                     </li>
                     <li class="menu-li">
-                        <a href="<?php echo baseurl; ?>/src/pages/about.php">Sobre nós</a>
+                        <a href="<?php echo baseurl; ?>/src/pages/about.php">SOBRE NÓS</a>
                     </li>
                 </ul>
                             <div class="navigation">
                                 <div class="menuToggle"></div>
-                                <ul>
+                                <ul class="boxMenu-ul">
                                     <li>
                                         <a href="<?php echo baseurl; ?>/index.php">
                                             <span class="icon"><i class="fa-solid fa-house"></i></span>
