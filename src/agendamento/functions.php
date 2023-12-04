@@ -6,25 +6,28 @@
 	/**
  	 *  Cadastro de Clientes
 	 */
-	function add() {
+
+		header("Access-Control-Allow-Origin: *");
+		header("Access-Control-Allow-Methods: POST");
+		header("Access-Control-Allow-Headers: Content-Type");
 
 		if ($_SERVER["REQUEST_METHOD"] === "POST") {
 			// Verifica se o parâmetro "data_agendada" foi enviado
-			if (isset($_POST['data_agendada'])) {
-				$dataRecebida = $_POST['data_agendada'];
+			if (isset($_POST['data_agenda'])) {
+				$dataRecebida = $_POST['data_agenda'];
+				$dataRecebida['agenda_status'] = "aguardando";
+
+				echo $dataRecebida;
+				die();
 		
-				// Aqui você pode realizar operações com o dado recebido
-				// Neste exemplo, apenas um echo para demonstração
-				echo "Dado recebido no PHP: " . $dataRecebida;
+				save('agendamentos', $dataRecebida);
+				header('location: index.php');
+
 			} else {
-				echo "Erro: Parâmetro 'data_agendada' não foi enviado.";
+				echo "Erro: Parâmetro 'data_agenda' não foi enviado.";
 			}
 		} else {
 			echo "Erro: Método de requisição inválido.";
 		}
 
-		save('agendamentos', $dataRecebida);
-		header('location: index.php');
-	}
-	
 ?>

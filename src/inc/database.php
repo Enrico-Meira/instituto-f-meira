@@ -180,7 +180,7 @@
 	/**
 	*  Insere um registro no BD
 	*/
-	function save($table = null, $data = null, $id_clientes = null) 
+	function save($table = null, $data = null) 
     {
 		$database = open_database();
 	
@@ -293,5 +293,6 @@
         $_SESSION['message'] = null;
         $_SESSION['type'] = null;
     }
-	
+
+
 ?>

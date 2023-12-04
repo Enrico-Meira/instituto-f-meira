@@ -16,6 +16,11 @@
             <div class="line"></div>
         </div>
 
+        <!-- <div class="mt-4 p-5 bg-primary text-white rounded">
+            <h1>Jumbotron Example</h1>
+            <p>Lorem ipsum...</p>
+        </div> -->
+
         <div class="botox-container">
             <div class="botox-title">
                 <h2>TOXINA BOTULÍNICA</h2>

@@ -72,7 +72,7 @@ function criarBotoes()
     const horasFim = 19;
     const minutosIntervalo = 30;
 
-    const container = document.querySelector(".botoes-container"); // Substitua pelo ID real do seu contêiner
+    const container = document.querySelector(".botoes-container");
 
     for (let hora = horasInicio; hora < horasFim; hora++) 
     {
@@ -87,7 +87,6 @@ function criarBotoes()
             const textoBotao = horaFormatada + ":" + minutoFormatado;
             button.textContent = textoBotao;
 
-            // Adicione o botão ao contêiner
             container.appendChild(button);
         }
     }
@@ -102,52 +101,41 @@ button.forEach(btn => {
     });
 });
 
-function enviarParaPHP(data_agendada) 
-{
+function enviarParaPHP(data_agendada) {
     const xhr = new XMLHttpRequest();
     const url = "functions.php";
-
-    alert(data_agendada);
 
     xhr.open("POST", url, true);
     xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
-    xhr.onreadystatechange = function() 
-    {
-        if (xhr.readyState == 4) 
-        {
-            if (xhr.status == 200) 
-            {
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4) {
+            if (xhr.status == 200) {
+                // Aqui você pode lidar com a resposta da página PHP, se necessário
                 console.log("Resposta da página PHP:", xhr.responseText);
-                // window.location.href = 'teste.php';  // Remova ou mova para dentro do bloco if, se necessário
-            } 
-            else 
-            {
+                // Redireciona para a página PHP após o envio bem-sucedido
+                // window.location.href = "functions.php";
+            } else {
                 console.error("Erro na requisição AJAX:", xhr.status, xhr.statusText);
             }
         }
     };
-
-    xhr.send("data_agendada=" + encodeURIComponent(data_agendada));
+    xhr.send("data_agenda=" + encodeURIComponent(data_agendada));
 }
 
 renderCalendar();
 
-prevNextIcon.forEach(icon => { // getting prev and next icons
+prevNextIcon.forEach(icon => {
     icon.addEventListener("click", () => { 
-        // adding click event on both icons
-        // if clicked icon is previous icon then decrement current month by 1 else increment it by 1
         currMonth = icon.id === "prev" ? currMonth - 1 : currMonth + 1;
 
-        if(currMonth < 0 || currMonth > 11) { // if current month is less than 0 or greater than 11
-            // creating a new date of current year & month and pass it as date value
+        if(currMonth < 0 || currMonth > 11) { 
             date = new Date(currYear, currMonth, new Date().getDate());
-            currYear = date.getFullYear(); // updating current year with new date year
-            currMonth = date.getMonth(); // updating current month with new date month
-        } else {
-            date = new Date(); // pass the current date as date value
+            currYear = date.getFullYear();
+            currMonth = date.getMonth();
+            date = new Date();
         }
-        renderCalendar(); // calling renderCalendar function
+        renderCalendar();
     });
 });
 

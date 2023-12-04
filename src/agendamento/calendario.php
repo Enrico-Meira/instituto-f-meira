@@ -1,11 +1,11 @@
 <?php
-    require_once('functions.php');
+    require_once('../../config.php');
     $head = "cabecalho2";
     if(!isset($_SESSION))
     {
       session_start();
     }
-    include(header_template); 
+    include(header_template);
 ?>
 
 <!DOCTYPE html>

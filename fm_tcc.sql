@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `agendamentos` (
-  `id_agendamentos` int(11) NOT NULL AUTO_INCREMENT,
+  `id_agendamentos` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
   `id_clientes` varchar(13) DEFAULT NULL,
   `id_procedimentos` int(11) DEFAULT NULL,
   `data_agenda` datetime DEFAULT NULL,
@@ -65,45 +65,25 @@ CREATE TABLE `clientes` (
 --
 
 CREATE TABLE `procedimentos` (
-  `id_procedimentos` int(11) NOT NULL AUTO_INCREMENT,
+  `id_procedimentos` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
   `procedimento` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Índices para tabelas despejadas
---
 
 --
 -- Índices para tabela `agendamentos`
 --
 ALTER TABLE `agendamentos`
-  ADD PRIMARY KEY (`id_agendamentos`),
   ADD KEY `FK_id_clientes` (`id_clientes`),
-  ADD KEY `FK_id_funcionarios` (`id_funcionarios`),
   ADD KEY `FK_id_procedimentos` (`id_procedimentos`);
 
---
--- Índices para tabela `clientes`
---
+
 ALTER TABLE `clientes`
   ADD PRIMARY KEY (`id_clientes`);
 
---
--- Índices para tabela `procedimentos`
---
-ALTER TABLE `procedimentos`
-  ADD PRIMARY KEY (`id_procedimentos`);
-
---
--- Restrições para despejos de tabelas
---
-
---
 -- Limitadores para a tabela `agendamentos`
 --
 ALTER TABLE `agendamentos`
   ADD CONSTRAINT `FK_id_clientes` FOREIGN KEY (`id_clientes`) REFERENCES `clientes` (`id_clientes`),
-  ADD CONSTRAINT `FK_id_funcionarios` FOREIGN KEY (`id_funcionarios`) REFERENCES `funcionarios` (`id_funcionarios`),
   ADD CONSTRAINT `FK_id_procedimentos` FOREIGN KEY (`id_procedimentos`) REFERENCES `procedimentos` (`id_procedimentos`);
 COMMIT;
 
