@@ -940,6 +940,17 @@
         margin-left: 50px;
     }
 
+    .trats-proced-container {
+        position: relative;
+        display: block;
+        opacity: 1;
+        width: 1450px;
+        transform: translate3d(0px, 0px, 0px);
+        content: "";
+        display: table;
+        margin: 30px 0;
+    }
+    
     .trats-container {
         position: relative;
         display: block;
@@ -951,12 +962,7 @@
         margin: 30px 0;
     }
 
-    .trat-gen {
-        position: relative;
-        bottom: 50px;
-    }
-    
-    .trat-container {
+    .trat-proced-container {
         margin: 0 5px;
         border-radius: 5px;
         background-color: #594047;
@@ -967,7 +973,24 @@
         padding: 5px 0; 
     }
 
-     .trat-container img{
+    .trat-container {
+        margin: 0 5px;
+        border-radius: 5px;
+        display: inline-block;
+        width: 100%;
+        text-align: center;        
+        width: 19.0%;
+        padding: 5px 0; 
+    }
+
+
+    .trat-gen {
+        position: relative;
+        bottom: 50px;
+    }
+    
+
+    .trat-proced-container img{
         width: 200px;
         height: 200px;
         border-radius: 50%;
@@ -980,7 +1003,44 @@
         
     }
 
-    .trat-container h2{
+    .trat-container img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        margin-bottom: 15px;
+        max-width: 100%;
+        max-height: 100%;
+        height: auto;
+        vertical-align: middle;
+        border-style: none;
+    }
+
+    .trat-container h2 {
+        position: relative;
+        bottom: 18px;
+        color: #000;
+        border-bottom: 0.5px solid #c9c9c9;
+        font-size: 18px;
+        font-weight: 600;
+        margin: 3px 10px;
+        padding: 5px 0;
+    }
+
+    .trat-container p {
+        position: relative;
+        bottom: 18px;
+        color: #000;
+        text-align: center;
+        font-family: Lato;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        text-align: center;
+        margin: 0 10px;
+        line-height: 100%; /* 24.3px */
+    }
+
+    .trat-proced-container h2{
         position: relative;
         bottom: 18px;
         color: #fff;
@@ -991,7 +1051,7 @@
         padding: 5px 0;
     }
 
-    .trat-container p{
+    .trat-proced-container p{
         position: relative;
         bottom: 18px;
         color: #FFF;

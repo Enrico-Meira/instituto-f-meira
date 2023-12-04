@@ -26,8 +26,8 @@
             
     
             <div class="general-container">
-                <div class="trats-container">
-                    <div class="trat-container">
+                <div class="trats-proced-container">
+                    <div class="trat-proced-container">
                         <a href="<?php echo baseurl; ?>/src/procedimentos/botox.php">
                             <img class="linha-img" src="<?php echo baseurl; ?>/src/imagens/download.png">
                             <h2>Toxina botulínica - botox</h2>
@@ -35,7 +35,7 @@
                         </a>
                     </div>
     
-                    <div class="trat-container">
+                    <div class="trat-proced-container">
                         <a href="">
                             <img class="linha-img" src="<?php echo baseurl; ?>/src/imagens/download.png">
                             <h2>Rinomodelação</h2>
@@ -43,7 +43,7 @@
                         </a>
                     </div>
     
-                    <div class="trat-container">
+                    <div class="trat-proced-container">
                         <a href="">
                             <img class="linha-img" src="<?php echo baseurl; ?>/src/imagens/download.png">
                             <h2>Preenchimento labial</h2>
@@ -51,7 +51,7 @@
                         </a>
                     </div>
     
-                    <div class="trat-container">
+                    <div class="trat-proced-container">
                         <a href="">
                             <img class="linha-img" src="<?php echo baseurl; ?>/src/imagens/download.png">
                             <h2>Bioestimuladores de colágeno</h2>
@@ -59,7 +59,7 @@
                         </a>
                     </div>
     
-                    <div class="trat-container">
+                    <div class="trat-proced-container">
                         <a href="">
                             <img class="linha-img" src="<?php echo baseurl; ?>/src/imagens/download.png">
                             <h2>Fios de PDO</h2>
@@ -68,8 +68,8 @@
                     </div>
                 </div>
     
-                <div class="trats-container">
-                    <div class="trat-container">
+                <div class="trats-proced-container">
+                    <div class="trat-proced-container">
                         <a href="">
                             <img class="linha-img" src="<?php echo baseurl; ?>/src/imagens/download.png">
                             <h2>Microagulhamento</h2>
@@ -77,7 +77,7 @@
                         </a>
                     </div>
     
-                    <div class="trat-container">
+                    <div class="trat-proced-container">
                         <a href="">
                             <img class="linha-img" src="<?php echo baseurl; ?>/src/imagens/download.png">
                             <h2>Peeling químico</h2>
@@ -85,7 +85,7 @@
                         </a>
                     </div>
     
-                    <div class="trat-container">
+                    <div class="trat-proced-container">
                         <a href="">
                             <img class="linha-img" src="<?php echo baseurl; ?>/src/imagens/download.png">
                             <h2>Skinbooster</h2>
@@ -93,7 +93,7 @@
                         </a>
                     </div>
     
-                    <div class="trat-container">
+                    <div class="trat-proced-container">
                         <a href="">
                             <img class="linha-img" src="<?php echo baseurl; ?>/src/imagens/download.png">
                             <h2>Intradermoterapia</h2>
@@ -101,7 +101,7 @@
                         </a>
                     </div>
     
-                    <div class="trat-container">
+                    <div class="trat-proced-container">
                         <a href="">
                             <img class="linha-img" src="<?php echo baseurl; ?>/src/imagens/download.png">
                             <h2>Microtox</h2>
@@ -110,8 +110,8 @@
                     </div>
                 </div>
     
-                <div class="trats-container">
-                    <div class="trat-container">
+                <div class="trats-proced-container">
+                    <div class="trat-proced-container">
                         <a href="">
                             <img class="linha-img" src="<?php echo baseurl; ?>/src/imagens/download.png">
                             <h2>Cicatriz de acne</h2>
@@ -119,7 +119,7 @@
                         </a>
                     </div>
     
-                    <div class="trat-container">
+                    <div class="trat-proced-container">
                         <a href="">
                             <img class="linha-img" src="<?php echo baseurl; ?>/src/imagens/download.png">
                             <h2>Melasma/manchas</h2>
@@ -127,7 +127,7 @@
                         </a>
                     </div>
     
-                    <div class="trat-container">
+                    <div class="trat-proced-container">
                         <a href="">
                             <img class="linha-img" src="<?php echo baseurl; ?>/src/imagens/download.png">
                             <h2>Hidratação facial</h2>
@@ -135,7 +135,7 @@
                         </a>
                     </div>
     
-                    <div class="trat-container">
+                    <div class="trat-proced-container">
                         <a href="">
                             <img class="linha-img" src="<?php echo baseurl; ?>/src/imagens/download.png">
                             <h2>Lipo enzimática de papada</h2>
@@ -143,7 +143,7 @@
                         </a>
                     </div>
     
-                    <div class="trat-container">
+                    <div class="trat-proced-container">
                         <a href="">
                             <img class="linha-img" src="<?php echo baseurl; ?>/src/imagens/download.png">
                             <h2>Tratamentos para pescoço</h2>
@@ -152,8 +152,8 @@
                     </div>
                 </div>
     
-                <div class="trats-container">
-                    <div class="trat-container">
+                <div class="trats-proced-container">
+                    <div class="trat-proced-container">
                         <a href="">
                             <img class="linha-img" src="<?php echo baseurl; ?>/src/imagens/download.png">
                             <h2>Enzimas</h2>
@@ -161,7 +161,7 @@
                         </a>
                     </div>
     
-                    <div class="trat-container">
+                    <div class="trat-proced-container">
                         <a href="">
                             <img class="linha-img" src="<?php echo baseurl; ?>/src/imagens/download.png">
                             <h2>Trat. gordura localizada</h2>
@@ -169,7 +169,7 @@
                         </a>
                     </div>
     
-                    <div class="trat-container">
+                    <div class="trat-proced-container">
                         <a href="">
                             <img class="linha-img" src="<?php echo baseurl; ?>/src/imagens/download.png">
                             <h2>Hidrolipoclasia</h2>
@@ -177,7 +177,7 @@
                         </a>
                     </div>
     
-                    <div class="trat-container">
+                    <div class="trat-proced-container">
                         <a href="">
                             <img class="linha-img" src="<?php echo baseurl; ?>/src/imagens/download.png">
                             <h2>Flacidez corporal</h2>
@@ -185,7 +185,7 @@
                         </a>
                     </div>
     
-                    <div class="trat-container">
+                    <div class="trat-proced-container">
                         <a href="">
                             <img class="linha-img" src="<?php echo baseurl; ?>/src/imagens/download.png">
                             <h2>Limpeza de pele</h2>
@@ -194,8 +194,8 @@
                     </div>
                 </div>
                  
-                <div class="trats-container">
-                    <div class="trat-container">
+                <div class="trats-proced-container">
+                    <div class="trat-proced-container">
                         <a href="">
                             <img class="linha-img" src="<?php echo baseurl; ?>/src/imagens/download.png">
                             <h2>Drenagem linfática</h2>
@@ -203,7 +203,7 @@
                         </a>
                     </div>
     
-                    <div class="trat-container">
+                    <div class="trat-proced-container">
                         <a href="">
                             <img class="linha-img" src="<?php echo baseurl; ?>/src/imagens/download.png">
                             <h2>Preenchimento facial</h2>
@@ -211,7 +211,7 @@
                         </a>
                     </div>
     
-                    <div class="trat-container">
+                    <div class="trat-proced-container">
                         <a href="">
                             <img class="linha-img" src="<?php echo baseurl; ?>/src/imagens/download.png">
                             <h2>Lipo enzimática de papada</h2>
@@ -219,7 +219,7 @@
                         </a>
                     </div>
     
-                    <div class="trat-container">
+                    <div class="trat-proced-container">
                         <a href="">
                             <img class="linha-img" src="<?php echo baseurl; ?>/src/imagens/download.png">
                             <h2>Protocol. para emagrecimento</h2>
@@ -227,7 +227,7 @@
                         </a>
                     </div>
     
-                    <div class="trat-container">
+                    <div class="trat-proced-container">
                         <a href="">
                             <img class="linha-img" src="<?php echo baseurl; ?>/src/imagens/download.png">
                             <h2>Definição abdominal</h2>
