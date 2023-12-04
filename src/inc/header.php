@@ -60,9 +60,9 @@
                                     </li>
 
                                     <li>
-                                        <a href="#">
-                                            <span class="icon"><i class="fa-solid fa-message"></i></span>
-                                            <span class="title">Messages</span>
+                                        <a href="<?php echo baseurl; ?>/src/agendamento/admPanel.php">
+                                            <span class="icon"><i class="fa-solid fa-calendar"></i></span>
+                                            <span class="title">Agendamentos</span>
                                         </a>
                                     </li>
 

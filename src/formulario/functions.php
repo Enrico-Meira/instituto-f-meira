@@ -26,16 +26,6 @@
 	/**
  	 *  Cadastro de Clientes
 	 */
-	function add() 
-	{
-		if (!empty($_POST['clientes'])) 
-		{
-			$cliente = $_POST['clientes'];
-			$cliente['id_clientes'] = gerar_id();
-			save('clientes', $cliente);
-			header('location: index.php');
-		}
-	}
 	/**
 	 *	Atualizacao/Edicao de Cliente
 	*/
