@@ -32,7 +32,7 @@ CREATE TABLE `agendamentos` (
   `id_clientes` varchar(13) DEFAULT NULL,
   `id_procedimentos` int(11) DEFAULT NULL,
   `data_agenda` datetime DEFAULT NULL,
-  `status_agenda` tinyint(1) DEFAULT NULL
+  `status_agenda` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------

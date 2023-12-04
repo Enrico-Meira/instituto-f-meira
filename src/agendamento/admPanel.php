@@ -1,46 +1,72 @@
-<?php 
+<?php
         ob_start();
-	    require_once('functions.php'); 
-        if(!isset($_SESSION))
-        {
-            session_start();
+        $head = "cabecalho2";
+        require_once('functions.php');
+        if(!isset($_SESSION)) 
+        { 
+                session_start();
         }
-	    index();
+        index();
+        include(header_template);
+
+        
 ?>
 
-<?php include(header_template); ?>
-
-    <h2>Cliente <?php echo $agendamento['id_agendamentos']; ?></h2>
-    <hr>
+    <header class="barra">
+        <div class="row">
+            <div class="col-sm-6">
+                <h2>Agendamentos</h2>
+            </div>
+        </div>
+    </header>
+    
 
     <?php if (!empty($_SESSION['message'])) : ?>
-        <div class="alert alert-<?php echo $_SESSION['type']; ?>"><?php echo $_SESSION['message']; ?></div>
+        <div class="alert alert-<?php echo $_SESSION['type']; ?> alert-dismissible" role="alert">
+            <button type="button" class="close" data-bs-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <?php echo $_SESSION['message']; ?>
+        </div>
+        <?php clear_messages(); ?>
     <?php endif; ?>
 
-    <dl class="dl-horizontal">
-        <dt>Nome / Razão Social:</dt>
-        <dd><?php echo $agendamento['nome']; ?></dd>
+    <hr>
 
-        <dt>Procedimento selecionado:</dt>
-        <dd><?php echo $agendamento['procedimento']; ?></dd>
+    <table class="table table-hover">
+    <thead>
+        <tr>
+            <th>ID agendamento</th>
+            <th width="30%">Nome</th>
+            <th>Procedimento</th>
+            <th>Data agendada</th>
+            <th>Status agendamento</th>
+            <th>Opções</th>
+        </tr>
+    </thead>
+    <tbody>
+    <?php if ($agendamentos) : ?>
+    <?php foreach ($agendamentos as $agendamento) : ?>
+        <tr>
+            <td><?php echo $agendamento['id_agendamentos']; ?></td>
+            <td><?php echo $agendamento['nome']; ?></td>
+            <td><?php echo $agendamento['procedimento']?></td>
+            <td><?php echo formataData($agendamento['data_agenda'], "d/m/Y"); ?></td>
+            <td><?php echo $agendamento['status_agenda']; ?></td>
+            
+            <td class="actions text-start">
+                    <a href="edit.php?id=<?php echo $agendamento['id']; ?>" class="btn btn-sm btn-secondary"><i class="fa-solid fa-pen-to-square"></i> Editar</a>
+            </td>
+        </tr>
+    <?php endforeach; ?>
+    <?php else : ?>
+        <tr>
+            <td colspan="6">Nenhum registro encontrado.</td>
+        </tr>
+    <?php endif; ?>
+    </tbody>
+    </table>
 
-        <dt>Data agendada:</dt>
-        <dd><?php echo $agendamento['data_agenda']; ?></dd>
+    <?php 
 
-        <dt>Status atual:</dt>
-        <dd><?php echo $agendamento['status_agenda']; ?></dd>
-    </dl>
-
-    <div id="actions" class="row">
-        <div class="col-md-12">
-        <?php if (isset($_SESSION['email'])) : ?>
-            <a href="edit.php?id=<?php echo $agendamento['id_agendamentos']; ?>" class="btn btn-dark"><i class="fa-solid fa-pen-to-square"></i> Editar</a>
-        <?php endif; ?>     
-            <a href="index.php" class="btn btn-default"><i class="fa-solid fa-rotate-left"></i> Voltar</a>
-        </div>
-    </div>
-
-<?php 
-require_once(footer_template); 
-ob_end_flush();
-?>
+    include(footer_template); 
+    ob_end_flush();
+    ?>

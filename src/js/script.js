@@ -115,26 +115,22 @@ button.forEach(btn => {
 });
 
 function enviarParaPHP(data_agendada) {
-    const xhr = new XMLHttpRequest();
     const url = "functions.php";
-
-    xhr.open("POST", url, true);
-    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState == 4) {
-            if (xhr.status == 200) {
-                // Aqui você pode lidar com a resposta da página PHP, se necessário
-                console.log("Resposta da página PHP:", xhr.responseText);
-                // Redireciona para a página PHP após o envio bem-sucedido
-                // window.location.href = "functions.php";
-            } else {
-                console.error("Erro na requisição AJAX:", xhr.status, xhr.statusText);
-            }
+ 
+    $.ajax({
+        type: "POST",
+        url: url,
+        data: {
+            data_agenda: JSON.stringify(data_agendada)
+        },
+        success: function(response) {
+            console.log("Resposta da página PHP:", response);
+        },
+        error: function(xhr, status, error) {
+            console.error("Erro na requisição AJAX:", xhr.status, xhr.statusText);
         }
-    };
-    xhr.send("data_agenda=" + encodeURIComponent(data_agendada));
-}
+    });
+ }
 
 renderCalendar();
 
