@@ -30,6 +30,18 @@
                         </span>
                     </div>
 
+                    <div class="input-box">
+                        <input type="email" name="clientes['email']" id="email" placeholder="Email" maxlength="100" required>
+                    </div>
+
+                    <div class="input-box">
+                        <input type="password" name="senha" id="senha" placeholder="Senha" maxlength="30" required onchange="confereSenha();">
+                    </div>
+
+                    <div class="input-box">
+                        <input type="password" name="clientes['senha']" id="confirma" placeholder="Confirme a senha" maxlength="30" required onchange="confereSenha();">
+                    </div>
+
                     <div class="gender-box">
                         <label class="gnr-title">Gênero:</label> <br>
 
@@ -49,19 +61,9 @@
                         </span>
                     </div>
 
-                    <div class="input-box">
-                        <input type="email" name="clientes['email']" id="email" placeholder="Email" maxlength="100" required>
-                    </div>
-
-                    <div class="input-box">
-                        <input type="password" name="senha" id="senha" placeholder="Senha" maxlength="30" required onchange="confereSenha();">
-                    </div>
-
-                    <div class="input-box">
-                        <input type="password" name="clientes['senha']" id="confirma" placeholder="Confirme a senha" maxlength="30" required onchange="confereSenha();">
-                    </div>
-
                     <button class="btn" id="btnCad" type="submit" value="Enviar">Cadastrar</button>
+
+                    
                 </form>
             </div>
         </div>

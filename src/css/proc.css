@@ -31,14 +31,14 @@
 .btx-container2 .linha-title {
     width: 300px;
     position: relative;
-    left: 770px;
+    left: 650px;
     bottom: 40px;
 }
 
 .botox-title {
     width: 500px;
     position: relative;
-    left: 300px;
+    left: 200px;
     top: 250px;
 }
 
@@ -59,25 +59,149 @@
     text-align: center;
 }
 
+.botox-title2 {
+    width: 500px;
+    position: relative;
+    left: 200px;
+    top: 200px;
+}
+
+.botox-title2 h2 {
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: xx-large;
+    color: var(--dominant-color);
+}
+
+.botox-title2 p {
+    padding: 10px; 
+    border-radius: 10px; 
+    font-size: 18px; 
+    font-family: Arial; 
+    line-height: 1.4; 
+    margin: 10px 0; 
+    text-align: center;
+}
+
+.botox-title3 {
+    width: 500px;
+    position: relative;
+    left: 200px;
+    top: 150px;
+}
+
+.botox-title3 h2 {
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: xx-large;
+    color: var(--dominant-color);
+}
+
+.botox-title3 p {
+    padding: 10px; 
+    border-radius: 10px; 
+    font-size: 18px; 
+    font-family: Arial; 
+    line-height: 1.4; 
+    margin: 10px 0; 
+    text-align: center;
+}
+
 .botox-img {
     width: 10px;
     height: 10px;
 }
 
 .botox-btn {
-    font-size: large;
-    border-color: #424242;
-    cursor: pointer;
-    background-color: white;
-    text-align: center;
-    border-radius: 16px;
     position: relative;
-    top: 280px;
-    left: 460px;
-    width: 170px;
-    height: 40px;
-    border-width: 5px;
+    height: 37px;
+    background-color: #594047;
+    color: #fff;
+    border-radius: 12px;
+    padding: 10px 20px;
+    font-size: 12px;
+    margin: 0px 10px;
+    font-weight: 400;
+    text-shadow: 2px 2px 7px #8D8D8D;
+    font-family: Lato;
+    color: #EDEDED;
+    text-align: center;
+    font-family: Lato;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1.96px;
+    text-transform: uppercase;
+    left: 380px;
+    top: 270px;
 }
+
+.botox-btn2 {
+    position: relative;
+    height: 37px;
+    background-color: #594047;
+    color: #fff;
+    border-radius: 12px;
+    padding: 10px 20px;
+    font-size: 12px;
+    margin: 0px 10px;
+    font-weight: 400;
+    text-shadow: 2px 2px 7px #8D8D8D;
+    font-family: Lato;
+    color: #EDEDED;
+    text-align: center;
+    font-family: Lato;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1.96px;
+    text-transform: uppercase;
+    left: 380px;
+    top: 220px;
+}
+
+.botox-btn3 {
+    /* display: inline-block; */
+    position: relative;
+    height: 37px;
+    background-color: #594047;
+    color: #fff;
+    border-radius: 12px;
+    padding: 10px 20px;
+    font-size: 12px;
+    margin: 0px 10px;
+    font-weight: 400;
+    text-shadow: 2px 2px 7px #8D8D8D;
+    font-family: Lato;
+    color: #EDEDED;
+    text-align: center;
+    font-family: Lato;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1.96px;
+    text-transform: uppercase;
+    left: 380px;
+    top: 190px;
+}
+
+.botox-btn1:hover {
+    color: #fff;
+}
+
+.botox-btn2:hover {
+    color: #fff;
+}
+
+.botox-btn3:hover {
+    color: #fff;
+}
+
+
+
 
 .hex-img {
     width: 100%;
@@ -86,17 +210,58 @@
     object-fit: cover;
 }
 
+
 .hex {
     display: flex;
     position: relative;
     bottom: 300px;
-    left: 1051px;
-    width: 800px;
-    height: 800px;
+    left: 835px;
+    width: 700px;
+    height: 700px;
     background-color: #424242;
     -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
     clip-path: polygon(26% 0, 75% 0%, 100% 0, 100% 62%, 57% 95%, 8% 59%);
 }
+
+.hex-img-2 {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+
+.hex2 {
+    display: flex;
+    position: relative;
+    bottom: 415px;
+    left: 835px;
+    width: 700px;
+    height: 700px;
+    background-color: #424242;
+    -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    clip-path: polygon(26% 0, 75% 0%, 100% 0, 100% 62%, 57% 95%, 8% 59%);
+}
+
+.hex3 {
+    display: flex;
+    position: relative;
+    bottom: 464px;
+    left: 835px;
+    width: 700px;
+    height: 700px;
+    background-color: #424242;
+    -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    clip-path: polygon(26% 0, 75% 0%, 100% 0, 100% 62%, 57% 95%, 8% 59%);
+}
+
+.hex-img-3 {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
 
 .logo-container {
     position: relative;
@@ -141,7 +306,7 @@
     vertical-align: middle;
     padding: 0 10px;
     position: relative;
-    left: 410px;
+    left: 250px;
     bottom: 60px;
     margin: 10px 0;
 }

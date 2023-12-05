@@ -23,13 +23,13 @@
         </div> -->
 
         <div class="botox-container">
-            <div class="botox-title">
-                <h2>TOXINA BOTULÍNICA</h2>
-                <p>O Botox é um tratamento estético que utiliza a toxina botulínica para suavizar rugas e linhas de expressão no rosto. A toxina bloqueia temporariamente os sinais nervosos para os músculos, relaxando-os e reduzindo as rugas. O procedimento é realizado por profissionais qualificados, e os resultados duram de três a seis meses. </p>
+            <div class="botox-title3">
+                <h2>PREENCHIMENTO LABIAL</h2>
+                <p>O preenchimento labial é um procedimento estético não invasivo projetado para realçar ou restaurar o volume e a forma dos lábios. Geralmente, é realizado por meio da injeção de substâncias preenchedoras, como ácido hialurônico, para proporcionar resultados naturais e simétricos. Essa abordagem é popular para quem busca lábios mais cheios, definidos ou corrigir linhas finas ao redor da boca. O preenchimento labial é uma opção conveniente, muitas vezes realizada em consultórios médicos, e possui um tempo de recuperação mínimo. No entanto, é crucial consultar um profissional capacitado para avaliar as expectativas do paciente, a fim de garantir resultados estéticos harmônicos e seguros. </p>
             </div>
-            <a class="botox-btn" href="">AGENDAR</a>
-            <div class="hex">
-                <img class="hex-img"src="<?php echo baseurl; ?>/src/imagens/butux.jpg" alt="some">
+            <a class="botox-btn3" href="<?php echo baseurl; ?>">AGENDAR</a>
+            <div class="hex3">
+                <img class="hex-img-3"src="<?php echo baseurl; ?>/src/imagens/preenchimento_labial.jpg" alt="some">
             </div>
         </div>
     </div>

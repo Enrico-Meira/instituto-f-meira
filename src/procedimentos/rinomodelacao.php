@@ -23,13 +23,13 @@
         </div> -->
 
         <div class="botox-container">
-            <div class="botox-title">
-                <h2>TOXINA BOTULÍNICA</h2>
-                <p>O Botox é um tratamento estético que utiliza a toxina botulínica para suavizar rugas e linhas de expressão no rosto. A toxina bloqueia temporariamente os sinais nervosos para os músculos, relaxando-os e reduzindo as rugas. O procedimento é realizado por profissionais qualificados, e os resultados duram de três a seis meses. </p>
+            <div class="botox-title2">
+                <h2>RINOMODELAÇÃO</h2>
+                <p>A rinomodelação é um procedimento estético não cirúrgico que busca aprimorar a aparência do nariz sem recorrer à cirurgia. Utilizando preenchedores à base de ácido hialurônico, injetados na região nasal, o procedimento permite ajustes como a correção de pequenas assimetrias e a suavização de irregularidades. Por ser ambulatorial, a rinomodelação oferece uma recuperação mais rápida em comparação com a rinoplastia cirúrgica. Contudo, é crucial consultar um profissional qualificado antes do procedimento para avaliar a adequação às necessidades do paciente e garantir resultados seguros e satisfatórios. </p>
             </div>
-            <a class="botox-btn" href="">AGENDAR</a>
-            <div class="hex">
-                <img class="hex-img"src="<?php echo baseurl; ?>/src/imagens/butux.jpg" alt="some">
+            <a class="botox-btn2" href="">AGENDAR</a>
+            <div class="hex2">
+                <img class="hex-img-2"src="<?php echo baseurl; ?>/src/imagens/rinoplasta.jpg" alt="some">
             </div>
         </div>
     </div>

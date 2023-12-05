@@ -25,7 +25,7 @@
                         <p>BIOMÉDICA ESTETA</p>
                 </div>
                 <div class="saber">
-                    <a href="<?php echo baseurl; ?>/src/procedimentos">Tratamentos</a>
+                    <a href="<?php echo baseurl; ?>/src/procedimentos/index.php">Tratamentos</a>
                     <a href="">Agendamentos</a>
                 </div>
             </div>
