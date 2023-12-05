@@ -40,14 +40,6 @@
 		$agendamentos = find_all('agendamentos');
 	}
 
-	function testa_email() 
-	{
-		if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['action']) && $_POST['action'] == 'verifica_email') 
-		{
-			$email = $_POST['email'];
-			echo email_query($email);
-		}
-	}
 
 	/**
  	 *  Cadastro de agendamentos
@@ -70,7 +62,7 @@
 			} else {
 		
 				global $agendamento;
-				$agendamento = find('agendamentos', $id);
+				$agendamento = find_all('agendamentos');
 			} 
 		
 		} else {
@@ -80,9 +72,14 @@
 	/**
 	 *  Visualização de um agendamento
 	 */
-	function view($id = null) {
-		global $agendamento;
-		$agendamento = find('agendamentos', $id);
+	function view( $id = null) {
+		global $nomeCliente;
+		$nomeCliente = find('clientes', $id);
+	}
+
+	function view2( $id = null) {
+		global $nomeProcedimento;
+		$nomeProcedimento = find('procedimentos', $id);
 	}
 	/**
 	 *  Exclusão de um agendamento

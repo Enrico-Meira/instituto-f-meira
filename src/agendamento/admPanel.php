@@ -8,7 +8,6 @@
         }
         index();
         include(header_template);
-
         
 ?>
 
@@ -53,7 +52,7 @@
             <td><?php echo $agendamento['status_agenda']; ?></td>
             
             <td class="actions text-start">
-                    <a href="edit.php?id=<?php echo $agendamento['id']; ?>" class="btn btn-sm btn-secondary"><i class="fa-solid fa-pen-to-square"></i> Editar</a>
+                    <a href="edit.php?id=<?php echo $agendamento['id_agendamentos']; ?>" class="btn btn-sm btn-secondary"><i class="fa-solid fa-pen-to-square"></i> Editar</a>
             </td>
         </tr>
     <?php endforeach; ?>

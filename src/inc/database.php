@@ -66,7 +66,10 @@
 			
 		} else {
 			
-			$sql = "SELECT * FROM " . $table;
+			$sql = "SELECT id_agendamentos, nome, procedimento, data_agenda, status_agenda FROM $table a 
+			INNER JOIN clientes c ON a.id_clientes = c.id_clientes 
+			INNER JOIN procedimentos p on a.id_procedimentos = p.id_procedimentos 
+			ORDER BY id_agendamentos DESC";
 			$result = $database->query($sql);
 			
 			if ($result->num_rows > 0) {
