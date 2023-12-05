@@ -1,6 +1,7 @@
 <?php
     require_once('../../config.php');
     $head = "cabecalho2";
+    $footer = "footer";
     if(!isset($_SESSION))
     {
       session_start();

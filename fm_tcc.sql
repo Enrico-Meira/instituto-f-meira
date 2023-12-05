@@ -103,3 +103,4 @@ VALUES ('q34f5q3ffq5', 'Sujiro Kimame', '56473829106', 'SP', 'Sorocaba', 'Cajuru
 INSERT INTO `clientes` 
 (`id_clientes`, `nome`, `cpf`, `estado`, `cidade`, `bairro`, `rua`, `numero`, `telefone`, `descricao`, `data_nasc`, `genero`, `email`, `senha`) 
 VALUES ('qf54qf5q4fq', 'camila loures', '12222222222', 'SP', 'Sorocaba', 'Cajuru', 'Rua dos Flamingo', '128', '15992342342', 'descrição', '2023-11-21 17:10:59', 'Feminino', 'email5@gmail.com', '123456');
+

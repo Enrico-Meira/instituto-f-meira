@@ -6,6 +6,7 @@
             session_start();
         }
     $head = "cabecalho2";
+    $footer = "footer";
     include(header_template);
 ?>
 

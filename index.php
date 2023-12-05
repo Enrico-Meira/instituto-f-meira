@@ -3,6 +3,7 @@
     require_once('config.php');
     require_once(dbpath);
     $head = "cabecalho";
+    $footer = "footer";
     if(!isset($_SESSION))
     {
         session_start();

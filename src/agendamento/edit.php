@@ -27,7 +27,7 @@
 
             <div class="form-group col-md-3">
             <label for="campo2">CNPJ / CPF</label>
-            <input type="text" class="form-control" name="agendamento['cpf_cnpj']" value="<?php echo $agendamento['cpf_cnpj']; ?>" maxlength="11">
+            <input type="text" class="form-control" name="agendamento['cpf']" value="<?php echo $agendamento['cpf']; ?>" maxlength="11">
             </div>
 
             <div class="form-group col-md-2">

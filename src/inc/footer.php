@@ -1,4 +1,4 @@
-        <footer class="footer">
+        <footer class="<?php echo $footer; ?>">
             <div class="footer-container">
                 <div class="footer-row">
                     <div class="footer-col">
