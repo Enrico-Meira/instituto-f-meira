@@ -40,6 +40,8 @@
                         $_SESSION['email'] = $email;
                         $_SESSION['cpf'] = $cpf;
                         $_SESSION['senha'] = $senha;
+
+                        var_dump($_SESSION);
                 }
 
                 else

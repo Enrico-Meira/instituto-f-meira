@@ -1,5 +1,5 @@
 <?php
-    require_once('functions.php');
+    include("../../config.php");
     $head = "cabecalho2";
     $footer = "footer";
     if(!isset($_SESSION))
@@ -7,6 +7,7 @@
       session_start();
     }
     include(header_template);   
+    $_SESSION['id_proced'] = 1;
 ?>
 
 
@@ -27,7 +28,7 @@
                 <h2>TOXINA BOTULÍNICA</h2>
                 <p>O Botox é um tratamento estético que utiliza a toxina botulínica para suavizar rugas e linhas de expressão no rosto. A toxina bloqueia temporariamente os sinais nervosos para os músculos, relaxando-os e reduzindo as rugas. O procedimento é realizado por profissionais qualificados, e os resultados duram de três a seis meses. </p>
             </div>
-            <a class="botox-btn" href="">AGENDAR</a>
+            <a class="botox-btn" href="<?php echo baseurl; ?>/src/agendar/">AGENDAR</a>
             <div class="hex">
                 <img class="hex-img"src="<?php echo baseurl; ?>/src/imagens/butux.jpg" alt="some">
             </div>

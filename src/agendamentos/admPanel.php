@@ -54,8 +54,8 @@
                 <td><?php echo $agendamento['status_agenda']; ?></td>
                 
                 <td class="actions text-start">
-                        <a href="edit.php?id=<?php echo $agendamento['id_agendamentos']; ?>" class="btn btn-sm btn-secondary"><i class="fa-solid fa-square-plus"></i>Confirmar</a>
-                        <a href="edit.php?id=<?php echo $agendamento['id_agendamentos']; ?>" class="btn btn-sm btn-secondary"><i class="fa-solid fa-square-minus"></i>Recusar</a>
+                        <a href="confirma.php?id=<?php echo $agendamento['id_agendamentos']; ?>" class="btn btn-sm btn-secondary"><i class="fa-solid fa-square-plus"></i>Confirmar</a>
+                        <a href="recusa.php?id=<?php echo $agendamento['id_agendamentos']; ?>" class="btn btn-sm btn-secondary"><i class="fa-solid fa-square-minus"></i>Recusar</a>
                 </td>
             </tr>
         <?php endforeach; ?>

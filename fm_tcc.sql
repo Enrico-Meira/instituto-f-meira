@@ -96,11 +96,13 @@ INSERT INTO `clientes`
 VALUES ('43f5q34f543', 'Camila Loures', '12345678912', 'SP', 'Sorocaba', 'Cajuru', 'Rua dos Flamingo', '128', '15992342342', 'descrição', '2023-11-21 17:10:59', 'Feminino', 'email2@gmail.com', '123456');
 INSERT INTO `clientes` 
 (`id_clientes`, `nome`, `cpf`, `estado`, `cidade`, `bairro`, `rua`, `numero`, `telefone`, `descricao`, `data_nasc`, `genero`, `email`, `senha`) 
-VALUES ('q245f443f', 'João gomes', '09876543112', 'SP', 'Sorocaba', 'Cajuru', 'Rua dos Flamingo', '128', '15992342342', 'descrição', '2023-11-21 17:10:59', 'Masculino', 'email3@gmail.com', '123456');
-INSERT INTO `clientes` 
-(`id_clientes`, `nome`, `cpf`, `estado`, `cidade`, `bairro`, `rua`, `numero`, `telefone`, `descricao`, `data_nasc`, `genero`, `email`, `senha`) 
-VALUES ('q34f5q3ffq5', 'Sujiro Kimame', '56473829106', 'SP', 'Sorocaba', 'Cajuru', 'Rua dos Flamingo', '128', '15992342342', 'descrição', '2023-11-21 17:10:59', 'Masculino', 'email4@gmail.com', '123456');
-INSERT INTO `clientes` 
-(`id_clientes`, `nome`, `cpf`, `estado`, `cidade`, `bairro`, `rua`, `numero`, `telefone`, `descricao`, `data_nasc`, `genero`, `email`, `senha`) 
-VALUES ('qf54qf5q4fq', 'camila loures', '12222222222', 'SP', 'Sorocaba', 'Cajuru', 'Rua dos Flamingo', '128', '15992342342', 'descrição', '2023-11-21 17:10:59', 'Feminino', 'email5@gmail.com', '123456');
+VALUES ('q245f443ftg', 'João gomes', '09876543112', 'SP', 'Sorocaba', 'Cajuru', 'Rua dos Flamingo', '128', '15992342342', 'descrição', '2023-11-21 17:10:59', 'Masculino', 'email3@gmail.com', '123456');
+INSERT INTO `clientes` (`id_clientes`,`email`,`senha`) 
+VALUES ('tgew9uaghgd','emailclinica@gmail.com','instfmeira');
 
+INSERT INTO `procedimentos` (`procedimento`) 
+VALUES ('Toxina botulínica');
+INSERT INTO `procedimentos` (`procedimento`) 
+VALUES ('Rinomodelação');
+INSERT INTO `procedimentos` (`procedimento`) 
+VALUES ('Preenchimento labial');

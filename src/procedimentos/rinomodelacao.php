@@ -1,12 +1,13 @@
 <?php
-    require_once('functions.php');
+    include("../../config.php");
     $head = "cabecalho2";
     $footer = "footer";
     if(!isset($_SESSION))
     {
       session_start();
     }
-    include(header_template);   
+    include(header_template);
+    $_SESSION['id_proced'] = 4;   
 ?>
 
 

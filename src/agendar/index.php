@@ -6,7 +6,10 @@
     {
       session_start();
     }
+
     include(header_template);
+
+    var_dump($_SESSION['id_proced']);
 ?>
 
 <!DOCTYPE html>
@@ -48,5 +51,6 @@
     
 
 <?php 
+      require_once('modal.php');
       require_once(footer_template);
 ?>

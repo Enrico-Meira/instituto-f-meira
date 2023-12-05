@@ -1,3 +1,10 @@
+<?php
+    if(!isset($_SESSION))
+    {
+        session_start();
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -17,8 +24,6 @@
 
 
         <!-- <link rel="stylesheet" href="<?php echo baseurl; ?>/src/css/tst.css"> -->
-
-        
         
         <title>TCC</title>
     </head>
@@ -35,9 +40,11 @@
                     <li class="menu-li">
                         <a href="<?php echo baseurl; ?>/src/procedimentos/index.php">PROCEDIMENTOS</a>
                     </li>
+                    <?php if ($_SESSION['email'] == "emailclinica@gmail.com") : ?>
                     <li class="menu-li">
-                        <a href="<?php echo baseurl; ?>/src/agendamento/calendario.php">AGENDAMENTO</a>
+                        <a href="<?php echo baseurl; ?>/src/agendamentos/admPanel.php">AGENDAMENTOS</a>
                     </li>
+                    <?php endif; ?>
                     <li class="menu-li">
                         <a href="<?php echo baseurl; ?>/src/pages/about.php">SOBRE NÓS</a>
                     </li>
@@ -81,6 +88,7 @@
                                     </li>
                                     
                                     <?php if (!isset($_SESSION['email'])) : ?>
+
                                         <li>
                                             <a href="<?php echo baseurl; ?>/src/inc/login.php">
                                                 <span class="icon"><i class="fa-solid fa-right-from-bracket"></i></span>

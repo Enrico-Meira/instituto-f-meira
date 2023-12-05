@@ -17,6 +17,7 @@ const months = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Jul
 criarBotoes();
 
 let data;
+let horario;
 
 const renderCalendar = () => {
     let firstDayofMonth = new Date(currYear, currMonth, 1).getDay(), // getting first day of month
@@ -93,6 +94,8 @@ function criarBotoes()
         {
             const button = document.createElement("button");
             button.className = "button-hour";
+            button.dataset.bsToggle = "modal"
+            button.dataset.bsTarget = "#agenda_modal";
 
             const horaFormatada = hora < 10 ? "0" + hora : hora;
             const minutoFormatado = minuto === 0 ? "00" : minuto;
@@ -106,13 +109,21 @@ function criarBotoes()
 }
 
 button = document.querySelectorAll(".botoes-container .button-hour");
+const confirma = document.querySelector("#confirm");
 
 button.forEach(btn => {
     btn.addEventListener("click", () => {
-        const horarioClicado = data + " " + btn.innerHTML + ":00";
-        enviarParaPHP(horarioClicado);
+        horario = btn.innerHTML;
+        // $("agenda_modal").modal('toggle');
     });
 });
+
+function confirmar() 
+{
+        const horarioClicado = data + " " + horario + ":00";
+        enviarParaPHP(horarioClicado);
+}
+
 
 function enviarParaPHP(data_agendada) {
     const url = "functions.php";
