@@ -40,10 +40,12 @@
                     <li class="menu-li">
                         <a href="<?php echo baseurl; ?>/src/procedimentos/index.php">PROCEDIMENTOS</a>
                     </li>
-                    <?php if ($_SESSION['email'] == "emailclinica@gmail.com") : ?>
-                    <li class="menu-li">
-                        <a href="<?php echo baseurl; ?>/src/agendamentos/admPanel.php">AGENDAMENTOS</a>
-                    </li>
+                    <?php if (isset($_SESSION['email'])) : ?>
+                        <?php if ($_SESSION['email'] == "emailclinica@gmail.com") : ?>
+                            <li class="menu-li">
+                                <a href="<?php echo baseurl; ?>/src/agendamentos/admPanel.php">AGENDAMENTOS</a>
+                            </li>
+                        <?php endif; ?>
                     <?php endif; ?>
                     <li class="menu-li">
                         <a href="<?php echo baseurl; ?>/src/pages/about.php">SOBRE NÓS</a>
@@ -62,7 +64,7 @@
                                     <li>
                                         <a href="#">
                                             <span class="icon"><i class="fa-solid fa-user"></i></span>
-                                            <span class="title">Profile</span>
+                                            <span class="title">Perfil</span>
                                         </a>
                                     </li>
 
@@ -76,14 +78,14 @@
                                     <li>
                                         <a href="#">
                                             <span class="icon"><i class="fa-solid fa-gear"></i></span>
-                                            <span class="title">Settings</span>
+                                            <span class="title">Opções</span>
                                         </a>
                                     </li>
 
                                     <li>
                                         <a href="#">
                                             <span class="icon"><i class="fa-solid fa-lock"></i></span>
-                                            <span class="title">Password</span>
+                                            <span class="title">Senha</span>
                                         </a>
                                     </li>
                                     

@@ -8,8 +8,6 @@
     }
 
     include(header_template);
-
-    var_dump($_SESSION['id_proced']);
 ?>
 
 <!DOCTYPE html>
