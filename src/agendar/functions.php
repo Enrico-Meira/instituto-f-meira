@@ -48,9 +48,9 @@
 		echo "Erro: Método de requisição inválido.";
 	}
 
-
-
-
-
+	function view( $id = null) {
+		global $nomeProcedimento;
+		$nomeProcedimento = find('procedimentos', $id, null);
+	}
 
 ?>

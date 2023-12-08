@@ -2,10 +2,6 @@
     require_once('functions.php');
     $head = "cabecalho2";
     $footer = "footer";
-    if(!isset($_SESSION))
-    {
-      session_start();
-    }
     include(header_template);
     add();
 ?>

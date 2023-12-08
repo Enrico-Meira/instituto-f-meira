@@ -19,36 +19,41 @@
         if(!empty($cliente) && !empty($senha))
         {
             
-            $sql = "SELECT id_clientes, nome, email, cpf, senha FROM clientes WHERE (email = '" . $cliente . "') AND (senha = '" . $senha . "') LIMIT 1";
+            $sql = "SELECT id_clientes, nome, email, cpf, senha FROM clientes WHERE email = '" . $cliente . "' LIMIT 1";
             $query = $bd->query($sql);
             if ($query->num_rows > 0)
             {
-                $dados = $query->fetch_assoc();
-                $id = $dados['id_clientes'];
-                $nome = $dados['nome'];
-                $email = $dados['email'];
-                $cpf = $dados['cpf'];
-                $senha = $dados['senha'];
 
-                if(!empty($email))
+                $dados = $query->fetch_assoc();       
+                
+                $dados['senha'];
+                if (password_verify($senha, $dados['senha'])) 
                 {
-                    if (!isset($_SESSION)) session_start();
-                        $_SESSION['message'] = "Bem vindo" . $nome . "!";
-                        $_SESSION['type'] = "info";
-                        $_SESSION['id_clientes'] = $id;
-                        $_SESSION['nome'] = $nome;
-                        $_SESSION['email'] = $email;
-                        $_SESSION['cpf'] = $cpf;
-                        $_SESSION['senha'] = $senha;
-
-                        var_dump($_SESSION);
+                    $id = $dados['id_clientes'];
+                    $nome = $dados['nome'];
+                    $email = $dados['email'];
+                    // $cpf = $dados['cpf'];
+                    $senha = $dados['senha'];
+    
+                    if(!empty($email))
+                    {
+                        if (!isset($_SESSION)) session_start();
+                            $_SESSION['message'] = "Bem vindo" . $nome . "!";
+                            $_SESSION['type'] = "info";
+                            $_SESSION['id_clientes'] = $id;
+                            $_SESSION['nome'] = $nome;
+                            $_SESSION['email'] = $email;
+                            // $_SESSION['cpf'] = $cpf;
+                            $_SESSION['senha'] = $senha;
+                    }
+    
+                    else
+                    {
+                        throw new Exception ("Não foi possível se conectar! <br> Verifique seu usuário e senha.");
+                    }
+                    header("Location: " . baseurl . "/index.php");
                 }
-
-                else
-                {
-                    throw new Exception ("Não foi possível se conectar! <br> Verifique seu usuário e senha.");
-                }
-                header("Location: " . baseurl . "/index.php");
+                
             }
 
             else

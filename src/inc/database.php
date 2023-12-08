@@ -57,7 +57,7 @@
 
 		try {
 		if ($id) {
-			$sql = "SELECT * FROM " . $table . " WHERE id = " . $id;
+			$sql = "SELECT * FROM " . $table . " WHERE id_procedimentos = " . $id;
 			$result = $database->query($sql);
 			
 			if ($result->num_rows > 0) {	
@@ -283,13 +283,7 @@
 
 	function criptografia($senha)
     {
-        $custo = "08";
-        $salt = 'Cf1f11ePArKlBJomM0F6aJ';
-        
-        // Gera um hash baseado em bcrypt
-        $hash = crypt($senha, '$2a$' . $custo . '$' . $salt . '$');
-
-        return $hash;
+		
     }
 
 	function clear_messages()

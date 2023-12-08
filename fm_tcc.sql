@@ -55,7 +55,7 @@ CREATE TABLE `clientes` (
   `data_nasc` datetime DEFAULT NULL,
   `genero` varchar(100) DEFAULT NULL,
   `email` varchar(100) DEFAULT NULL,
-  `senha` varchar(30) DEFAULT NULL
+  `senha` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------

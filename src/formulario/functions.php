@@ -27,6 +27,10 @@
 		{
 			$cliente = $_POST['clientes'];
 			$cliente['id_clientes'] = gerar_id();
+
+			var_dump($cliente);
+
+
 			save('clientes', $cliente);
 			header('location: index.php');
 		}

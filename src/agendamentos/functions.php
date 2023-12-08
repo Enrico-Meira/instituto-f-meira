@@ -9,20 +9,23 @@
 	/**
 	 *  Listagem de agendamentos
 	 */
-	function index() {
-
+	function index() 
+	{
 		global $agendamentos;
+
+		if (isset($_POST['filtragem']))
+        {   
+			$_SESSION['filtro'] = $_POST['filtragem'];
+            $agendamentos = find_all("agendamentos", $_SESSION['filtro']);   
+        } else
+		{
+			$agendamentos = find_all("agendamentos", $_SESSION['filtro']);  
+		}
+
         if (!empty($_POST['nome_usuario'])) 
         {
-            $agendamentos = filter("agendamentos", "nome like '%" . $_POST['nome_usuario'] . "%'", $_POST['filtragem']);
+            $agendamentos = filter("agendamentos", "nome like '%" . $_POST['nome_usuario'] . "%'", $_SESSION['filtro']);
         }
-        if (isset($_GET['filtragem']))
-        {    
-            $agendamentos = find_all("agendamentos", $_GET['filtragem']);   
-        }else
-		{
-			$agendamentos = find_all("agendamentos", "id_agendamentos DESC");  
-		}
 	}
 	
 	/**

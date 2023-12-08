@@ -1,12 +1,12 @@
 <?php 
     ob_start();
     include("../../config.php");
-    if(!isset($_SESSION))
-        {
-            session_start();
-        }
     $head = "cabecalho2";
     $footer = "footer";
+    if(!isset($_SESSION))
+    {
+        session_start();
+    }
     include(header_template);
 ?>
 

@@ -32,14 +32,14 @@
                 </div>
             </div>
         </form>
-        <form name="filtro" action="admPanel.php" method="GET">
+        <form name="filtro" action="admPanel.php" method="post">
             <div class="row">
-                <div class="form-group col-md-4">
+                <div class="form-group col-md-2">
                     <div class="input-group mb-3">
                         <select name="filtragem" id="filtragem" class="form-control">
-                            <option value="id_agendamentos DESC">recentes</option>
-                            <option value="data_agenda ASC">data</option>
-                            <option value="data_agenda DESC">data</option>
+                            <option value="id_agendamentos DESC">Recentes ⌚</option>
+                            <option value="data_agenda ASC">Data Ascendente ↑</option>
+                            <option value="data_agenda DESC">Data Decrescente ↓</option>
                         </select>
                         <button type="submit" class="btn btn-secondary"> Filtrar</button>
                     </div>
@@ -65,7 +65,7 @@
                 <th>Procedimento</th>
                 <th>Data agendada</th>
                 <th>Status agendamento</th>
-                <th>Opções</th>
+                <th>Alterar status</th>
             </tr>
         </thead>
         <tbody>

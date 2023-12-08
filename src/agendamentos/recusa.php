@@ -3,6 +3,11 @@
     require_once('../../config.php');
     require_once(dbpath);
 
+    if(!isset($_SESSION)) 
+    { 
+        session_start();
+    }
+
     if (isset($_GET['id'])) 
     {
         $id = $_GET['id'];
@@ -14,9 +19,6 @@
         try {
 
         $database->query($sql);
-
-        $_SESSION['message'] = 'Registro cadastrado com sucesso.';
-        $_SESSION['type'] = 'success';
 
         header('location: admPanel.php');
 
