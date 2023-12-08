@@ -10,8 +10,19 @@
 	 *  Listagem de agendamentos
 	 */
 	function index() {
+
 		global $agendamentos;
-		$agendamentos = find_all('agendamentos');
+        if (!empty($_POST['nome_usuario'])) 
+        {
+            $agendamentos = filter("agendamentos", "nome like '%" . $_POST['nome_usuario'] . "%'", $_POST['filtragem']);
+        }
+        if (isset($_GET['filtragem']))
+        {    
+            $agendamentos = find_all("agendamentos", $_GET['filtragem']);   
+        }else
+		{
+			$agendamentos = find_all("agendamentos", "id_agendamentos DESC");  
+		}
 	}
 	
 	/**

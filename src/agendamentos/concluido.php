@@ -9,7 +9,7 @@
 
         $database = open_database();
 
-        $sql = "UPDATE agendamentos SET status_agenda = 'recusado' WHERE id_agendamentos = " . $id;
+        $sql = "UPDATE agendamentos SET status_agenda = 'concluido' WHERE id_agendamentos = " . $id;
 
         try {
 
@@ -19,16 +19,16 @@
         $_SESSION['type'] = 'success';
 
         header('location: admPanel.php');
-
+        
         } catch (Exception $e) { 
-
+        
         $_SESSION['message'] = 'Não foi possivel realizar a operação.';
         $_SESSION['type'] = 'danger';
         } 
     }
     else 
     {
-        header('location: admPanel.php?filtragem');
+        header('location: admPanel.php');
     }
 
     close_database($database);

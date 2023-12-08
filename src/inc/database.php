@@ -50,7 +50,7 @@
     /**
 	 *  Pesquisa um Registro pelo ID em uma Tabela
 	 */
-	function find( $table = null, $id = null ) 
+	function find( $table = null, $id = null, $order = null ) 
     {
 		$database = open_database();
 		$found = null;
@@ -63,13 +63,11 @@
 			if ($result->num_rows > 0) {	
 			$found = $result->fetch_assoc();
 			}
-			
 		} else {
-			
 			$sql = "SELECT id_agendamentos, nome, procedimento, data_agenda, status_agenda FROM $table a 
 			INNER JOIN clientes c ON a.id_clientes = c.id_clientes 
 			INNER JOIN procedimentos p on a.id_procedimentos = p.id_procedimentos 
-			ORDER BY id_agendamentos DESC";
+			ORDER BY $order";
 			$result = $database->query($sql);
 			
 			if ($result->num_rows > 0) {
@@ -85,7 +83,7 @@
 		return $found;
 	}
 
-	function filter( $table = null, $p = null ) 
+	function filter( $table = null, $p = null, $order = null ) 
 	{
 		$database = open_database();
 		$found = null;
@@ -94,9 +92,13 @@
 		{
 			if ($p) 
 			{
-				$sql = "SELECT * FROM " . $table . " WHERE " . $p;
+				$sql = "SELECT id_agendamentos, nome, procedimento, data_agenda, status_agenda FROM $table a 
+				INNER JOIN clientes c ON a.id_clientes = c.id_clientes 
+				INNER JOIN procedimentos p on a.id_procedimentos = p.id_procedimentos
+				WHERE $p 
+				ORDER BY $order";
 				$result = $database->query($sql);
-				
+			
 				if ($result->num_rows > 0) 
 				{	
 					$found = array();
@@ -105,7 +107,6 @@
 						array_push($found, $row);
 					}
 				}
-				
 			} 
 			else 
 			{
@@ -125,9 +126,9 @@
 	/**
 	 *  Pesquisa Todos os Registros de uma Tabela
 	 */
-	function find_all( $table ) 
+	function find_all( $table, $order ) 
     {
-		return find($table);
+		return find($table, null , $order);
 	}
 
 	function teste ($data)
