@@ -50,7 +50,7 @@
                 <td><?php echo $agendamento['id_agendamentos']; ?></td>
                 <td><?php echo $agendamento['nome']; ?></td>
                 <td><?php echo $agendamento['procedimento']?></td>
-                <td><?php echo formataData($agendamento['data_agenda'], "d/m/Y"); ?></td>
+                <td><?php echo formataData($agendamento['data_agenda'], "d/m/Y H:i"); ?></td>
                 <td><?php echo $agendamento['status_agenda']; ?></td>
                 
                 <td class="actions text-start">

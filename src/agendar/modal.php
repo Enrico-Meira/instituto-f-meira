@@ -9,9 +9,10 @@
 				Efetuar agendamento?
 			</div>
 			<div class="modal-footer">
-				<a id="confirm" class="btn btn-dark" href="<?php echo baseurl; ?>/index.php" onclick="confirmar()"><i class="fa-solid fa-right-from-bracket"></i> Confirmar</a>
-				<a id="cancel" class="btn btn-secondary" data-bs-dismiss="modal"><i class="fa-solid fa-xmark"></i> Cancelar</a>
+				<a id="confirm" class="btn btn-dark" href="#" onclick="confirmar()"> Confirmar</a>
+				<a id="cancel" class="btn btn-secondary" data-bs-dismiss="modal"> Cancelar</a>
 			</div>
 		</div>
 	</div>
 </div>
+

@@ -14,24 +14,41 @@
 	header("Access-Control-Allow-Methods: POST");
 	header("Access-Control-Allow-Headers: Content-Type");
 	
-	if ($_SERVER["REQUEST_METHOD"] === "POST") {
+	if ($_SERVER["REQUEST_METHOD"] === "POST") 
+	{
 		// Verifica se o parâmetro "data_agenda" foi enviado
-		if (isset($_POST['data_agenda'])) {
+		if (isset($_POST['data_agenda'])) 
+		{
+			$database = open_database();
+
 			$dataRecebida = json_decode($_POST['data_agenda'], true);
-			$data = array();			   
-			$data['id_clientes'] = $_SESSION['id_clientes']; 
-			$data['id_procedimentos'] = $_SESSION['id_proced'];
-			$data['data_agenda'] = $dataRecebida;
-			$data['status_agenda'] = "aguardando";
+
+			$sql = "SELECT data_agenda FROM agendamentos WHERE data_agenda = '" . $dataRecebida . "'";
+			$result = $database->query($sql);
 	
-			save('agendamentos', $data);
-			header('location: index.php');
-		} else {
+			if ($result -> num_rows > 0) {
+				echo "Este horário ja foi agendado!";
+			} else {
+				$data = array();			   
+				$data['id_clientes'] = $_SESSION['id_clientes']; 
+				$data['id_procedimentos'] = $_SESSION['id_proced'];
+				$data['data_agenda'] = $dataRecebida;
+				$data['status_agenda'] = "aguardando";
+		
+				save('agendamentos', $data);
+				echo "agendamento concluido com sucesso!";
+			}
+			close_database($database);
+		} 
+		else {
 			echo "Erro: Parâmetro 'data_agenda' não foi enviado.";
 		}
-	} else {
+	} 
+	else {
 		echo "Erro: Método de requisição inválido.";
 	}
+
+
 
 
 

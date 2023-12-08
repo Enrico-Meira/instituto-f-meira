@@ -135,7 +135,7 @@ function enviarParaPHP(data_agendada) {
             data_agenda: JSON.stringify(data_agendada)
         },
         success: function(response) {
-            console.log("Resposta da página PHP:", response);
+           alert(response);
         },
         error: function(xhr, status, error) {
             console.error("Erro na requisição AJAX:", xhr.status, xhr.statusText);
