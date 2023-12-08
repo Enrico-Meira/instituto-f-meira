@@ -58,6 +58,7 @@
 		try {
 		if ($id) {
 			$sql = "SELECT * FROM " . $table . " WHERE id_procedimentos = " . $id;
+
 			$result = $database->query($sql);
 			
 			if ($result->num_rows > 0) {	
@@ -283,7 +284,7 @@
 
 	function criptografia($senha)
     {
-		
+
     }
 
 	function clear_messages()

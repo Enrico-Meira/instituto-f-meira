@@ -45,7 +45,7 @@
 		}
 	} 
 	else {
-		echo "Erro: Método de requisição inválido.";
+		// echo "Erro: Método de requisição inválido.";
 	}
 
 	function view( $id = null) {

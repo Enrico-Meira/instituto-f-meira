@@ -6,7 +6,8 @@
 				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
 			</div>
 			<div class="modal-body">
-				<p>Procedimento: <?php view('procedimentos', $_SESSION['id_proced']); $procedimento = $nomeProcedimento['procedimentos']; echo $procedimento;?></p>
+				<div class="procedimento">Procedimento: <?php view($_SESSION['id_proced']); echo $nomeProcedimento['procedimento'];?></div> 
+				<div class="data"> </div>
 			</div>
 			<div class="modal-footer">
 				<a id="confirm" class="btn btn-dark" href="#" onclick="confirmar()"> Confirmar</a>

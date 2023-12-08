@@ -1,6 +1,6 @@
 <?php
     // ob_start();
-    require_once('../../config.php');
+    require_once('functions.php');
     $head = "cabecalho2";
     $footer = "footer";
     if(!isset($_SESSION))
@@ -20,7 +20,6 @@
     <!-- Google Font Link for Icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
   </head>
-
   <div class="cld-container">
     <div class="ghostDiv"></div>
     <div class="wrapper">
