@@ -3,6 +3,8 @@ const fundo = document.querySelector(".fundo");
 currentDate = document.querySelector(".current-date");
 prevNextIcon = document.querySelectorAll(".icons span");
 // periodo = document.querySelectorAll(".pPeriodo");
+// const containerManha = document.querySelector(".botoes-container-manha");
+// const containerTarde = document.querySelector(".botoes-container-tarde");
 let fundoExibido = false;
 
 // getting new date, current year and month
@@ -72,8 +74,6 @@ const renderCalendar = () => {
     // buttonsPeriod.forEach(btn => {
     //     btn.addEventListener("click", () => {
     //         const period = btn.innerText;
-    //         const containerManha = document.querySelector(".botoes-container-manha");
-    //         const containerTarde = document.querySelector(".botoes-container-tarde");
 
     //         if (period === "<") {
     //             periodo[0].innerText = "Manhã";
@@ -102,8 +102,6 @@ const renderCalendar = () => {
 //    const horasFim = 12;
 //    const minutosIntervalo = 30;
 
-//    const container = document.querySelector(".botoes-container-manha");
-
 //    for (let hora = horasInicio; hora < horasFim; hora++) 
 //    {
 //        for (let minuto = 0; minuto < 60; minuto += minutosIntervalo) 
@@ -119,7 +117,7 @@ const renderCalendar = () => {
 //            const textoBotao = horaFormatada + ":" + minutoFormatado;
 //            button.textContent = textoBotao;
 
-//            container.appendChild(button);
+//            containerManha.appendChild(button);
 //        }
 //    }
 // }
@@ -141,8 +139,6 @@ const renderCalendar = () => {
 //    const horasFim = 18;
 //    const minutosIntervalo = 30;
 
-//    const container = document.querySelector(".botoes-container-tarde");
-
 //    for (let hora = horasInicio; hora < horasFim; hora++) 
 //    {
 //        for (let minuto = 0; minuto < 60; minuto += minutosIntervalo) 
@@ -158,7 +154,7 @@ const renderCalendar = () => {
 //            const textoBotao = horaFormatada + ":" + minutoFormatado;
 //            button.textContent = textoBotao;
 
-//            container.appendChild(button);
+//            containerTarde.appendChild(button);
 //        }
 //    }
 // }

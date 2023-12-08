@@ -26,6 +26,7 @@
         {
             $agendamentos = filter("agendamentos", "nome like '%" . $_POST['nome_usuario'] . "%'", $_SESSION['filtro']);
         }
+		
 	}
 	
 	/**

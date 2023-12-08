@@ -38,8 +38,8 @@
                     <div class="input-group mb-3">
                         <select name="filtragem" id="filtragem" class="form-control">
                             <option value="id_agendamentos DESC">Recentes ⌚</option>
-                            <option value="data_agenda ASC">Data Ascendente ↑</option>
-                            <option value="data_agenda DESC">Data Decrescente ↓</option>
+                            <option value="data_agenda ASC" <?=$_SESSION['filtro'] == "data_agenda ASC" ? 'selected' : "" ?>>Data Ascendente ↑</option>
+                            <option value="data_agenda DESC" <?=$_SESSION['filtro'] == "data_agenda DESC" ? 'selected' : "" ?>>Data Decrescente ↓</option>
                         </select>
                         <button type="submit" class="btn btn-secondary"> Filtrar</button>
                     </div>

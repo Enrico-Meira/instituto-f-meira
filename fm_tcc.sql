@@ -98,7 +98,7 @@ INSERT INTO `clientes`
 (`id_clientes`, `nome`, `cpf`, `estado`, `cidade`, `bairro`, `rua`, `numero`, `telefone`, `descricao`, `data_nasc`, `genero`, `email`, `senha`) 
 VALUES ('q245f443ftg', 'João gomes', '09876543112', 'SP', 'Sorocaba', 'Cajuru', 'Rua dos Flamingo', '128', '15992342342', 'descrição', '2023-11-21 17:10:59', 'Masculino', 'email3@gmail.com', '123456');
 INSERT INTO `clientes` (`id_clientes`,`nome`,`email`,`senha`) 
-VALUES ('tgew9uaghgd','Fernanda Meira','emailclinica@gmail.com','instfmeira');
+VALUES ('tgew9uaghgd','Fernanda Meira','emailclinica@gmail.com','123456');
 
 INSERT INTO `procedimentos` (`procedimento`) 
 VALUES ('Toxina botulínica');

@@ -40,6 +40,7 @@
                         $_SESSION['email'] = $email;
                         $_SESSION['cpf'] = $cpf;
                         $_SESSION['senha'] = $senha;
+                        $_SESSION['filtro'] = "id_agendamentos DESC";
 
                         var_dump($_SESSION);
                 }
