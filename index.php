@@ -70,12 +70,14 @@
                             <p>Confira aqui outros procedimentos faciais e corporais. Veja mais...</p>
                         </div>
                     </div>
+
+                    <div class="buttons">
+                        <button id="prev"><</button>
+                        <button id="next">></button>
+                    </div>
                 </div>
 
-                <div class="buttons">
-                    <button id="prev"><</button>
-                    <button id="next">></button>
-                </div>
+                
 
                 <br>
             </div>

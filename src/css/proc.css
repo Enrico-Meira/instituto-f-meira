@@ -1,5 +1,10 @@
 /* BOTOX */
 
+.btx-res {
+    display: flex;
+    flex-direction: row;
+}
+
 .btx-container1 {
     /* background-color: red; */
     height: 800px;
@@ -29,10 +34,9 @@
 }
 
 .btx-container2 .linha-title {
+    display: inline;
     width: 300px;
-    position: relative;
-    left: 650px;
-    bottom: 40px;
+    text-align: center;
 }
 
 .botox-title {
@@ -294,7 +298,7 @@
 .resultados {
     display: flex;
     flex-wrap: wrap;
-    /* margin: 0 -15px; */
+    margin: 0 -0.12vw;
 }
 
 .resultados img {
@@ -305,9 +309,6 @@
     transition: all 0.3s;
     vertical-align: middle;
     padding: 0 10px;
-    position: relative;
-    left: 250px;
-    bottom: 60px;
     margin: 10px 0;
 }
 

@@ -43,9 +43,11 @@
     </div>
 
     <div class="fundo">
-          <div class="botoes-container">
-
-          </div>
+      <div class="flex-period">
+        <button class="period">a</button>
+        <button class="period">b</button>
+      </div>
+          <div class="botoes-container"></div>
     </div>
   </div>
     
