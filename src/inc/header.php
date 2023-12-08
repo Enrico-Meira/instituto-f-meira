@@ -32,7 +32,7 @@
             <a href="<?php echo baseurl; ?>/index.php">
                 <img class="logo" src="<?php echo baseurl; ?>/src/imagens/logo.png">
             </a>
-            <nav>
+            <!-- <nav> -->
                 <ul class="menu">
                     <li class="menu-li">
                         <a href="<?php echo baseurl; ?>/index.php">INÍCIO</a>
@@ -57,37 +57,41 @@
                                     <li>
                                         <a href="<?php echo baseurl; ?>/index.php">
                                             <span class="icon"><i class="fa-solid fa-house"></i></span>
-                                            <span class="title">Home</span>
+                                            <span class="title">Início</span>
                                         </a>
                                     </li>
 
                                     <li>
                                         <a href="#">
                                             <span class="icon"><i class="fa-solid fa-user"></i></span>
-                                            <span class="title">Perfil</span>
+                                            <span class="title">Procedimentos</span>
                                         </a>
                                     </li>
 
-                                    <li>
-                                        <a href="<?php echo baseurl; ?>/src/agendamento/admPanel.php">
-                                            <span class="icon"><i class="fa-solid fa-calendar"></i></span>
-                                            <span class="title">Agendamentos</span>
-                                        </a>
-                                    </li>
+                                <?php if (isset($_SESSION['email'])) : ?>
+                                    <?php if ($_SESSION['email'] == "emailclinica@gmail.com") : ?>
+                                        <li>
+                                            <a href="<?php echo baseurl; ?>/src/agendamentos/admPanel.php">
+                                                <span class="icon"><i class="fa-solid fa-calendar"></i></span>
+                                                <span class="title">Agendamentos</span>
+                                            </a>
+                                        </li>
+                                    <?php endif; ?>
+                                <?php endif; ?>
 
                                     <li>
                                         <a href="#">
                                             <span class="icon"><i class="fa-solid fa-gear"></i></span>
-                                            <span class="title">Opções</span>
+                                            <span class="title">Sobre nós</span>
                                         </a>
                                     </li>
 
-                                    <li>
+                                    <!-- <li>
                                         <a href="#">
                                             <span class="icon"><i class="fa-solid fa-lock"></i></span>
                                             <span class="title">Senha</span>
                                         </a>
-                                    </li>
+                                    </li> -->
                                     
                                     <?php if (!isset($_SESSION['email'])) : ?>
 
@@ -107,7 +111,7 @@
                                     <?php endif; ?>
                                 </ul>
                             </div>
-            </nav>
+            <!-- </nav> -->
         </header>
         <?php include('modaluser.php'); ?>
         
