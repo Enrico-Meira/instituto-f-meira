@@ -14,7 +14,8 @@ currMonth = date.getMonth();
 const months = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho",
 "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
 
-criarBotoes();
+criarBotoesManha();
+criarBotoesTarde();
 
 let data;
 let horario;
@@ -66,49 +67,97 @@ const renderCalendar = () => {
 
     
     function sincronizarAltura() {
-        var btnContainer = document.querySelector('.botoes-container');
+        var btnContainerManha = document.querySelector('.botoes-container-manha');
+        var btnContainerTarde = document.querySelector('.botoes-container-Tarde');
         var divFrente = document.querySelector('.wrapper');
         var divTras = document.querySelector('.fundo');
 
         var alturaFrente = divFrente.getBoundingClientRect().height + 'px'; // Get the computed height of the .wrapper div
         var alturaTras = divTras.getBoundingClientRect().height + 'px';
         divTras.style.height = alturaFrente; // Set the height of the .fundo div equal to the .wrapper div
-        btnContainer.style.height = alturaTras;
+        btnContainerManha.style.height = alturaTras;
+        btnContainerTarde.style.height = alturaTras;
     }
+
+    const buttonsPeriod = document.querySelectorAll(".period");
+
+    buttonsPeriod.forEach(btn => {
+        btn.addEventListener("click", () => {
+            const period = btn.innerText;
+            const containerManha = document.querySelector(".botoes-container-manha");
+            const containerTarde = document.querySelector(".botoes-container-tarde");
+
+            if (period === "Manhã") {
+                containerManha.style.display = "block";
+                containerTarde.style.display = "none";
+            } else {
+                containerManha.style.display = "none";
+                containerTarde.style.display = "block";
+            }
+        });
+    });
 
     sincronizarAltura(); // Call the function to synchronize heights
 }
 
 
-function criarBotoes() 
+function criarBotoesManha() 
 {
-    const horasInicio = 8;
-    const horasFim = 19;
-    const minutosIntervalo = 30;
+   const horasInicio = 8;
+   const horasFim = 12;
+   const minutosIntervalo = 30;
 
-    const container = document.querySelector(".botoes-container");
+   const container = document.querySelector(".botoes-container-manha");
 
-    for (let hora = horasInicio; hora < horasFim; hora++) 
-    {
-        for (let minuto = 0; minuto < 60; minuto += minutosIntervalo) 
-        {
-            const button = document.createElement("button");
-            button.className = "button-hour";
-            button.dataset.bsToggle = "modal"
-            button.dataset.bsTarget = "#agenda_modal";
+   for (let hora = horasInicio; hora < horasFim; hora++) 
+   {
+       for (let minuto = 0; minuto < 60; minuto += minutosIntervalo) 
+       {
+           const button = document.createElement("button");
+           button.className = "button-hour";
+           button.dataset.bsToggle = "modal";
+           button.dataset.bsTarget = "#agenda_modal";
 
-            const horaFormatada = hora < 10 ? "0" + hora : hora;
-            const minutoFormatado = minuto === 0 ? "00" : minuto;
+           const horaFormatada = hora < 10 ? "0" + hora : hora;
+           const minutoFormatado = minuto === 0 ? "00" : minuto;
 
-            const textoBotao = horaFormatada + ":" + minutoFormatado;
-            button.textContent = textoBotao;
+           const textoBotao = horaFormatada + ":" + minutoFormatado;
+           button.textContent = textoBotao;
 
-            container.appendChild(button);
-        }
-    }
+           container.appendChild(button);
+       }
+   }
 }
 
-button = document.querySelectorAll(".botoes-container .button-hour");
+function criarBotoesTarde() 
+{
+   const horasInicio = 12;
+   const horasFim = 18;
+   const minutosIntervalo = 30;
+
+   const container = document.querySelector(".botoes-container-tarde");
+
+   for (let hora = horasInicio; hora < horasFim; hora++) 
+   {
+       for (let minuto = 0; minuto < 60; minuto += minutosIntervalo) 
+       {
+           const button = document.createElement("button");
+           button.className = "button-hour";
+           button.dataset.bsToggle = "modal";
+           button.dataset.bsTarget = "#agenda_modal";
+
+           const horaFormatada = hora < 10 ? "0" + hora : hora;
+           const minutoFormatado = minuto === 0 ? "00" : minuto;
+
+           const textoBotao = horaFormatada + ":" + minutoFormatado;
+           button.textContent = textoBotao;
+
+           container.appendChild(button);
+       }
+   }
+}
+
+button = document.querySelectorAll(".fundo .button-hour");
 const confirma = document.querySelector("#confirm");
 
 button.forEach(btn => {
@@ -117,6 +166,7 @@ button.forEach(btn => {
         // $("agenda_modal").modal('toggle');
     });
 });
+
 
 function confirmar() 
 {

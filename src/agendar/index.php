@@ -44,12 +44,16 @@
 
     <div class="fundo">
       <div class="flex-period">
-        <button class="period">a</button>
+        <button class="period">Manhã</button>
         <p>Macaco</p>
-        <button class="period">b</button>
+        <button class="period">Tarde</button>
       </div>
-      <div class="botoes-container-manha"></div>
-      <div class="botoes-container-tarde"></div>
+      <div class="botoes-container-manha">
+        <!-- botões manha -->
+      </div>
+      <div class="botoes-container-tarde">
+        <!-- botões tarde -->
+      </div>
     </div>
   </div>
     
