@@ -1,4 +1,5 @@
 <?php
+    ob_start();
     require_once('functions.php');
     $head = "cabecalho2";
     $footer = "footer";
@@ -55,6 +56,12 @@
                             <label class="form-control" for="outros">Out</label>
                             <input class="gnr-input" type="radio" name="clientes['genero']" id="outros" value="outros">
                         </span>
+                    </div>
+
+                    <div class="accept">
+                        <input type="checkbox" required>
+                        <p>Li e aceito os termos de uso.</p>
+                        <a href="<?php echo baseurl; ?>/src/security/serviceTerms.php" class="terms">Termos</a>
                     </div>
 
                     <button class="btn" id="btnCad" type="submit" value="Enviar">Cadastrar</button>
@@ -114,4 +121,5 @@
         </main>
 <?php 
     require_once(footer_template);
+    ob_end_flush();
 ?>

@@ -1,5 +1,6 @@
 <?php
-    require_once('../../config.php');
+    ob_start();
+    include('../../config.php');
     $head = "cabecalho2";
     $footer = "footer";
     if(!isset($_SESSION))
@@ -56,4 +57,5 @@
 
 <?php
     require_once(footer_template);
+    ob_end_flush();
 ?>

@@ -1,4 +1,5 @@
 <?php
+    ob_start();
     include("../../config.php");
     $head = "cabecalho2";
     $footer = "footer";
@@ -56,4 +57,5 @@
 
 <?php
     require_once(footer_template);
+    ob_end_flush();
 ?>

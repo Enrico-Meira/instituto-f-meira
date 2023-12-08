@@ -1,5 +1,5 @@
 <?php 
-
+    ob_start();
     require_once('config.php');
     require_once(dbpath);
     $head = "cabecalho";
@@ -59,26 +59,8 @@
                             <h2>Bioestimuladores de colágeno</h2>
                             <p>São substâncias injetáveis que estimulam a produção de colágeno na pele. São utilizados para tratar rugas, flacidez e melhorar a textura da pele.</p>
                         </div>
-                        <div class="item item-container trat-container" style="width: 430px;">
-                            <img src="<?php echo baseurl; ?>/src/imagens/testing.png" alt="">
-                            <h2>Fios de PDO</h2>
-                            <p>São fios absorvíveis que são inseridos na pele para promover um efeito de lifting facial, melhorando a firmeza e a sustentação da pele.</p>
-                        </div>
-                        <div class="item item-container trat-container" style="width: 430px;">
-                            <img src="<?php echo baseurl; ?>/src/imagens/testing.png" alt="">
-                            <h2>Outros</h2>
-                            <p>Confira aqui outros procedimentos faciais e corporais. Veja mais...</p>
-                        </div>
-                    </div>
-
-                    <div class="buttons">
-                        <button id="prev"><</button>
-                        <button id="next">></button>
                     </div>
                 </div>
-
-                
-
                 <br>
             </div>
             
@@ -95,5 +77,6 @@
             <script src="<?php echo baseurl; ?>/src/js/slider.js"></script>
 <?php 
     require_once(footer_template);
+    ob_end_flush();
 ?>
 

@@ -2,7 +2,7 @@
 
     require_once('../../config.php');
     require_once(dbpath);
-
+    
     if(!isset($_SESSION)) 
     { 
         session_start();

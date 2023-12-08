@@ -16,7 +16,12 @@
     padding-left: 0rem;
    }
 
+    .ghostDiv {
+        height: 100vh;
+    }
+
     body {
+        height: 100vh;
         color: #333;
         background: white;
         /* font-family: ; */
@@ -30,6 +35,9 @@
         display: block;
     }
     
+    .pPeriodo {
+        content: "";
+    }
 
     .flex-period {
         display: flex;
@@ -38,8 +46,13 @@
     }
 
     .period {
-        background-color: red;
+        background-color: transparent;
+        border-style: none;
+        border-radius: 4px;
+        width: 3vw;
+        height: 3vh;
     }
+
 
     /* HEADER */
     .cabecalho {
@@ -124,6 +137,9 @@
         transition-delay: 0s, 0.25s;
     }
 
+
+    
+
     .navigation .menuToggle {
         position: relative;
         top: 0;
@@ -204,7 +220,7 @@
         background-color: transparent;
         background-size: cover;
         position: relative;
-        bottom: 14.3vw;
+        bottom: 14.9vw;
     }
     
     
@@ -362,6 +378,7 @@
     /* INFO */
 
     .info {
+        margin-top: 1vh;
         background: #fff;
         display: flex;
         flex-direction: column;
@@ -411,8 +428,7 @@
     .row {
         display: flex;
         flex-wrap: wrap;
-        margin-right: -15px;
-        margin-left: -15px;
+        width: 95vw;
     }
 
     .row2 {
@@ -602,6 +618,7 @@
     }
 
     .location {
+        margin-top: 2vh;
         font-family: Lato;
     }
 
@@ -665,12 +682,12 @@
     /* PRINCIPAIS TRATAMENTOS */
 
     .slider-container {
+        position: relative;
+        bottom: 35vh;
         padding: 20px 0;
         background-size: cover;
         background-color: #fff;
         background-position: center;
-        position: relative;
-        bottom: 250px;
         height: 400px;
     }
 
@@ -683,18 +700,29 @@
         background-color: #a25050;
     }
 
+    .service {
+        font-family: Lato;
+    }
+    
+    .service h2 {
+        margin-bottom: 5vh;
+    }
+
     .slider {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         margin: auto;
         overflow: hidden;
-        
     }
 
     .list {
-        position: absolute;
-        top: 0;
-        left: 0;
         height: 100%;
+        /* width: 100vw !important; */
+        align-content: center;
+        align-items: center;
         display: flex;
+        flex-direction: row;
         width: max-content;
         transition: 1s;
     }
@@ -928,29 +956,21 @@
     }
 
     .trats-proced-container {
-        position: relative;
-        display: block;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
         opacity: 1;
-        width: 1450px;
-        transform: translate3d(0px, 0px, 0px);
+        width: 98vw;
         content: "";
-        display: table;
         margin: 30px 0;
     }
     
-    .trats-container {
-        position: relative;
-        display: block;
-        opacity: 1;
-        width: 1450px;
-        transform: translate3d(0px, 0px, 0px);
-        content: "";
-        display: table;
-        margin: 30px 0;
-    }
 
     .trat-proced-container {
-        margin: 0 5px;
+        height: 42vh;
+        margin: 1vh 5px;
         border-radius: 5px;
         background-color: #594047;
         display: inline-block;
@@ -964,7 +984,7 @@
         /* margin: 0 5px; */
         border-radius: 5px;
         /* display: inline-block; */
-        /* width: 100%; */
+        width: 10vw;
         text-align: center;        
         /* width: 19.0%; */
         /* padding: 5px 0;  */
@@ -972,8 +992,10 @@
 
 
     .trat-gen {
-        position: relative;
-        bottom: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     
 
@@ -991,7 +1013,7 @@
     }
 
     .trat-container img {
-        width: 200px;
+        width: 15vw;
         border-radius: 50%;
         margin-bottom: 15px;
     }
@@ -999,7 +1021,7 @@
     .trat-container h2 {
         color: #000;
         border-bottom: 0.5px solid #c9c9c9;
-        font-size: 18px;
+        font-size: 1em;
         font-weight: 600;
         margin: 3px 10px;
         padding: 5px 0;
@@ -1009,7 +1031,7 @@
         color: #000;
         text-align: center;
         font-family: Lato;
-        font-size: 13px;
+        font-size: 1em;
         font-style: normal;
         font-weight: 400;
         text-align: center;
@@ -1018,27 +1040,22 @@
     }
 
     .trat-proced-container h2{
-        position: relative;
-        bottom: 18px;
         color: #fff;
         border-bottom: 0.5px solid #c9c9c9;
         font-size: 18px;
         font-weight: 600;
-        margin: 3px 10px;
         padding: 5px 0;
     }
 
     .trat-proced-container p{
-        position: relative;
-        bottom: 18px;
         color: #FFF;
+        margin-bottom: 0;
         text-align: center;
         font-family: Lato;
-        font-size: 13px;
+        font-size: 12px;
         font-style: normal;
         font-weight: 400;
         text-align: center;
-        margin: 0 10px;
         line-height: 100%; /* 24.3px */
     }
 
@@ -1098,12 +1115,17 @@
     .footer-row {
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-around;
     }
 
     .footer ul {
         list-style: none;
     }
     
+
+    .serivceLGPD h2 {
+        margin-bottom: 2vh;
+    }
 
     .footer-col {
         width: 25%;
@@ -1177,6 +1199,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        height: 100vh;
         min-width: 100vh;
         font-family: "Poppins", sans-serif;
         background: url('../imagens/bgLogin.jpg') no-repeat;
@@ -1252,6 +1275,24 @@
         text-decoration: underline;
     }
 
+    .accept {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .accept input[type="checkbox"] {
+        margin-bottom: 1.6vh;
+        margin-right: 0.5vw;
+    }
+
+    .terms {
+        color: blue;
+        font-size: 0.8em;
+        margin-bottom: 1.6vh;
+        margin-left: 3vw;
+    }
+
     .wrapper2 .btn {
         width: 100%;
         height: 45px;
@@ -1280,4 +1321,34 @@
 
     .register-link p a:hover {
         text-decoration: underline;
+    }
+
+    .botoes-container-manha{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .botoes-container-manha button{
+        margin-bottom: 1vw;
+        width: 4.5vw;
+        height: 3.5vh;
+        color: #696969;
+        background-color: #fff;
+        border-style: none;
+        border-radius: 3px;
+    }
+
+    .botoes-container-tarde {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .botoes-container-tarde button {
+        margin-bottom: 1vw;
+        width: 4.5vw;
+        height: 3.5vh;
+        color: #696969;
+        background-color: #fff;
+        border-style: none;
+        border-radius: 3px;
     }

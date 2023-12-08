@@ -1,7 +1,7 @@
 <?php
         ob_start();
         $head = "cabecalho2";
-        $footer = "footer2";
+        $footer = "footer";
         require_once('functions.php');
         if(!isset($_SESSION)) 
         { 
@@ -93,8 +93,8 @@
         </tbody>
         </table>
     </div>
-        <?php 
+<?php 
     
     include(footer_template); 
     ob_end_flush();
-    ?>
+?>

@@ -1,4 +1,5 @@
 <?php
+    ob_start();
     include("../../config.php");
     $head = "cabecalho2";
     $footer = "footer";
@@ -26,7 +27,7 @@
             
             
     
-            <div class="general-container">
+
                 <div class="trats-proced-container">
                     <div class="trat-proced-container">
                         <a href="<?php echo baseurl; ?>/src/procedimentos/botox.php">
@@ -67,9 +68,7 @@
                             <p>São fios absorvíveis que são inseridos na pele para promover um efeito de lifting facial, melhorando a firmeza e a sustentação da pele.</p>
                         </a>
                     </div>
-                </div>
-    
-                <div class="trats-proced-container">
+                
                     <div class="trat-proced-container">
                         <a href="">
                             <img class="linha-img" src="<?php echo baseurl; ?>/src/imagens/testing.png">
@@ -109,9 +108,9 @@
                             <p>A Microtox é uma técnica que utiliza pequenas quantidades de toxina botulínica, aplicadas de maneira difusa, para suavizar rugas e criar um efeito de rejuvenescimento.</p>
                         </a>
                     </div>
-                </div>
+                
     
-                <div class="trats-proced-container">
+                
                     <div class="trat-proced-container">
                         <a href="">
                             <img class="linha-img" src="<?php echo baseurl; ?>/src/imagens/testing.png">
@@ -151,9 +150,9 @@
                             <p>Diversas abordagens estéticas destinadas a melhorar a aparência do pescoço, incluindo procedimentos como lifting, radiofrequência ou preenchimento.</p>
                         </a>
                     </div>
-                </div>
+                
     
-                <div class="trats-proced-container">
+                
                     <div class="trat-proced-container">
                         <a href="">
                             <img class="linha-img" src="<?php echo baseurl; ?>/src/imagens/testing.png">
@@ -193,9 +192,9 @@
                             <p>Procedimento estético que remove impurezas, células mortas e comedões da pele, promovendo uma pele mais saudável e revitalizada.</p>
                         </a>
                     </div>
-                </div>
-                 
-                <div class="trats-proced-container">
+                
+                
+                
                     <div class="trat-proced-container">
                         <a href="">
                             <img class="linha-img" src="<?php echo baseurl; ?>/src/imagens/testing.png">
@@ -236,27 +235,8 @@
                         </a>
                     </div>
                 </div>
-            </div>
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <!-- <a href="./protocoll.php">
-        <img class="protocoll-img"src="<?php echo baseurl; ?>/src/imagens/logo.png" alt="">
-        <h2>Protocoll</h2>
-        <p>Esse tratamento tem o objetivo de reestruturar a pele, através da aplicação de toxinas que estimulam a produção de colágeno.</p>
-        </a> -->
     </main>
 <?php
     require_once(footer_template);
+    ob_end_flush();
 ?>
