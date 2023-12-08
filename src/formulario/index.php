@@ -61,6 +61,12 @@
                         </span>
                     </div>
 
+                    <div class="accept">
+                        <input type="checkbox" required>
+                        <p>Leio e aceito os termos de uso.</p>
+                        <a href="<?php echo baseurl; ?>/src/security/serviceTerms.php" class="terms">Termos</a>
+                    </div>
+
                     <button class="btn" id="btnCad" type="submit" value="Enviar">Cadastrar</button>
 
                     

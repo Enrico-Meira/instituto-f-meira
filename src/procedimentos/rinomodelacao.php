@@ -24,7 +24,7 @@
         </div> -->
 
         <div class="botox-container">
-            <div class="botox-title2">
+            <div class="botox-title">
                 <h2>RINOMODELAÇÃO</h2>
                 <p>A rinomodelação é um procedimento estético não cirúrgico que busca aprimorar a aparência do nariz sem recorrer à cirurgia. Utilizando preenchedores à base de ácido hialurônico, injetados na região nasal, o procedimento permite ajustes como a correção de pequenas assimetrias e a suavização de irregularidades. Por ser ambulatorial, a rinomodelação oferece uma recuperação mais rápida em comparação com a rinoplastia cirúrgica. Contudo, é crucial consultar um profissional qualificado antes do procedimento para avaliar a adequação às necessidades do paciente e garantir resultados seguros e satisfatórios. </p>
             </div>

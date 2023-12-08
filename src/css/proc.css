@@ -16,7 +16,7 @@
 }
 
 .btx-container2 h2 {
-    padding: 50px;
+    padding-top: 3vh;
     text-align: center;
     font-size: 45px;
 }
@@ -29,13 +29,10 @@
 .btx-container2 p {
     text-align: center;
     font-size: 20px;
-    position: relative;
-    bottom: 55px;
 }
 
 .btx-container2 .linha-title {
-    display: inline;
-    width: 300px;
+    width: 98vw;
     text-align: center;
 }
 
@@ -217,10 +214,10 @@
 
 .hex {
     display: flex;
-    position: relative;
-    bottom: 300px;
-    left: 835px;
-    width: 700px;
+    position: absolute;
+    bottom: 20vh;
+    left: 54.3%;
+    width: 45vw;
     height: 700px;
     background-color: #424242;
     -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
@@ -237,10 +234,10 @@
 
 .hex2 {
     display: flex;
-    position: relative;
-    bottom: 415px;
-    left: 835px;
-    width: 700px;
+    position: absolute;
+    bottom: 20vh;
+    left: 54.3%;
+    width: 45vw;
     height: 700px;
     background-color: #424242;
     -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
@@ -249,10 +246,10 @@
 
 .hex3 {
     display: flex;
-    position: relative;
-    bottom: 464px;
-    left: 835px;
-    width: 700px;
+    position: absolute;
+    bottom: 20vh;
+    left: 54.3%;
+    width: 45vw;
     height: 700px;
     background-color: #424242;
     -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
@@ -298,12 +295,12 @@
 .resultados {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -0.12vw;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .resultados img {
-    width: 255px;
-    height: 255px;
+    width: 23vw;
     border-radius: 12px;
     max-width: 100%;
     transition: all 0.3s;

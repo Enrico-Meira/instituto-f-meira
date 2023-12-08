@@ -11,11 +11,11 @@
 
 .wrapper{
   z-index: 2;
-  position: relative; 
-  top: 200px;
-  left: 450px;
-  width: 650px;
-  background: #cac6c6;
+  position: absolute; 
+  bottom: 15vh;
+  left: 1vw;
+  width: 38em;
+  background: #9B7D86;;
   border-radius: 10px;
   box-shadow: 0 15px 40px rgba(0,0,0,0.12);
   align-items: center;
@@ -28,11 +28,11 @@
 .fundo {
   /* height: 470px; */
   z-index: 1;
-  position: relative;
-  bottom: 418px;
-  left: 650px;
-  width: 450px;
-  background: var(--complementary-color);
+  position: absolute;
+  bottom: 15vh;
+  left: 1vw;
+  width: 38em;
+  background: rgba(236,205,218,1) 100%;
   overflow-y: scroll;
   border-radius: 10px;
   box-shadow: 0 15px 40px rgba(0,0,0,0.12);
@@ -72,7 +72,7 @@
   width: 38px;
   margin: 0 1px;
   cursor: pointer;
-  color: #878787;
+  color: #fff;
   text-align: center;
   line-height: 38px;
   font-size: 1.9rem;
@@ -91,6 +91,7 @@
   background: #f2f2f2;
 }
 .current-date{
+  color: #fff;
   font-size: 1.45rem;
   font-weight: 500;
 }
@@ -106,13 +107,15 @@
 }
 
 .calendar .days{
+  height: 40vh;
+  color: #fff;
   margin-bottom: 20px;
 }
 .calendar li{
   padding: 6px 0;
   justify-content: center;
   float: left;
-  color: #333;
+  color: #fff;
   width: 13%;
   height: 40px;
   font-size: 1.07rem;

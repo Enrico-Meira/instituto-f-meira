@@ -13,24 +13,43 @@
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
     .footer {
-        background-color: yellow;
+        background-color: #EBC2D4;
     }
 
-
-    .menu {
-        background-color: blue;
+    .cabecalho .menu {
         display: none;
+    }
+
+    .cabecalho2 .menu {
+        display: none;
+    }
+
+    .list {
+        height: 100%;
+        width: 100vw !important;
+        align-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        width: max-content;
+        transition: 1s;
     }
 }
 
 /* Extra large devices (large laptops and desktops, 1300px and up) */
 @media only screen and (min-width: 1280px) {
-
-
     .footer {
-        background-color: green;
+        background-color: #EBC2D4;
+    }
+
+    .cabecalho .menu {
+        display: flex;
+    }
+
+    .cabecalho2 .menu {
+        display: flex;
     }
 }
 

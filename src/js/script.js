@@ -2,6 +2,7 @@ const daysTag = document.querySelector(".days");
 const fundo = document.querySelector(".fundo");
 currentDate = document.querySelector(".current-date");
 prevNextIcon = document.querySelectorAll(".icons span");
+periodo = document.querySelectorAll(".pPeriodo");
 let fundoExibido = false;
 
 // getting new date, current year and month
@@ -14,11 +15,14 @@ currMonth = date.getMonth();
 const months = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho",
 "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
 
-criarBotoesManha();
-criarBotoesTarde();
+
 
 let data;
 let horario;
+
+
+criarBotoesManha();
+criarBotoesTarde();
 
 const renderCalendar = () => {
     let firstDayofMonth = new Date(currYear, currMonth, 1).getDay(), // getting first day of month
@@ -56,28 +60,15 @@ const renderCalendar = () => {
             let valor = dia.innerText;
             data = currYear + "-" +  (currMonth + 1) + "-" + valor;
             if (fundoExibido) {
-                fundo.style.transform = 'translateX(0)'; // Retrai o fundo movendo-o para a posição original
+                fundo.style.transform = 'translate(0, 0)'; // Retrai o fundo movendo-o para a posição original
                 fundoExibido = false;
             } else {
-                fundo.style.transform = 'translateX(40%)'; // Movendo o fundo para o lado direito
+                fundo.style.transform = 'translate(100%, 0 )'; // Movendo o fundo para o lado direito
                 fundoExibido = true;
             }
         });
     });
 
-    
-    function sincronizarAltura() {
-        var btnContainerManha = document.querySelector('.botoes-container-manha');
-        var btnContainerTarde = document.querySelector('.botoes-container-Tarde');
-        var divFrente = document.querySelector('.wrapper');
-        var divTras = document.querySelector('.fundo');
-
-        var alturaFrente = divFrente.getBoundingClientRect().height + 'px'; // Get the computed height of the .wrapper div
-        var alturaTras = divTras.getBoundingClientRect().height + 'px';
-        divTras.style.height = alturaFrente; // Set the height of the .fundo div equal to the .wrapper div
-        btnContainerManha.style.height = alturaTras;
-        btnContainerTarde.style.height = alturaTras;
-    }
 
     const buttonsPeriod = document.querySelectorAll(".period");
 
@@ -87,16 +78,23 @@ const renderCalendar = () => {
             const containerManha = document.querySelector(".botoes-container-manha");
             const containerTarde = document.querySelector(".botoes-container-tarde");
 
-            if (period === "Manhã") {
-                containerManha.style.display = "block";
+            if (period === "<") {
+                periodo[0].innerText = "Manhã";
+                containerManha.style.display = "flex";
                 containerTarde.style.display = "none";
-            } else {
+            } else if (period === ">") {
+                periodo[0].innerText = "Tarde";
                 containerManha.style.display = "none";
-                containerTarde.style.display = "block";
+                containerTarde.style.display = "flex";
+            }
+            else if (periodo[0].innerText = "Período") {
+                containerManha.style.display = "none";
+                containerTarde.style.display ="none";
             }
         });
     });
 
+    
     sincronizarAltura(); // Call the function to synchronize heights
 }
 
@@ -128,6 +126,17 @@ function criarBotoesManha()
        }
    }
 }
+
+function sincronizarAltura() {
+
+            var divFrente = document.querySelector('.wrapper');
+            var divTras = document.querySelector('.fundo');
+
+            var alturaFrente = divFrente.offsetHeight; // Use offsetHeight instead of getBoundingClientRect().height
+            var alturaTras = divTras.offsetHeight; // Use offsetHeight instead of getBoundingClientRect().height
+            divTras.style.height = alturaFrente + 'px'; // Set the height of the .fundo div equal to the .wrapper div
+
+        }
 
 function criarBotoesTarde() 
 {
@@ -206,5 +215,6 @@ prevNextIcon.forEach(icon => {
             date = new Date();
         }
         renderCalendar();
+        sincronizarAltura();
     });
 });

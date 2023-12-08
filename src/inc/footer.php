@@ -4,37 +4,17 @@
                     <div class="footer-col">
                         <h4>Empresa</h4>
                         <ul>
-                            <li><a href="">Sobre nós</a></li>
-                            <li><a href="">Nossos serviços</a></li>
-                            <li><a href="">Política de privacidade</a></li>
+                            <li><a href="<?php echo baseurl; ?>/src/pages/about.php">Sobre nós</a></li>
+                            <li><a href="<?php echo baseurl; ?>/src/security/serviceTerms.php">Termos de serviço</a></li>
+                            <li><a href="<?php echo baseurl; ?>/src/security/policyPrivacy.php">Política de privacidade</a></li>
                             <!-- <li><a href="">affiliate program</a></li> -->
                         </ul>
                     </div>
                     <div class="footer-col">
-                        <h4>get help</h4>
-                        <ul>
-                            <li><a href="">FAQ</a></li>
-                            <li><a href="">shipping</a></li>
-                            <li><a href="">returns</a></li>
-                            <!-- <li><a href="">payment options</a></li> -->
-                        </ul>
-                    </div>
-                    <div class="footer-col">
-                        <h4>online shop</h4>
-                        <ul>
-                            <li><a href="">watch</a></li>
-                            <li><a href="">bag</a></li>
-                            <li><a href="">shoes</a></li>
-                            <!-- <li><a href="">dress</a></li> -->
-                        </ul>
-                    </div>
-                    <div class="footer-col">
-                        <h4>follow us</h4>
+                        <h4>Siga-nos</h4>
                         <div class="social-links">
-                            <a href=""><i class="fab fa-facebook-f"></i></a>
-                            <a href=""><i class="fab fa-twitter"></i></a>
-                            <a href=""><i class="fab fa-instagram"></i></a>
-                            <a href=""><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.instagram.com/institutofmeira/"><i class="fab fa-instagram"></i></a>
+                            <a href="https://br.linkedin.com/in/fernandacmeira"><i class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
                 </div>

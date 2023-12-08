@@ -22,6 +22,7 @@
   </head>
 
   <div class="cld-container">
+    <div class="ghostDiv"></div>
     <div class="wrapper">
         <div class="icons">
           <span id="prev" class="material-symbols-rounded">chevron_left</span>
@@ -44,9 +45,9 @@
 
     <div class="fundo">
       <div class="flex-period">
-        <button class="period">Manhã</button>
-        <p>Macaco</p>
-        <button class="period">Tarde</button>
+        <button class="period"><</button>
+        <p class="pPeriodo">Período</p>
+        <button class="period">></button>
       </div>
       <div class="botoes-container-manha">
         <!-- botões manha -->

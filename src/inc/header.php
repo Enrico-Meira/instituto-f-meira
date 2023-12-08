@@ -62,8 +62,8 @@
                                     </li>
 
                                     <li>
-                                        <a href="#">
-                                            <span class="icon"><i class="fa-solid fa-user"></i></span>
+                                        <a href="<?php echo baseurl; ?>/src/procedimentos/index.php">
+                                            <span class="icon"><i class="fa-solid fa-syringe"></i></span>
                                             <span class="title">Procedimentos</span>
                                         </a>
                                     </li>
@@ -80,8 +80,8 @@
                                 <?php endif; ?>
 
                                     <li>
-                                        <a href="#">
-                                            <span class="icon"><i class="fa-solid fa-gear"></i></span>
+                                        <a href="<?php echo baseurl; ?>/src/pages/about.php">
+                                            <span class="icon"><i class="fa-solid fa-question"></i></span>
                                             <span class="title">Sobre nós</span>
                                         </a>
                                     </li>

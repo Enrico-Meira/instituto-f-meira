@@ -10,6 +10,7 @@
         $database = open_database();
 
         $sql = "UPDATE agendamentos SET status_agenda = 'confirmado' WHERE id_agendamentos = " . $id;
+        
 
         try {
 
