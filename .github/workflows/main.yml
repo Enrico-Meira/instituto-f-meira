@@ -1,12 +1,7 @@
-on:
-  # Trigger analysis when pushing in master or pull requests, and when creating
-  # a pull request.
-  push:
-    branches:
-      - main
-  pull_request:
-      types: [opened, synchronize, reopened]
 name: Main Workflow
+on:
+  workflow_dispatch:
+  
 jobs:
   sonarcloud:
     runs-on: ubuntu-latest
@@ -22,6 +17,6 @@ jobs:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       with: 
         args: >
-          -Dsonar.organization=Enrico-Meira
+          -Dsonar.organization=enrico-meira
           -Dsonar.projectKey=instituto-f-meira
 
